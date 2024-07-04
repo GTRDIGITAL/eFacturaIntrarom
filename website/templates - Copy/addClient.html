@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <title>Adauga clienti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background: url('static/factura.png') no-repeat center center fixed;
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 700px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #2B144D;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #2B144D;
+            width: 200px;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 0px;
+            color: #333;
+        }
+        @keyframes colorChange {
+      0% { color: #2B144D; }
+      25% { color: gray; }
+      50% { color: #2B144D; }
+      75% { color: gray; }
+      100% { color: #2B144D; }
+    }
+
+    h1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      animation: colorChange 6s infinite; }
+
+      .button-container {
+        display: flex;
+        justify-content: flex-start; /* Aliniază butonul la stânga */
+        width: 50%;
+        padding-top: 20px;
+        margin-top: 20px;
+      }
+
+      .button2-container {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 0px;
+        margin-top: 0px;
+      }
+
+      .button {
+        background-color: #4f2d7f;
+        color: #fff;
+        padding: 10px 20px; /* Reducem padding-ul pentru a face butonul mai mic */
+        width: auto; /* Eliminăm specificarea unei lățimi fixe pentru a permite butonului să se adapteze la conținut */
+        border: none;
+        border-radius: 5px; /* Reducem raza de rotație a colțurilor pentru a face butonul mai mic */
+        cursor: pointer;
+        font-size: 18px; /* Reducem dimensiunea fontului */
+        transition: background-color 0.3s ease-in-out,
+          transform 0.2s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); /* Reducem umbra butonului */
+        margin-right: 10px; /* Ajustăm margin-right pentru a separa butoanele */
+      }
+
+      .button:hover {
+        background-color: #2b144d;
+        transform: scale(1.05);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="button-container">
+            <form action="/clients" method="GET">
+              <button type="submit" class="button" id="leftButton">
+                Clienti
+              </button>
+            </form>
+          </div>
+        <h1>ADD CLIENT</h1>
+        <form method="POST" enctype = "multipart/form-data" style="padding-left:60px;">
+            <div class="form-group">
+                <label for="field1">Name:</label>
+                <input type="text" id="numeClient" name="numeClient">
+            </div>
+
+            <div class="form-group">
+                <label for="field2">Country:</label>
+                <input type="text" id="tara" name="tara">
+            </div>
+
+            <div class="form-group">
+                <label for="field3">CUST:</label>
+                <input type="text" id="cust" name="cust">
+            </div>
+
+            <div class="form-group">
+                <label for="field4">REGNO:</label>
+                <input type="text" id="cui" name="cui">
+            </div>
+
+            <div class="form-group">
+                <label for="field5">City:</label>
+                <input type="text" id="oras" name="oras">
+            </div>
+
+            <div class="form-group">
+                <label for="field6">Street:</label>
+                <input type="text" id="strada" name="strada">
+            </div>
+
+            <div class="form-group">
+                <label for="field7">Region:</label>
+                <select style="width:300px; text-align: center;" id="judeteDropdown"; name="judeteDropdown"></select>
+            </div>
+
+            <button type="submit">Add client</button>
+        </form>
+    </div>
+<script>
+    // Lista județelor
+    const judete = ["","AB", "AR", "AG", "B", "BC", "BH", "BN", "BR", "BT", "BV", "BR", "BZ", "CS", "CL", "CJ", "CT", "CV", "DB", "DJ", "GL", "GR", "GJ", "HR", "HD", "IL", "IS", "IF", "MM", "MH", "MS", "NT", "OT", "PH", "SM", "SJ", "SB", "SV", "TR", "TM", "TL", "VS", "VL"];
+ 
+    // Obține elementul dropdown
+    const judeteDropdown = document.getElementById("judeteDropdown");
+ 
+    // Populează lista dropdown cu județele
+    judete.forEach(judet => {
+        const option = document.createElement("option");
+        option.value = judet;
+        option.text = judet;
+        judeteDropdown.appendChild(option);
+    });
+</script>
+</body>
+</html>

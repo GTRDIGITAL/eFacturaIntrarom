@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Client Raport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background: url('static/factura2.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: none;
+            color: #fff;
+            width: 10%;
+            min-height: 70vh;
+            padding: 20px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar2 {
+            background-color: darkred;
+            color: #fff;
+            width: 20%;
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 90vh;
+            justify-content: flex-end;
+            width: 60%;
+/*            margin-top: 1px;*/
+            margin-left: -300px;
+            margin-top: 50px;
+        }
+
+        .container2 {
+            margin-left: 180px;
+            margin-bottom: 20px;
+                }
+
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 4px 6px #4f2d7f;
+/*            padding: 20px;*/
+            width: 50%;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+            border: 1px solid #2b144d;
+
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+         /* h1 {
+             color: #000;
+            font-size: 38px;
+            margin-bottom: 10px;
+            -webkit-text-stroke: 0.5px #fff;
+
+        } */
+        h1 {
+            color: #2b144d;
+            display: center;
+        }
+
+        h2 {
+            color: #2b144d;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .sidebar-box {
+            margin-bottom: 20px;
+            background-color: none; /* chimbați culoarea fundalului */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinează textul la stânga */
+        }
+
+        .sidebar-box h2 {
+            color: #fff; /* Schimbați culoarea textului titlului */
+        }
+
+        .sidebar-box p {
+            color: #ccc; /* Schimbați culoarea textului conținutului */
+        }
+        .login-form button {
+            background-color: #4f2d7f;
+            color: #fff; /* Schimbați culoarea textului butonului */
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+            margin-right: 40px;
+        }
+
+        /* Stilizări pentru butonul de autentificare la trecerea peste el */
+        .login-form button:hover {
+            background-color: #2b144d; /* Schimbați culoarea de fundal la trecerea peste buton */
+        }
+
+
+        .denis{
+            background-color: #000; /* Schimbați culoarea de fundal a butonului */
+            color: #000; /* Schimbați culoarea textului butonului */
+            padding-top: 200px;
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+        }
+
+         #myPieChart {
+            width: 230px;
+            height: 230px;
+            margin-left: auto;
+/*            margin-right: 200px;*/
+/*            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);*/
+            border-radius: 10px;
+            margin-top: 230px;
+            align-items: center;
+/*            margin-right: -150px;*/
+        }
+
+        .download-button {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+            margin-top: 20px;
+/*            margin-left: 45px;*/
+
+
+        }
+
+        .download-button:hover {
+            background-color: #000;
+        }
+
+         .trimitere-button {
+/*            background-color: #000;*/
+            background-color: #4f2d7f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+/*            display: inline-block;*/
+/*            margin-top: -100px;*/
+/*            margin-right: -230px;*/
+
+
+        }
+
+        .trimitere-button:hover {
+            background-color: #2b144d;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between; /* Acesta separă butoanele pe aceeași linie */
+            margin-top: 20px; /* Puteți ajusta spațiul de sus așa cum doriți */
+        }
+ #popup {
+            display: none;
+            position: fixed;
+            float:center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*height:10%; */
+            padding: 10px;
+            background-color: grey;
+            color:white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            /*border-radius: 30px;*/
+        }
+
+        #loading {
+            display: none;
+        }
+
+        button {
+            background-color: #4f2d7f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #header {
+            background-color: #4f2d7f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adăugăm umbre la antet */
+            /* float:top; */
+            display: block;
+        }
+        #loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #fff;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-left: 10px;
+
+        }
+         #notice-icon {
+            color: #4f2d7f;
+            font-size: 30px;
+            margin-right: 10px;
+            /*background-color: green*/
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- <div id="header">
+        <p>E-Factura</p>
+    </div> -->
+   
+    <div>
+        <p> 
+            {% for string in lista %}
+                <li>{{ string }}</li>
+            {% endfor %}
+        </p>
+    </div>
+    <div class="sidebar">
+
+       <!-- <div >
+            <h1>Client Demo</h1>
+        </div> -->
+<!--         <div >
+            <h2>Status</h2>
+        </div> -->
+        <div >
+            <!-- <h2>User: {{ username }}</h2> -->
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+             <h2> </h2>
+        </div>
+        <div >
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+       
+    </div>
+    <div class="container">
+<div id="popup">
+     <i id="notice-icon" class="fas fa-exclamation-circle"></i>
+    <p style="color: white;">The invoices are being transmitted, please wait for their automatic download.</p>
+    <div id="loading">Loading<span id="loading-spinner"></span></div>
+    <button onclick="hidePopup()">Close</button>
+</div>
+
+        <div class="box">
+            <h2>Total invoices uploaded</h2>
+            <p id="totalFacturi">0</p>
+        </div>
+
+        <div class="box">
+            <h2>Document number of the first uploaded invoice</h2>
+            <p id="nrPrimeiFacturi">N/A</p>
+        </div>
+        <div class="box">
+            <h2>Document number of the last uploaded invoice</h2>
+            <p id="nrUltimeiFacturi">N/A</p>
+        </div>
+        <div class="box">
+            <h2>Total amount of uploaded invoices</h2>
+            <p id="total_Facturi">N/A</p>
+        </div>
+
+     <div class="button-container">
+        <form id="login-form" class="login-form" action="/main" method="POST">
+            <button type="submit">Main page</button>
+        </form>
+
+        <form action="/trimitere_anaf" method="GET">
+            <button type = "submit" id="sendEmailButton" onclick="showPopup()" class="trimitere-button">SPV Submission</button>
+            
+        </form>
+          </div>      
+    </div>
+
+    <div class = "container2">
+
+
+    
+</div>
+    <script>
+
+
+
+        const nrPrimeiFacturi = "{{ primaFactura }}";
+        const nrUltimeiFacturi = "{{ ultimaFactura }}";
+        const totalFacturi = {{ numarFacturi }};
+        const total_Facturi = {{ totalFactura }} || 0;
+
+        // Actualizăm valorile afișate în chenarele din dreapta
+        document.getElementById("totalFacturi").textContent = totalFacturi;
+        // alert(totalFacturi)
+        document.getElementById("nrPrimeiFacturi").textContent = nrPrimeiFacturi;
+        document.getElementById("nrUltimeiFacturi").textContent = nrUltimeiFacturi;
+        // document.getElementById('total_Facturi').textContent = total_Facturi;
+        document.getElementById('total_Facturi').textContent = total_Facturi;
+       
+       // Datele pentru pie chart
+
+        var numarFacturiTrimise = totalFacturi;
+        var numarFacturiCorecte = {{ numarFacturiCorecte }};
+        var numarFacturiEroare = {{ facturiNuleUnice }};
+        // alert(numarFacturiRespise)
+        var data = {
+            labels: ['Valid', 'Rejected'],
+            datasets: [{
+                data: [numarFacturiCorecte, numarFacturiEroare], // Schimbați valorile aici
+                backgroundColor: ['#4F2D7F', 'darkred'], // Culorile pentru segmente
+            }]
+        };
+
+        // Opțiunile pentru pie chart
+        var options = {
+            responsive: false, // Dezactivează redimensionarea automată a graficului
+            maintainAspectRatio: false, // Menține aspectul rațional
+        };
+
+        // Obțineți contextul canvas-ului
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+
+        // Creați pie chart-ul
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options
+        });
+
+
+   function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('loading').style.display = 'block';
+
+        // Simularea unui proces de încărcare (poate fi înlocuit cu acțiuni reale)
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+        }, 90000); // Înlocuiește cu durata reală a procesului de încărcare
+         setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+        hidePopup();  // Ascunde pop-up-ul după 10 secunde
+    }, 60000); 
+    }
+
+    // Funcția pentru ascunderea pop-up-ului
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+
+</body>
+</html>

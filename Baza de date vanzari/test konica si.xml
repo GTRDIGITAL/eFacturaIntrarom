@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ROEInvoice>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000003</SI_DocNo>
+    <SI_BillToName>SC Heineken Romania SA</SI_BillToName>
+    <SI_BillToAddress>Str. Tipografilor nr. 1A</SI_BillToAddress>
+    <SI_BillToAddress2>et. 4-6, Sector 1</SI_BillToAddress2>
+    <SI_BillToCity>București </SI_BillToCity>
+    <SI_BillToPostCode>013714</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO13240781</SI_VATRegNo>
+    <SI_SellToContact>Sorin Paun</SI_SellToContact>
+    <SI_BillToContact>Dana-Coca Gherghescu</SI_BillToContact>
+    <SI_SalespersonCode>CAPRAG</SI_SalespersonCode>
+    <SI_PostingDate>08/01/2024</SI_PostingDate>
+    <SI_DocumentDate>08/01/2024</SI_DocumentDate>
+    <SI_DueDate>06/06/2024</SI_DueDate>
+    <SI_ExternalDocNo>6170082168</SI_ExternalDocNo>
+    <SI_YourReference>98806</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Postere CFR Loss Tree Reasons (267131)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>14</SI_Quantity>
+      <SI_UnitPrice>114.40</SI_UnitPrice>
+      <SI_Amount>1,601.60</SI_Amount>
+      <SI_AmountInclVAT>1,905.90</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041396</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000002</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>AnaMaria Ianos</SI_SellToContact>
+    <SI_BillToContact>Luiza Ivan</SI_BillToContact>
+    <SI_SalespersonCode>COJOCARUZ</SI_SalespersonCode>
+    <SI_PostingDate>16/01/2024</SI_PostingDate>
+    <SI_DocumentDate>16/01/2024</SI_DocumentDate>
+    <SI_DueDate>15/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15112795</SI_ExternalDocNo>
+    <SI_YourReference>11556645</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>30000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Livrare prin curier - Suplim. 2 Cofraje Stand RTS  Hellmann's KFL</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>136.34</SI_UnitPrice>
+      <SI_Amount>136.34</SI_Amount>
+      <SI_AmountInclVAT>162.24</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>40000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Suplim. 2 COFRAJE PRINTATE - 77 Standuri carton  1/4 Hellmann's - RTS Kaufland (16101562)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>154</SI_Quantity>
+      <SI_UnitPrice>12.40</SI_UnitPrice>
+      <SI_Amount>1,909.60</SI_Amount>
+      <SI_AmountInclVAT>2,272.43</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>50000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>MANSOANE - 77 Standuri 1/4 Hellmann's - RTS  Kaufland (16101562)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>77</SI_Quantity>
+      <SI_UnitPrice>8.53</SI_UnitPrice>
+      <SI_Amount>656.81</SI_Amount>
+      <SI_AmountInclVAT>781.60</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>60000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Transport + paletizare 77 Standuri 1/4 Hellmann's  - RTS Kaufland (16101562)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>2,136.06</SI_UnitPrice>
+      <SI_Amount>2,136.06</SI_Amount>
+      <SI_AmountInclVAT>2,541.91</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>70000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>COFRAJE PRINTATE - 77 Standuri carton 1/4  Hellmann's - RTS Kaufland (16101562)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>308</SI_Quantity>
+      <SI_UnitPrice>12.33</SI_UnitPrice>
+      <SI_Amount>3,797.64</SI_Amount>
+      <SI_AmountInclVAT>4,519.19</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>80000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Standuri carton 1/4 Hellmann's - RTS Kaufland_77  buc (16101562)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>77</SI_Quantity>
+      <SI_UnitPrice>159.66</SI_UnitPrice>
+      <SI_Amount>12,293.82</SI_Amount>
+      <SI_AmountInclVAT>14,629.65</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>16101562</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000004</SI_DocNo>
+    <SI_BillToName>SC Heineken Romania SA</SI_BillToName>
+    <SI_BillToAddress>Str. Tipografilor nr. 1A</SI_BillToAddress>
+    <SI_BillToAddress2>et. 4-6, Sector 1</SI_BillToAddress2>
+    <SI_BillToCity>București </SI_BillToCity>
+    <SI_BillToPostCode>013714</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO13240781</SI_VATRegNo>
+    <SI_SellToContact />
+    <SI_BillToContact>Dana-Coca Gherghescu</SI_BillToContact>
+    <SI_SalespersonCode>NOVACA</SI_SalespersonCode>
+    <SI_PostingDate>16/01/2024</SI_PostingDate>
+    <SI_DocumentDate>16/01/2024</SI_DocumentDate>
+    <SI_DueDate>14/06/2024</SI_DueDate>
+    <SI_ExternalDocNo>4502303977</SI_ExternalDocNo>
+    <SI_YourReference>99070</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Etichete EAN 48x65mm (257673)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>8,640</SI_Quantity>
+      <SI_UnitPrice>0.09</SI_UnitPrice>
+      <SI_Amount>777.60</SI_Amount>
+      <SI_AmountInclVAT>925.34</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00039565</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo>0002</SI_CustPOLineNo>
+      <SI_Description>Etichete EAN 80x44mm (257674)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>57,600</SI_Quantity>
+      <SI_UnitPrice>0.05</SI_UnitPrice>
+      <SI_Amount>2,880.00</SI_Amount>
+      <SI_AmountInclVAT>3,427.20</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00039565</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000005</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact />
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>16/01/2024</SI_PostingDate>
+    <SI_DocumentDate>16/01/2024</SI_DocumentDate>
+    <SI_DueDate>15/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO14768650</SI_ExternalDocNo>
+    <SI_YourReference>92668</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Base Wrap PPC cu coltare ascunse - insula 1 </SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>50</SI_Quantity>
+      <SI_UnitPrice>152.74</SI_UnitPrice>
+      <SI_Amount>7,637.00</SI_Amount>
+      <SI_AmountInclVAT>9,088.03</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo />
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>30000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>Livrare conform desfasurator insule 1 palet Doeve </SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>1,538.73</SI_UnitPrice>
+      <SI_Amount>1,538.73</SI_Amount>
+      <SI_AmountInclVAT>1,831.09</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo />
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000006</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Cristina Moraru</SI_SellToContact>
+    <SI_BillToContact>Luiza Ivan</SI_BillToContact>
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>19/01/2024</SI_PostingDate>
+    <SI_DocumentDate>19/01/2024</SI_DocumentDate>
+    <SI_DueDate>18/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15107695</SI_ExternalDocNo>
+    <SI_YourReference>100672</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Logistica Standuri RTS Clear&amp;Dove in Lidl - 2  tiruri (259690)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>2</SI_Quantity>
+      <SI_UnitPrice>2,593.05</SI_UnitPrice>
+      <SI_Amount>5,186.10</SI_Amount>
+      <SI_AmountInclVAT>6,171.46</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo>0002</SI_CustPOLineNo>
+      <SI_Description>Cofraje  Dove&amp;Clear- standuri Dove&amp;Clear in Lidl   (259692)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>23.71</SI_UnitPrice>
+      <SI_Amount>8,772.70</SI_Amount>
+      <SI_AmountInclVAT>10,439.51</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>30000</SI_LineNo>
+      <SI_CustPOLineNo>0003</SI_CustPOLineNo>
+      <SI_Description>_Mansoane Standuri RTS Dove&amp;Clear in Lidl (259699)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>6.27</SI_UnitPrice>
+      <SI_Amount>2,319.90</SI_Amount>
+      <SI_AmountInclVAT>2,760.68</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>40000</SI_LineNo>
+      <SI_CustPOLineNo>0004</SI_CustPOLineNo>
+      <SI_Description>Pereti Verticali Standuri RTS Dove&amp;Clear in Lidl  (259700)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>11.40</SI_UnitPrice>
+      <SI_Amount>4,218.00</SI_Amount>
+      <SI_AmountInclVAT>5,019.42</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>50000</SI_LineNo>
+      <SI_CustPOLineNo>0005</SI_CustPOLineNo>
+      <SI_Description>Inaltator pentru cremele de maini - polita 1   Standuri RTS Dove&amp;Clear in Lidl (259701)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>3.99</SI_UnitPrice>
+      <SI_Amount>1,476.30</SI_Amount>
+      <SI_AmountInclVAT>1,756.80</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>60000</SI_LineNo>
+      <SI_CustPOLineNo>0006</SI_CustPOLineNo>
+      <SI_Description>Minipaleti de lemn pentru standuri RTS Dove&amp;Clear  in Lidl (259702)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>28.50</SI_UnitPrice>
+      <SI_Amount>10,545.00</SI_Amount>
+      <SI_AmountInclVAT>12,548.55</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000007</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Cristina Moraru</SI_SellToContact>
+    <SI_BillToContact>Luiza Ivan</SI_BillToContact>
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>19/01/2024</SI_PostingDate>
+    <SI_DocumentDate>19/01/2024</SI_DocumentDate>
+    <SI_DueDate>18/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15107168</SI_ExternalDocNo>
+    <SI_YourReference>100673</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Standuri RTS Dove&amp;Clear, 4 polite, 40cm x30 cm x  H160cm (259703)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>370</SI_Quantity>
+      <SI_UnitPrice>145.90</SI_UnitPrice>
+      <SI_Amount>53,983.00</SI_Amount>
+      <SI_AmountInclVAT>64,239.77</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000008</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Adriana Soare</SI_SellToContact>
+    <SI_BillToContact>Luiza Ivan</SI_BillToContact>
+    <SI_SalespersonCode>COJOCARUZ</SI_SalespersonCode>
+    <SI_PostingDate>19/01/2024</SI_PostingDate>
+    <SI_DocumentDate>19/01/2024</SI_DocumentDate>
+    <SI_DueDate>18/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15114743</SI_ExternalDocNo>
+    <SI_YourReference>100679</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Clip Strip (Cravate) Metal 12 clipsuri  (transa  2) - Job 40441 (261275)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>510</SI_Quantity>
+      <SI_UnitPrice>33.37</SI_UnitPrice>
+      <SI_Amount>17,018.70</SI_Amount>
+      <SI_AmountInclVAT>20,252.25</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040441</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo>0002</SI_CustPOLineNo>
+      <SI_Description>Livrare - Clip Strip (Cravate) Metal 12 clipsuri  (transa 2) - Job 40441 (261278)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>1,384.00</SI_UnitPrice>
+      <SI_Amount>1,384.00</SI_Amount>
+      <SI_AmountInclVAT>1,646.96</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040441</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000009</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Adriana Soare</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>23/01/2024</SI_PostingDate>
+    <SI_DocumentDate>23/01/2024</SI_DocumentDate>
+    <SI_DueDate>22/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO14588214</SI_ExternalDocNo>
+    <SI_YourReference>100948</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Reglete pentru Shelflinere Nutrition  (272330)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>10</SI_Quantity>
+      <SI_UnitPrice>37.98</SI_UnitPrice>
+      <SI_Amount>379.80</SI_Amount>
+      <SI_AmountInclVAT>451.96</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00042605</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000010</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Adriana Soare</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>26/01/2024</SI_PostingDate>
+    <SI_DocumentDate>26/01/2024</SI_DocumentDate>
+    <SI_DueDate>25/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO14588214</SI_ExternalDocNo>
+    <SI_YourReference>100505</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Shelf Liner Nutrition - Job 40807 (262785)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>10</SI_Quantity>
+      <SI_UnitPrice>17.10</SI_UnitPrice>
+      <SI_Amount>171.00</SI_Amount>
+      <SI_AmountInclVAT>203.49</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040807</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000011</SI_DocNo>
+    <SI_BillToName>SC Heineken Romania SA</SI_BillToName>
+    <SI_BillToAddress>Str. Tipografilor nr. 1A</SI_BillToAddress>
+    <SI_BillToAddress2>et. 4-6, Sector 1</SI_BillToAddress2>
+    <SI_BillToCity>București </SI_BillToCity>
+    <SI_BillToPostCode>013714</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO13240781</SI_VATRegNo>
+    <SI_SellToContact>Adrian Girodi</SI_SellToContact>
+    <SI_BillToContact>Dana-Coca Gherghescu</SI_BillToContact>
+    <SI_SalespersonCode>CAPRAG</SI_SalespersonCode>
+    <SI_PostingDate>26/01/2024</SI_PostingDate>
+    <SI_DocumentDate>26/01/2024</SI_DocumentDate>
+    <SI_DueDate>24/06/2024</SI_DueDate>
+    <SI_ExternalDocNo>4902199367</SI_ExternalDocNo>
+    <SI_YourReference>101308</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Steag 1x3m_Heineken_re-order (273884)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>4</SI_Quantity>
+      <SI_UnitPrice>247.50</SI_UnitPrice>
+      <SI_Amount>990.00</SI_Amount>
+      <SI_AmountInclVAT>1,178.10</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00042977</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000012</SI_DocNo>
+    <SI_BillToName>SC Heineken Romania SA</SI_BillToName>
+    <SI_BillToAddress>Str. Tipografilor nr. 1A</SI_BillToAddress>
+    <SI_BillToAddress2>et. 4-6, Sector 1</SI_BillToAddress2>
+    <SI_BillToCity>București </SI_BillToCity>
+    <SI_BillToPostCode>013714</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO13240781</SI_VATRegNo>
+    <SI_SellToContact>Mihaela Nicola</SI_SellToContact>
+    <SI_BillToContact>Dana-Coca Gherghescu</SI_BillToContact>
+    <SI_SalespersonCode>CAPRAG</SI_SalespersonCode>
+    <SI_PostingDate>26/01/2024</SI_PostingDate>
+    <SI_DocumentDate>26/01/2024</SI_DocumentDate>
+    <SI_DueDate>24/06/2024</SI_DueDate>
+    <SI_ExternalDocNo>6170086235</SI_ExternalDocNo>
+    <SI_YourReference>101589</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>Carti vizita_1400buc_Bucuresti (271210)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1,400</SI_Quantity>
+      <SI_UnitPrice>0.50</SI_UnitPrice>
+      <SI_Amount>700.00</SI_Amount>
+      <SI_AmountInclVAT>833.00</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00042294</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000013</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Alexandra Sarbu</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>26/01/2024</SI_PostingDate>
+    <SI_DocumentDate>26/01/2024</SI_DocumentDate>
+    <SI_DueDate>25/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO14576382</SI_ExternalDocNo>
+    <SI_YourReference>101917</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>PP - Suplim.  Standuri CRF SM - HH 1/4 FLAT, 4  Polite, H160cm - Job 41476 (268492)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>100</SI_Quantity>
+      <SI_UnitPrice>163.00</SI_UnitPrice>
+      <SI_Amount>16,300.00</SI_Amount>
+      <SI_AmountInclVAT>19,397.00</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041476</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>PP - Standuri CRF HM - Dero &amp; Coccolino CRF HM  1/4 FLAT, 3 Polite, H160cm - Job 41476 (268285)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>80</SI_Quantity>
+      <SI_UnitPrice>159.58</SI_UnitPrice>
+      <SI_Amount>12,766.40</SI_Amount>
+      <SI_AmountInclVAT>15,192.01</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041476</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>30000</SI_LineNo>
+      <SI_CustPOLineNo>0002</SI_CustPOLineNo>
+      <SI_Description>PP - Standuri HH  1/4 FLAT, 3 Polite, H130cm  (Cora) - Job 41476  (268291)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>21</SI_Quantity>
+      <SI_UnitPrice>170.97</SI_UnitPrice>
+      <SI_Amount>3,590.37</SI_Amount>
+      <SI_AmountInclVAT>4,272.54</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041476</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>40000</SI_LineNo>
+      <SI_CustPOLineNo>0003</SI_CustPOLineNo>
+      <SI_Description>PP - Standuri CRF HM - HH 1/4 FLAT, 4 Polite,  H160cm - Job 41476 (268292)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>80</SI_Quantity>
+      <SI_UnitPrice>164.14</SI_UnitPrice>
+      <SI_Amount>13,131.20</SI_Amount>
+      <SI_AmountInclVAT>15,626.13</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041476</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>50000</SI_LineNo>
+      <SI_CustPOLineNo>0004</SI_CustPOLineNo>
+      <SI_Description>PP - Standuri Laundry  1/4 FLAT, 3 Polite, H130cm  (Cora) - Job 41476  (268299)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>21</SI_Quantity>
+      <SI_UnitPrice>170.97</SI_UnitPrice>
+      <SI_Amount>3,590.37</SI_Amount>
+      <SI_AmountInclVAT>4,272.54</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00041476</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000014</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Cristina Moraru</SI_SellToContact>
+    <SI_BillToContact>Luiza Ivan</SI_BillToContact>
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>31/01/2024</SI_PostingDate>
+    <SI_DocumentDate>31/01/2024</SI_DocumentDate>
+    <SI_DueDate>30/04/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15124052</SI_ExternalDocNo>
+    <SI_YourReference>100675</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo>0001</SI_CustPOLineNo>
+      <SI_Description>SUPLIMENTARE inaltator pentru cremele de maini -  polita 1  Standuri RTS Dove&amp;Clear in Lidl (262094)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>2</SI_Quantity>
+      <SI_UnitPrice>5.70</SI_UnitPrice>
+      <SI_Amount>11.40</SI_Amount>
+      <SI_AmountInclVAT>13.57</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>20000</SI_LineNo>
+      <SI_CustPOLineNo>0002</SI_CustPOLineNo>
+      <SI_Description>SUPLIMENTARE Minipaleti de lemn pentru standuri  RTS Dove&amp;Clear in Lidl (262096)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>2</SI_Quantity>
+      <SI_UnitPrice>28.50</SI_UnitPrice>
+      <SI_Amount>57.00</SI_Amount>
+      <SI_AmountInclVAT>67.83</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>30000</SI_LineNo>
+      <SI_CustPOLineNo>0003</SI_CustPOLineNo>
+      <SI_Description>SUPLIMENTARE Pereti Verticali Standuri RTS  Dove&amp;Clear in Lidl (262097)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>2</SI_Quantity>
+      <SI_UnitPrice>5.70</SI_UnitPrice>
+      <SI_Amount>11.40</SI_Amount>
+      <SI_AmountInclVAT>13.56</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Services</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>40000</SI_LineNo>
+      <SI_CustPOLineNo>0004</SI_CustPOLineNo>
+      <SI_Description>MOCK UP BLANK +LIVRARE Standuri RTS Dove&amp;Clear, 4  polite, 40cm x30 cm x H160cm (262105)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>854.85</SI_UnitPrice>
+      <SI_Amount>854.85</SI_Amount>
+      <SI_AmountInclVAT>1,017.28</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+    <SalesInvoiceLine>
+      <SI_LineNo>50000</SI_LineNo>
+      <SI_CustPOLineNo>0005</SI_CustPOLineNo>
+      <SI_Description>SUPLIMENTARE Standuri RTS Dove&amp;Clear, 4 polite,  40cm x30 cm x H160cm (262104)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>2</SI_Quantity>
+      <SI_UnitPrice>145.90</SI_UnitPrice>
+      <SI_Amount>291.80</SI_Amount>
+      <SI_AmountInclVAT>347.24</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo>00040003</SI_ProjectNo>
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000031</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Oana Chita/ Dora Dumitrescu</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>01/02/2024</SI_PostingDate>
+    <SI_DocumentDate>01/02/2024</SI_DocumentDate>
+    <SI_DueDate>01/05/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15112074</SI_ExternalDocNo>
+    <SI_YourReference>PO15112074</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>PP POSM's Dove SG – Carrefour SM JOB 40316</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>75,000.00</SI_UnitPrice>
+      <SI_Amount>75,000.00</SI_Amount>
+      <SI_AmountInclVAT>89,250.00</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo />
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000032</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Oana Chita/ Dora Dumitrescu</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>01/02/2024</SI_PostingDate>
+    <SI_DocumentDate>01/02/2024</SI_DocumentDate>
+    <SI_DueDate>01/05/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15112026</SI_ExternalDocNo>
+    <SI_YourReference>PO15112026</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>PP POSM's Dove deo – Carrefour HM (00040312)</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>75,000.00</SI_UnitPrice>
+      <SI_Amount>75,000.00</SI_Amount>
+      <SI_AmountInclVAT>89,250.00</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo />
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+  <SalesInvoiceHeader>
+    <SI_DocType>Sales Invoice</SI_DocType>
+    <SI_DocNo>SINRO24-000033</SI_DocNo>
+    <SI_BillToName>SC Unilever South Central Europe SA Prepayment</SI_BillToName>
+    <SI_BillToAddress>B-dul Republicii, nr 291</SI_BillToAddress>
+    <SI_BillToAddress2>100072 Jud. Prahova</SI_BillToAddress2>
+    <SI_BillToCity>Bucharest</SI_BillToCity>
+    <SI_BillToPostCode>10072</SI_BillToPostCode>
+    <SI_BillToState />
+    <SI_BillToCountryCode>RO</SI_BillToCountryCode>
+    <SI_VATRegNo>RO8226390</SI_VATRegNo>
+    <SI_SellToContact>Oana Chita/ Dora Dumitrescu</SI_SellToContact>
+    <SI_BillToContact />
+    <SI_SalespersonCode>ENUTAM</SI_SalespersonCode>
+    <SI_PostingDate>01/02/2024</SI_PostingDate>
+    <SI_DocumentDate>01/02/2024</SI_DocumentDate>
+    <SI_DueDate>01/05/2024</SI_DueDate>
+    <SI_ExternalDocNo>PO15112094</SI_ExternalDocNo>
+    <SI_YourReference>PO15112094</SI_YourReference>
+    <SI_CurrencyCode>RON</SI_CurrencyCode>
+    <SalesInvoiceLine>
+      <SI_LineNo>10000</SI_LineNo>
+      <SI_CustPOLineNo />
+      <SI_Description>PP POSM'sDove deo – Auchan - JOB 40315</SI_Description>
+      <SI_UOM>UNIT</SI_UOM>
+      <SI_Quantity>1</SI_Quantity>
+      <SI_UnitPrice>75,000.00</SI_UnitPrice>
+      <SI_Amount>75,000.00</SI_Amount>
+      <SI_AmountInclVAT>89,250.00</SI_AmountInclVAT>
+      <SI_VATIdentifier>RO-STDVAT-19</SI_VATIdentifier>
+      <SI_VATPerc>19</SI_VATPerc>
+      <SI_VATClause />
+      <SI_ProjectNo />
+      <SI_TypeOfSupply>Goods</SI_TypeOfSupply>
+      <SI_ShipFrom>RO</SI_ShipFrom>
+      <SI_ShipTo>RO</SI_ShipTo>
+      <SI_ReferencedDoc />
+      <SI_Comments />
+      <SI_BankName>Citibank Europe plc - sucursala Romania</SI_BankName>
+      <SI_BankAddress>Victoria Center, Calea Victoriei 145, Bucaresti, 010072, RO</SI_BankAddress>
+      <SI_BankSortCode>CITI0000</SI_BankSortCode>
+      <SI_BankAccNo>RO89CITI0000000755078018</SI_BankAccNo>
+      <SI_BankIBAN>RO89CITI0000000755078018</SI_BankIBAN>
+      <SI_BankSwiftCode>CITIROBU</SI_BankSwiftCode>
+      <SI_RemittanceDetails>Please forward your remittance to: finance.clients@indicia.konicaminolta.com</SI_RemittanceDetails>
+    </SalesInvoiceLine>
+  </SalesInvoiceHeader>
+
+</ROEInvoice>

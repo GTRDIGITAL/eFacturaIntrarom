@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eFactura - Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background: url('static/factura.png') no-repeat center center fixed;
+            background-size: cover;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #header {
+            background-color: #4f2d7f;
+            color: white;
+            padding: 0px;
+            font-size: 24px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding-top: 20px;
+            margin-top: 20px;
+            padding-left:200px ;
+        }
+
+        .button2-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        .button {
+            background-color: #4F2D7F;
+            color: #fff;
+            padding: 20px 40px;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+            margin-right: 20px; /* Added margin to separate buttons */
+        }
+
+        .button:hover {
+            background-color: #2b144d;
+            transform: scale(1.05);
+        }
+
+        .button2 {
+            background-color: #4F2D7F;
+            color: #fff;
+            padding: 20px 50px;
+            width: 285px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+            margin-right: 20px; /* Added margin to separate buttons */
+        }
+
+        .button2:hover {
+            background-color: #2b144d;
+            transform: scale(1.05);
+        }
+
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 0px;
+        }
+        .logout-button {
+            /* Stilurile pentru butonul de logout */
+            background-color: #4F2D7F;
+            color: #fff;
+            padding: 6px 10px; /* Ajustarea padding-ului pentru a face butonul mai mic */
+            width: 85%;
+            height: auto; /* Ajustarea înălțimii în funcție de conținut */
+            font-size: 10px; /* Reducerea dimensiunii fontului */
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            margin-right: 0px;
+            display: none;
+        }
+
+        .logout-button:hover {
+            background-color: #2b144d;
+            transform: scale(1.05);
+        }
+
+        .dropdown-toggle{
+            width: 150%;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown-toggle").click(function () {
+                $(".logout-button").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+        <div id="header">
+            <div class="header-info">
+                <p>eInvoice Demo</p>
+                <li style="list-style-type: none; display: flex;" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" style="color:white;">User: {{ email }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="padding: 0; margin: 0;">
+                        <li style="padding: 0; margin: 0;">
+                            <form action="/logout" style="padding: 0; margin: 0;">
+                                <button type="submit" class="logout-button fas fa-sign-out-alt" style="padding: 0; margin: 0;"> Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+            </div>
+    </div>
+<p>
+    
+
+
+</p>
+<p>
+    
+
+    
+</p>
+<p>
+    
+
+    
+</p>
+<p>
+    
+
+    
+</p>
+
+    <div class="button-container">
+        <form action="/raport_client" method="GET">
+            <button type="submit" class="button" id="rightButton">Invoice submission</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <form action="/statusFacturi" method="GET">
+            <button type="submit" class="button" id="leftButton">SPV submission status</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <form action="/statusFacturiPrimite" method="GET">
+            <button type="submit" class="button" id="leftButton">Vendor invoices</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <form action="/status" method="POST">
+            <button type="submit" class="button" id="leftButton">Data loading report</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <form action="/clients" method="GET">
+            <button type="submit" class="button" id="leftButton">Clients</button>
+        </form>
+    </div>
+</body>
+</html>

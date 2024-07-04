@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+	<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+	<cbc:ProfileID>1</cbc:ProfileID>
+	<cbc:ID>EVOMAG 2095813</cbc:ID>
+	<!--BT-1-->
+	<cbc:IssueDate>2024-06-05</cbc:IssueDate>
+	<!--BT-2-->
+	<cbc:DueDate>2024-06-12</cbc:DueDate>
+	<!--BT-9-->
+	<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+	<!--BT-3-->
+	<cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+	<!--BT-5-->
+	<cbc:TaxCurrencyCode>RON</cbc:TaxCurrencyCode>
+	<!--BT-6-->
+	<cac:InvoicePeriod>
+		<cbc:StartDate>2024-06-05</cbc:StartDate>
+		<!--BT-73-->
+		<cbc:EndDate>2024-06-05</cbc:EndDate>
+		<!--BT-74-->
+		<cbc:DescriptionCode>3</cbc:DescriptionCode>
+	</cac:InvoicePeriod>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="EM">contabilitate@evomag.ro</cbc:EndpointID>
+			<!--BT-34-1 BT-34-->
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="0206">J40/8413/2005</cbc:ID>
+				<!--BT-29-1 BT-29-->
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>EVOLUTION PREST SYSTEMS SRL</cbc:Name>
+				<!--BT-28-->
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName> 1 Decembrie 1918 Nr.20 Bl.2 Sc.1 Et.7 Ap.31 Sect.3</cbc:StreetName>
+				<!--BT-35-->
+				<cbc:CityName>SECTOR3</cbc:CityName>
+				<!--BT-37-->
+				<cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+				<!--BT-39-->
+				<cac:Country>
+					<cbc:IdentificationCode>RO</cbc:IdentificationCode>
+					<!--BT-40-->
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>RO17563840</cbc:CompanyID>
+				<!--BT-31-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>EVOLUTION PREST SYSTEMS SRL</cbc:RegistrationName>
+				<!--BT-27-->
+				<cbc:CompanyID schemeID="0210">RO17563840</cbc:CompanyID>
+				<!--BT-30-1 BT-30-->
+				<cbc:CompanyLegalForm>J40/8413/2005 #CS:56.000</cbc:CompanyLegalForm>
+				<!--BT-33-->
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Name>PAOLAZZO CARMEN</cbc:Name>
+				<!--BT-41-->
+				<cbc:Telephone>0721509995</cbc:Telephone>
+				<!--BT-42-->
+				<cbc:ElectronicMail>Contabilitate@evomag.ro</cbc:ElectronicMail>
+				<!--BT-43-->
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="0206">J40/25071/1993</cbc:ID>
+				<!--BT-46-1 BT-46-->
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>INTRAROM SA</cbc:Name>
+				<!--BT-45-->
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>-</cbc:StreetName>
+				<!--BT-50-->
+				<cbc:CityName>SECTOR2</cbc:CityName>
+				<!--BT-52-->
+				<cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+				<!--BT-54-->
+				<cac:Country>
+					<cbc:IdentificationCode>RO</cbc:IdentificationCode>
+					<!--BT-55-->
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>RO4879159</cbc:CompanyID>
+				<!--BT-48-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>INTRAROM SA</cbc:RegistrationName>
+				<!--BT-44-->
+				<cbc:CompanyID schemeID="0210">RO4879159</cbc:CompanyID>
+				<!--BT-47-1 BT-47-->
+			</cac:PartyLegalEntity>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2024-06-05</cbc:ActualDeliveryDate>
+		<!--BT-72-->
+		<cac:DeliveryLocation>
+			<cbc:ID schemeID="0088">179150</cbc:ID>
+			<!--BT-71-1 BT-71-->
+			<cac:Address>
+				<cbc:StreetName>-</cbc:StreetName>
+				<!--BT-75-->
+				<cbc:CityName>SECTOR2</cbc:CityName>
+				<!--BT-77-->
+				<cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+				<!--BT-79-->
+				<cac:Country>
+					<cbc:IdentificationCode>RO</cbc:IdentificationCode>
+					<!--BT-80-->
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+		<cac:DeliveryParty>
+			<cac:PartyName>
+				<cbc:Name>INTRAROM SA</cbc:Name>
+				<!--BT-70-->
+			</cac:PartyName>
+		</cac:DeliveryParty>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode name="Cash">10</cbc:PaymentMeansCode>
+		<!--BT-81-1 BT-81-->
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>RO14RZBR0000060012818885</cbc:ID>
+			<!--BT-84-->
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>100% 12.06.2024;</cbc:Note>
+		<!--BT-20-->
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="RON">293.14</cbc:TaxAmount>
+		<!--BT-110-1 BT-110-->
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="RON">1542.81</cbc:TaxableAmount>
+			<!--BT-116-1 BT-116-->
+			<cbc:TaxAmount currencyID="RON">293.14</cbc:TaxAmount>
+			<!--BT-117-1 BT-117-->
+			<cac:TaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<!--BT-118-->
+				<cbc:Percent>19</cbc:Percent>
+				<!--BT-119-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="RON">1542.81</cbc:LineExtensionAmount>
+		<!--BT-106-1 BT-106-->
+		<cbc:TaxExclusiveAmount currencyID="RON">1542.81</cbc:TaxExclusiveAmount>
+		<!--BT-109-1 BT-109-->
+		<cbc:TaxInclusiveAmount currencyID="RON">1835.95</cbc:TaxInclusiveAmount>
+		<!--BT-112-1 BT-112-->
+		<cbc:AllowanceTotalAmount currencyID="RON">0</cbc:AllowanceTotalAmount>
+		<!--BT-107-1 BT-107-->
+		<cbc:ChargeTotalAmount currencyID="RON">0</cbc:ChargeTotalAmount>
+		<!--BT-108-1 BT-108-->
+		<cbc:PrepaidAmount currencyID="RON">0</cbc:PrepaidAmount>
+		<!--BT-113-1 BT-113-->
+		<cbc:PayableRoundingAmount currencyID="RON">0</cbc:PayableRoundingAmount>
+		<!--BT-114-1 BT-114-->
+		<cbc:PayableAmount currencyID="RON">1835.95</cbc:PayableAmount>
+		<!--BT-115-1 BT-115-->
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<!--BT-126-->
+		<cbc:InvoicedQuantity unitCode="H87">1</cbc:InvoicedQuantity>
+		<!--BT-130 BT-129-->
+		<cbc:LineExtensionAmount currencyID="RON">3.35</cbc:LineExtensionAmount>
+		<!--BT-131-1 BT-131-->
+		<cac:InvoicePeriod>
+			<cbc:StartDate>2024-06-05</cbc:StartDate>
+			<!--BT-134-->
+			<cbc:EndDate>2024-06-05</cbc:EndDate>
+			<!--BT-135-->
+		</cac:InvoicePeriod>
+		<cac:Item>
+			<cbc:Name>DESCHIDERE COLET LA LIVRARE</cbc:Name>
+			<!--BT-153-->
+			<cac:OriginCountry></cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<!--BT-151-->
+				<cbc:Percent>19</cbc:Percent>
+				<!--BT-152-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="RON">3.35</cbc:PriceAmount>
+			<!--BT-146-1 BT-146-->
+			<cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+			<!--BT-150 BT-149-->
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<!--BT-126-->
+		<cbc:InvoicedQuantity unitCode="H87">2</cbc:InvoicedQuantity>
+		<!--BT-130 BT-129-->
+		<cbc:LineExtensionAmount currencyID="RON">36.96</cbc:LineExtensionAmount>
+		<!--BT-131-1 BT-131-->
+		<cac:InvoicePeriod>
+			<cbc:StartDate>2024-06-05</cbc:StartDate>
+			<!--BT-134-->
+			<cbc:EndDate>2024-06-05</cbc:EndDate>
+			<!--BT-135-->
+		</cac:InvoicePeriod>
+		<cac:Item>
+			<cbc:Name>CABLU GEMBRID DISPLAYPORT - HDMI, 1.8M</cbc:Name>
+			<!--BT-153-->
+			<cac:OriginCountry></cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<!--BT-151-->
+				<cbc:Percent>19</cbc:Percent>
+				<!--BT-152-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="RON">18.48</cbc:PriceAmount>
+			<!--BT-146-1 BT-146-->
+			<cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+			<!--BT-150 BT-149-->
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>3</cbc:ID>
+		<!--BT-126-->
+		<cbc:InvoicedQuantity unitCode="H87">2</cbc:InvoicedQuantity>
+		<!--BT-130 BT-129-->
+		<cbc:LineExtensionAmount currencyID="RON">157.98</cbc:LineExtensionAmount>
+		<!--BT-131-1 BT-131-->
+		<cac:InvoicePeriod>
+			<cbc:StartDate>2024-06-05</cbc:StartDate>
+			<!--BT-134-->
+			<cbc:EndDate>2024-06-05</cbc:EndDate>
+			<!--BT-135-->
+		</cac:InvoicePeriod>
+		<cac:Item>
+			<cbc:Name>+ 2 ANI</cbc:Name>
+			<!--BT-153-->
+			<cac:OriginCountry></cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<!--BT-151-->
+				<cbc:Percent>19</cbc:Percent>
+				<!--BT-152-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="RON">78.99</cbc:PriceAmount>
+			<!--BT-146-1 BT-146-->
+			<cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+			<!--BT-150 BT-149-->
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>4</cbc:ID>
+		<!--BT-126-->
+		<cbc:InvoicedQuantity unitCode="H87">2</cbc:InvoicedQuantity>
+		<!--BT-130 BT-129-->
+		<cbc:LineExtensionAmount currencyID="RON">1344.52</cbc:LineExtensionAmount>
+		<!--BT-131-1 BT-131-->
+		<cac:InvoicePeriod>
+			<cbc:StartDate>2024-06-05</cbc:StartDate>
+			<!--BT-134-->
+			<cbc:EndDate>2024-06-05</cbc:EndDate>
+			<!--BT-135-->
+		</cac:InvoicePeriod>
+		<cac:Item>
+			<cbc:Name>MONITOR IPS LED DELL 27&quot; S2721HS, FULL HD (1920 X 1080), HDMI, DISPLAYPORT, PIVOT, 75 HZ (NEGRU/ARGI</cbc:Name>
+			<!--BT-153-->
+			<cac:OriginCountry></cac:OriginCountry>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<!--BT-151-->
+				<cbc:Percent>19</cbc:Percent>
+				<!--BT-152-->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="RON">672.26</cbc:PriceAmount>
+			<!--BT-146-1 BT-146-->
+			<cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+			<!--BT-150 BT-149-->
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

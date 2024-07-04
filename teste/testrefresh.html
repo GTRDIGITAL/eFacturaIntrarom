@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplu Buton</title>
+</head>
+<body>
+
+<!-- Adaugă butonul de reîmprospătare generat de data-show-refresh -->
+<button id="refreshButton" class="btn btn-default" title="Refresh">
+    <i class="glyphicon glyphicon-refresh"></i>
+</button>
+
+<!-- Tabelul existent -->
+<table id="table1" class="table table-bordered" style="background-color: white; color:#2B144D; text-align: center;"
+       data-toggle="table"
+       data-search="true"
+       data-searchable="true"
+       data-filter-control="true"
+       data-show-export="true"
+       data-export-data-type="all"
+       data-click-to-select="true"
+       data-pagination="true"
+       data-show-columns="true"
+       data-show-search-clear-button="true"
+       data-show-refresh="true"></table>
+
+<!-- Include jQuery și Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Adaugă scriptul pentru gestionarea evenimentului de click -->
+<script>
+    $(document).ready(function() {
+        // Ascultă evenimentul de click al butonului de reîmprospătare
+        $('#refreshButton').on('click', function() {
+            // Face o cerere AJAX către serverul Python
+            $.ajax({
+                url: "/calea/catre/functia_python",  // Specifică calea către funcția Python
+                type: "POST",  // Poate fi și GET în funcție de nevoi
+                success: function(response) {
+                    console.log("Funcția Python a fost rulată cu succes!");
+                    // Poți adăuga orice logică adițională aici pentru a gestiona răspunsul
+                },
+                error: function(error) {
+                    console.error("Eroare în timpul rulării funcției Python: ", error);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

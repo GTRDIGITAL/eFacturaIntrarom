@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport Client</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background: url('static/factura.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: 000;
+            color: #fff;
+            width: 10%;
+            min-height: 70vh;
+            padding: 20px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar2 {
+            background-color: darkred;
+            color: #fff;
+            width: 20%;
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 180px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 90vh;
+            justify-content: flex-end;
+            width: 80%;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            width: 50%;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+            border: 1px solid #000;
+
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #000;
+            font-size: 38px;
+            margin-bottom: 10px;
+            margin-top: 100px;
+            -webkit-text-stroke: 0.5px #fff;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .sidebar-box {
+            margin-bottom: 20px;
+            background-color: #000; /* Schimbați culoarea fundalului */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinează textul la stânga */
+        }
+
+        .sidebar-box h2 {
+            color: #fff; /* Schimbați culoarea textului titlului */
+
+        }
+
+        .sidebar-box p {
+            color: #ccc; /* Schimbați culoarea textului conținutului */
+        }
+        .login-form button {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff; /* Schimbați culoarea textului butonului */
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+        }
+
+        .denis{
+            background-color: #000; /* Schimbați culoarea de fundal a butonului */
+            color: #fff; /* Schimbați culoarea textului butonului */
+            padding-top: 200px;
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+        }
+        /* Stilizări pentru butonul de autentificare la trecerea peste el */
+        .login-form button:hover {
+            background-color: #000; /* Schimbați culoarea de fundal la trecerea peste buton */
+        }
+        .navbar-top {
+    /*background-color: #6b4d47;*/
+    background-image: linear-gradient(85deg, #4f2d7f 40%, #4f2d7f 100%);
+    /*border-radius: 10px;*/
+    font-family: "Times New Roman", Times, serif;
+    /*color: : white;*/
+  }
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+
+
+.nav .navbar-nav > li > a:hover, .nav .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+.navbar-top {
+            position: fixed; 
+            width: 100%; 
+            z-index: 1000; 
+        }
+
+        .container {
+          
+            padding-top: 170px;
+        }
+
+        .nav-link.font-roboto {
+            font-family: Roboto, sans-serif;
+          }
+    </style>
+</head>
+<body>
+    <div>
+    <nav class="navbar navbar-inverse navbar-top"  >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+            <a class="navbar-brand" style="color:white; font: caption;" >E-Factura</a>
+          </div>
+          <ul class="nav navbar-nav">
+      
+            <li class="nav-item" style="float:left;">
+                <a class="nav-link font-roboto" style="float:right;color:white;" href="/main">Home</a>
+              </li>
+              
+            <li class="nav-item" style="float:right;">
+              <a class="nav-link font-roboto" style="float:right;color:white;" href="/raport_client">Modul transmitere facturi</a>
+            </li>
+            <li class="nav-item" style="float:right;color:white;">
+              <a class="nav-link font-roboto" style="float:right;color:white;" href="/statusFacturi">Status transmitere SPV</a>
+            </li>
+            
+          </ul>
+      
+        </div>
+      </nav>
+    </div>
+    <div class="sidebar">
+
+  
+<!--         <div >
+            <h2>Status</h2>
+        </div> -->
+        <div >
+            <!-- <h2>User: {{ username }}</h2> -->
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+        </div>
+        <div >
+            
+            <h2> </h2>
+            
+        </div>
+        <!-- <button class="denis" id="downloadExcelButton">Descarcă Excel</button> -->
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Total Facturi Încărcate</h2>
+            <p id="totalFacturi">0</p>
+        </div>
+        <div class="box">
+            <h2>Numarul ultimei facturi incărcate</h2>
+            <p id="nrUltimeiFacturi">N/A</p>
+        </div>
+        <div class="box">
+            <h2>Data ultimei încărcări</h2>
+            <p id="dataUltimeiIncarcari">N/A</p>
+        </div>
+        <form id="login-form" class="login-form" action="/main" method="POST">
+            <button style="background-color: #4f2d7f;" type="submit">Pagina principală</button>
+        </form>
+        
+         
+    </div>
+
+    <script>
+        // Simulăm datele facturilor încărcate
+        var totalFacturi = {{ totalFactura }}; // Schimbați cu totalul real al facturilor încărcate
+        var nrUltimeiFacturi = {{ ultimaFactura }}; // Schimbați cu numărul real al ultimei facturi
+        var dataUltimeiIncarcari = new Date(); // Schimbați cu data reală a ultimei încărcări
+        const date = new Date();
+        
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        // This arrangement can be altered based on how we want the date's format to appear.
+        let currentDate = `${day}-${month}-${year}`;
+            // console.log(currentDate); // "17-6-2022"
+
+        sessionStorage.setItem('totalFacturi', totalFacturi);
+        sessionStorage.setItem('nrUltimeiFacturi', nrUltimeiFacturi);
+        
+        document.getElementById("totalFacturi").textContent = totalFacturi;
+        document.getElementById("nrUltimeiFacturi").textContent = nrUltimeiFacturi;
+            
+        document.getElementById("dataUltimeiIncarcari").textContent = currentDate;
+        document.getElementById("downloadExcelButton").addEventListener("click", function() {
+            // Specifică calea către fișierul Excel existent
+            var excelFilePath = "denis.xlsx"; // Actualizează cu numele fișierului tău
+
+            // Creează un element de ancoră pentru descărcare
+            var a = document.createElement("a");
+            a.href = excelFilePath;
+
+            // Specifică numele fișierului pentru descărcare (opțional)
+            a.download = "Status ultima comanda.xlsx"; // Poți lăsa gol pentru a păstra numele original
+
+            // Simulează un clic pe link-ul de descărcare
+            a.click();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina 2</title>
+</head>
+<body>
+    <script>
+        // Recuperăm valoarea stocată în localStorage
+        var valoareRecuperata = localStorage.getItem('valoareSalvata');
+
+        // Afișăm valoarea în consolă sau în DOM
+        console.log("Valoarea recuperată este: ", valoareRecuperata);
+        // Sau pentru a o afișa în corpul paginii
+        document.body.innerHTML = "<h1>" + valoareRecuperata + "</h1>";
+    </script>
+</body>
+</html>

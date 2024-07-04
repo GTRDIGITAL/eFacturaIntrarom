@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+                <CreditNote
+xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+
+            <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+                <cbc:ID>SCRRO24-000031</cbc:ID>
+                <cbc:IssueDate>2024-03-28</cbc:IssueDate>
+                
+                <cbc:CreditNoteTypeCode>381</cbc:CreditNoteTypeCode>
+                <cbc:Note>Sell-to-Contact:Petru Arhirii- Alexandra Sarbu</cbc:Note>
+                <cbc:Note>Your Ref. No:PO14576382</cbc:Note>
+                <cbc:Note>Please forward your remittance to: remittances@indicia.konicaminolta.com</cbc:Note>
+                <cbc:Note>Project No.: </cbc:Note>
+                    
+                <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+                <cac:OrderReference>
+                    <cbc:ID>Referenced Doc SINRO24-000059</cbc:ID>
+                </cac:OrderReference>
+                
+                <cac:AccountingSupplierParty>
+                    <cac:Party>
+                        <cac:PostalAddress>
+                            <cbc:StreetName>Str. C.A Rosetti 17, Etj 1, Birou 105, Campus 02</cbc:StreetName>
+                            <cbc:CityName>SECTOR2</cbc:CityName>
+                            <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+                            <cac:Country>
+                                <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyTaxScheme>
+                            <cbc:CompanyID>RO30770893</cbc:CompanyID>
+                            <cac:TaxScheme>
+                                <cbc:ID>VAT</cbc:ID>
+                            </cac:TaxScheme>
+                        </cac:PartyTaxScheme>
+                        <cac:PartyLegalEntity>
+                            <cbc:RegistrationName>Konica Minolta Marketing Services Limited (RO)</cbc:RegistrationName>
+                            <cbc:CompanyID>RO30770893</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                                <cbc:Name>Mihaela Enuta</cbc:Name>
+                                <cbc:ElectronicMail>finance.clients@indicia.konicaminolta.com</cbc:ElectronicMail>
+                            </cac:Contact>
+                    </cac:Party>
+                </cac:AccountingSupplierParty>
+                
+                    <cac:AccountingCustomerParty>
+                        <cac:Party>
+                            <cac:PostalAddress>
+                                <cbc:StreetName>B-dul Republicii, nr 291 100072 Jud. Prahova</cbc:StreetName>
+                                <cbc:CityName>Mun. Ploiesti</cbc:CityName> 
+                                <cbc:CountrySubentity>RO-PH</cbc:CountrySubentity>
+                                <cac:Country>
+                                    <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                                </cac:Country>
+                            </cac:PostalAddress>
+                            <cac:PartyTaxScheme>
+                                <cbc:CompanyID>RO8226390</cbc:CompanyID>
+                                <cac:TaxScheme>
+                                    <cbc:ID>VAT</cbc:ID>
+                                </cac:TaxScheme>
+                            </cac:PartyTaxScheme>
+                            <cac:PartyLegalEntity>
+                                <cbc:RegistrationName>UNILEVER SOUTH CENTRAL EUROPE SA</cbc:RegistrationName>
+                                <cbc:CompanyID>RO8226390</cbc:CompanyID>
+                            </cac:PartyLegalEntity>
+                            <cac:Contact>
+                                    <cbc:Name>nan</cbc:Name>
+                            </cac:Contact>
+                        </cac:Party>
+                    </cac:AccountingCustomerParty>
+                <cac:PaymentMeans>
+                    <cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>
+                    <cac:PayeeFinancialAccount>
+                            <cbc:ID>RO89CITI0000000755078018</cbc:ID>
+                            <cbc:Name>Citibank Europe plc - sucursala Romania</cbc:Name>
+                            <cac:FinancialInstitutionBranch>
+                                <cbc:ID>CITIROBU</cbc:ID>
+                            </cac:FinancialInstitutionBranch>
+                        </cac:PayeeFinancialAccount>
+                </cac:PaymentMeans>
+                        <cac:TaxTotal>
+                            <cbc:TaxAmount currencyID="RON">500.71</cbc:TaxAmount>
+                            <cac:TaxSubtotal>
+                                <cbc:TaxableAmount currencyID="RON">2635.34</cbc:TaxableAmount>
+                                <cbc:TaxAmount currencyID="RON">500.71</cbc:TaxAmount>
+                                <cac:TaxCategory>
+                                    
+                                    <cbc:ID>S</cbc:ID>
+                                    <cbc:Percent>19.0</cbc:Percent>
+                                    <cac:TaxScheme>
+                                        <cbc:ID>VAT</cbc:ID>
+                                    </cac:TaxScheme>
+                                </cac:TaxCategory>
+                            </cac:TaxSubtotal>
+                        </cac:TaxTotal>
+
+                <cac:LegalMonetaryTotal>
+                    <cbc:LineExtensionAmount currencyID="RON">2635.34</cbc:LineExtensionAmount>
+                    <cbc:TaxExclusiveAmount currencyID="RON">2635.34</cbc:TaxExclusiveAmount>
+                    <cbc:TaxInclusiveAmount currencyID="RON">3136.05</cbc:TaxInclusiveAmount>
+                    <cbc:AllowanceTotalAmount currencyID="RON">0.00</cbc:AllowanceTotalAmount>
+                    <cbc:ChargeTotalAmount currencyID="RON">0.00</cbc:ChargeTotalAmount>
+                    <cbc:PrepaidAmount currencyID="RON">0.00</cbc:PrepaidAmount>
+                    <cbc:PayableRoundingAmount currencyID="RON">0.00</cbc:PayableRoundingAmount>
+                    <cbc:PayableAmount currencyID="RON">3136.05</cbc:PayableAmount>
+                </cac:LegalMonetaryTotal><cac:CreditNoteLine>
+                            <cbc:ID>1</cbc:ID>
+                            <cbc:CreditedQuantity unitCode="H87">337.0</cbc:CreditedQuantity>
+                            <cbc:LineExtensionAmount currencyID="RON">2635.34</cbc:LineExtensionAmount>
+                            <cac:Item>
+                                <cbc:Name>Mansoane  Standuri RTS HC4 polite_60x40x160 cm_ </cbc:Name>
+                                <cac:ClassifiedTaxCategory>
+                                    <cbc:ID>S</cbc:ID>
+                                    <cbc:Percent>19.0</cbc:Percent>
+                                    <cac:TaxScheme>
+                                        <cbc:ID>VAT</cbc:ID>
+                                    </cac:TaxScheme>
+                                </cac:ClassifiedTaxCategory>
+                            </cac:Item>
+                            <cac:Price>
+                                <cbc:PriceAmount currencyID="RON">7.82</cbc:PriceAmount>
+                            </cac:Price>
+                        </cac:CreditNoteLine>
+</CreditNote>

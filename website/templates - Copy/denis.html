@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport Client</title>
+    <style>
+        /* Stilurile CSS existente */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>E-factura: {{ username }}</p>
+    </div>
+    
+    <div id="container">
+        <h1>Raport Client</h1>
+        <button id="loadButton">Afișează Excel</button>
+        <br /><br />
+        <div id="tableContainer">
+            <table id="excelTable">
+                <!-- Tabelul pentru datele din Excel va fi afișat aici -->
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+    <script>
+        document.getElementById('loadButton').addEventListener('click', function() {
+            const filePath = '/RO_SAFT_SchemaDefCod_20230731.xlsx';
+
+            fetch(filePath)
+                .then(response => response.blob())
+                .then(blob => {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const data = e.target.result;
+                        const workbook = XLSX.read(data, { type: 'binary' });
+                        const sheetName = workbook.SheetNames[0];
+                        const worksheet = workbook.Sheets[sheetName];
+
+                        const table = XLSX.utils.sheet_to_html(worksheet, { header: 1 });
+                        document.getElementById('excelTable').innerHTML = table;
+                    };
+
+                    reader.readAsBinaryString(blob);
+                })
+                .catch(error => {
+                    console.error('Eroare la încărcarea fișierului Excel:', error);
+                });
+        });
+    </script>
+</body>
+</html>

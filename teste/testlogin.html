@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentificare</title>
+    <style>
+        /* Stilurile tale */
+        /* ... */
+        /* Ascunde câmpul și butonul inițial */
+        #verification-elements {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="login-form" class="login-form">
+            <h1>Autentificare</h1>
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="password-toggle">
+                    <input type="checkbox" id="showPasswordCheckbox" onclick="togglePassword()">
+                    <label for="showPasswordCheckbox"></label>
+                </div>
+            </div>
+            <button type="button" onclick="showVerificationElements()">Authenticator</button>
+            <!-- Elementele care trebuie să apară -->
+            <div id="verification-elements">
+                <div class="input-container">
+                    <label for="verification-code">Introduceți codul primit pe mail</label>
+                    <input type="text" id="verification-code" name="verification-code" required>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            // Implementarea ta
+        }
+
+        function showVerificationElements() {
+            // Afișează elementele când se apasă butonul
+            document.getElementById("verification-elements").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

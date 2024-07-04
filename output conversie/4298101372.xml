@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<Invoice xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:fgo="https://www.fgo.ro/xmlns" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+  <cbc:ID>AVEMKP241000877</cbc:ID>
+  <cbc:IssueDate>2024-06-05</cbc:IssueDate>
+  <cbc:DueDate>2024-06-15</cbc:DueDate>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+  <cbc:Note>Curs BNR: 1 EUR = 4.9752 RON</cbc:Note>
+  <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID>16425725</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>AVANSOFT S.R.L.</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>STR. TUDOR ARGHEZI, NR. 15</cbc:StreetName>
+        <cbc:AdditionalStreetName>-</cbc:AdditionalStreetName>
+        <cbc:CityName>Tunari</cbc:CityName>
+        <cbc:CountrySubentity>RO-IF</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO16425725</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>AVANSOFT S.R.L.</cbc:RegistrationName>
+        <cbc:CompanyID>J23/8026/2023</cbc:CompanyID>
+        <cbc:CompanyLegalForm>Capital social: 10000</cbc:CompanyLegalForm>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID>4879159</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>INTRAROM SA</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>SOS. FABRICA DE GLUCOZA, NR. 17</cbc:StreetName>
+        <cbc:AdditionalStreetName>-</cbc:AdditionalStreetName>
+        <cbc:CityName>SECTOR2</cbc:CityName>
+        <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO4879159</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>INTRAROM SA</cbc:RegistrationName>
+        <cbc:CompanyID>J40/25071/1993</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO44RZBR0000060004716032</cbc:ID>
+      <cbc:Name>RAIFFEISENBANK ROMANIA.</cbc:Name>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO91TREZ4215069XXX019996</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO94BTRLRONCRT0677153801</cbc:ID>
+      <cbc:Name>BANCA TRANSILVANIA</cbc:Name>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="RON">8189.73</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="RON">43103.89</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="RON">8189.73</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>19.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="RON">43103.89</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="RON">43103.89</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="RON">51293.62</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="RON">51293.62</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="E48">1.000</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">28333.76</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>01.05 - 31.05.2024</cbc:Description>
+      <cbc:Name>SERVICII MANAGEMENT PROIECT IT</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>00000009</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>19.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">28333.76</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="E48">1.000</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="E48">1.000</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">14770.13</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>01.05 - 31.05.2024</cbc:Description>
+      <cbc:Name>SERVICII IT</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>00000008</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>19.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">14770.13</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="E48">1.000</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

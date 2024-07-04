@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+  <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+  <cbc:ID>FV184623</cbc:ID>
+  <cbc:IssueDate>2024-06-11</cbc:IssueDate>
+  <cbc:DueDate>2024-07-11</cbc:DueDate>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+  <cbc:Note>Sobaru Elena
+t:   +40 212040845
+f:   +40 212040688
+m: +40 720072360
+elenas@intrarom.ro
+
+
+
+</cbc:Note>
+  <cbc:TaxPointDate>2024-06-11</cbc:TaxPointDate>
+  <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+  <cac:OrderReference>
+    <cbc:ID>212805,212750</cbc:ID>
+    <cbc:SalesOrderID>CV212805,CV212750</cbc:SalesOrderID>
+  </cac:OrderReference>
+  <cac:DespatchDocumentReference>
+    <cbc:ID>AE242723</cbc:ID>
+  </cac:DespatchDocumentReference>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cac:PostalAddress>
+        <cbc:StreetName>Str. Tacerii, Nr. 1, </cbc:StreetName>
+        <cbc:CityName>SECTOR5</cbc:CityName>
+        <cbc:PostalZone>051125</cbc:PostalZone>
+        <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO15777588</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>AAA BIROTICA SRL</cbc:RegistrationName>
+        <cbc:CompanyID>J40/13046/2003</cbc:CompanyID>
+        <cbc:CompanyLegalForm>Capital social: 200</cbc:CompanyLegalForm>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Telephone>+40740550000</cbc:Telephone>
+        <cbc:ElectronicMail>office@aaabirotica.ro</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PostalAddress>
+        <cbc:StreetName>Str.  SOS. FABRICA DE GLUCOZA, NR.17, </cbc:StreetName>
+        <cbc:CityName>SECTOR2</cbc:CityName>
+        <cbc:PostalZone>20331</cbc:PostalZone>
+        <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO4879159</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>INTRAROM S.A.</cbc:RegistrationName>
+        <cbc:CompanyID>J40/25071/1993</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:Delivery>
+    <cac:DeliveryLocation>
+      <cac:Address>
+        <cbc:StreetName>Str. 17 Fabrica de Glucoza, Nr. ., </cbc:StreetName>
+        <cbc:CityName>SECTOR2</cbc:CityName>
+        <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:Address>
+    </cac:DeliveryLocation>
+  </cac:Delivery>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="RON">29.91</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="RON">332.27</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="RON">29.91</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>9.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="RON">45.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="RON">0.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>E</cbc:ID>
+        <cbc:Percent>0.00</cbc:Percent>
+        <cbc:TaxExemptionReason>VATEX-EU-O</cbc:TaxExemptionReason>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="RON">377.27</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="RON">377.27</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="RON">407.18</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="RON">407.18</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="XBX">10.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">238.30</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>APA16BAX Apa plata pet 2l Bucovina 6 bucati/bax</cbc:Description>
+      <cbc:Name>Apa plata pet 2l Bucovina 6 bucati/bax</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>APA16BAX</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="TSP">22011011</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>9.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">23.83</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="XBX">5.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">104.25</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>APA05BAX Apa minerala carbogazoasa pet 1.5l borsec 6 bucati/bax</cbc:Description>
+      <cbc:Name>Apa minerala carbogazoasa pet 1.5l borsec 6 bucati/bax</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>APA05BAX</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="TSP">22011019</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>9.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">20.85</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>3</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="XPP">90.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">45.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>SGR Garantie SGR</cbc:Description>
+      <cbc:Name>Garantie SGR</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>SGR</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="TSP">99999999</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>E</cbc:ID>
+        <cbc:Percent>0.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">0.50</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>4</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="XPP">-1.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">-10.28</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>9990834 discount factura 3%</cbc:Description>
+      <cbc:Name>discount factura 3%</cbc:Name>
+      <cac:SellersItemIdentification>
+        <cbc:ID>9990834</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="TSP">99999999</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>9.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">10.28</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

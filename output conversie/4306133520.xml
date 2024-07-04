@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd">
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+  <cbc:ID>ULS_84270</cbc:ID>
+  <cbc:IssueDate>2024-06-07</cbc:IssueDate>
+  <cbc:DueDate>2024-07-07</cbc:DueDate>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+  <cbc:Note>Mentiuni</cbc:Note>
+  <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+  <cbc:TaxCurrencyCode>RON</cbc:TaxCurrencyCode>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="EM">office@rohel.ro</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>14368348</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PostalAddress>
+        <cbc:StreetName>JUD.ILFOV,COM.CLINCENI,SOS. DE CENTURA ,NR.4,COD POSTAL 077060</cbc:StreetName>
+        <cbc:CityName>CLINCENI</cbc:CityName>
+        <cbc:PostalZone>077060</cbc:PostalZone>
+        <cbc:CountrySubentity>RO-IF</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO14368348</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>UNIT LOGISTICS SERVICES S.R.L.</cbc:RegistrationName>
+        <cbc:CompanyID>RO14368348</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>LABUSCA GEORGETA-NICOLETA</cbc:Name>
+        <cbc:Telephone>-</cbc:Telephone>
+        <cbc:ElectronicMail>office@rohel.ro</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="EM">gabriela.nae@intrarom.ro; office@intrarom.ro</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>RO4879159</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PostalAddress>
+        <cbc:StreetName>FABRICA DE GLUCOZA - NR 7</cbc:StreetName>
+        <cbc:CityName>SECTOR2</cbc:CityName>
+        <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+        <cac:Country>
+          <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RO4879159</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>INTRAROM SA</cbc:RegistrationName>
+        <cbc:CompanyID>RO4879159</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:ElectronicMail>gabriela.nae@intrarom.ro; office@intrarom.ro</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO61BRDE450SV53116044500</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO92BRDE450SV53116394500</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO66MIRO0000906662030101</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>RO66MIRO0000906662030004</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="RON">68.08</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="RON">358.29</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="RON">68.08</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>19</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="RON">358.29</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="RON">358.29</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="RON">426.37</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="RON">426.37</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:Note>-</cbc:Note>
+    <cbc:InvoicedQuantity unitCode="H87">1.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RON">358.29</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>6/2024;Ref:EDL2406045;Exp:UNIT LOGISTICS SERVICES;Dest:INTRAROM SA;Marfa:5.00 PALETI-2282.2 KG;Ref client:GRRO24050061</cbc:Description>
+      <cbc:Name>Transport rutier intern:CLINCENI (RO)--&gt;BUCURESTI (RO);Auto:IF24MHI;DataInc:03/06/2024;DataDesc:03/0</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>19</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RON">358.29</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

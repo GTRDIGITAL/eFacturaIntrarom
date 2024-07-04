@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animație Tabel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Stilurile pentru tabel și animație */
+    table {
+      width: 80%;
+      margin: 50px auto;
+      border-collapse: collapse;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    table:hover {
+      transform: translateY(-10px); /* Ridică tabelul cu 10px când mouse-ul este pe tabel */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('table').addClass('animate-table');
+    });
+  </script>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coloană 1</th>
+      <th>Coloană 2</th>
+      <th>Coloană 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+      <td>Data 3</td>
+    </tr>
+    <!-- Alte rânduri -->
+  </tbody>
+</table>
+
+</body>
+</html>

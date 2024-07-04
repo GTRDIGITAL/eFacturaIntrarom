@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+    <cbc:ID>PRL18535</cbc:ID><!--BT-1-->
+    <cbc:IssueDate>2024-06-20</cbc:IssueDate><!--BT-2-->
+    <cbc:DueDate>2024-06-20</cbc:DueDate><!--BT-9-->
+    <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode><!--BT-3-->
+    <cbc:Note>Purchase order: 090212
+Job no: 00063480
+Konica Account Manager's Name: Alina Novac
+Konica VAT Number (RO30770893)
+The Suppliers VAT Number (RO9538195)</cbc:Note><!--BT-22-->
+    <cbc:TaxPointDate>2024-06-20</cbc:TaxPointDate><!--BT-7-->
+    <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode><!--BT-5-->
+    <cac:AccountingSupplierParty><!--BG-4-->
+        <cac:Party>
+            <cac:PostalAddress><!--BG-5-->
+                <cbc:StreetName>Str. Pavel Ceamur, Nr.12</cbc:StreetName><!--BT-35-->
+                <cbc:CityName>Popesti-Leordeni</cbc:CityName><!--BT-37-->
+                <cbc:CountrySubentity>RO-IF</cbc:CountrySubentity><!--BT-39-->
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode><!--BT-40-->
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>RO9538195</cbc:CompanyID><!--BT-31-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>PRO RECLAMA PRODUCTION  SRL</cbc:RegistrationName><!--BT-27-->
+                <cbc:CompanyID>J23/1861/2015</cbc:CompanyID><!--BT-30-->
+                <cbc:CompanyLegalForm>Capital social: 33 500 Lei lei</cbc:CompanyLegalForm><!--BT-33-->
+            </cac:PartyLegalEntity>
+            <cac:Contact><!--BG-6-->
+                <cbc:Name>Monica Serafim</cbc:Name><!--BT-41-->
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty><!--BG-7-->
+        <cac:Party>
+            <cac:PostalAddress><!--BG-8-->
+                <cbc:StreetName>Str. C. A. Rosetti, Nr. 17, Et. 1, Birou 105, Campus 02  Sect. 2, C.P. 20011</cbc:StreetName><!--BT-50-->
+                <cbc:CityName>SECTOR2</cbc:CityName><!--BT-52-->
+                <cbc:CountrySubentity>RO-B</cbc:CountrySubentity><!--BT-54-->
+                <cac:Country>
+                    <cbc:IdentificationCode>RO</cbc:IdentificationCode><!--BT-55-->
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>RO30770893</cbc:CompanyID><!--BT-48-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>KONICA MINOLTA MARKETING SERVICES LIMITED LONDON SUCURSALA BUCURESTI</cbc:RegistrationName><!--BT-44-->
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:PaymentMeans><!--BG-16-->
+        <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode><!--BT-81-->
+        <cbc:PaymentID>PRL18535</cbc:PaymentID><!--BT-83-->
+        <cac:PayeeFinancialAccount><!--BG-17-->
+            <cbc:ID>RO10INGB0000999906161201</cbc:ID><!--BT-84-->
+            <cbc:Name>CONT ING BANK NV IN RON</cbc:Name><!--BT-85-->
+            <cac:FinancialInstitutionBranch>
+                <cbc:ID>INGBROBU</cbc:ID><!--BT-86-->
+            </cac:FinancialInstitutionBranch>
+        </cac:PayeeFinancialAccount>
+    </cac:PaymentMeans>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="RON">2156.50</cbc:TaxAmount><!--BT-110-->
+        <cac:TaxSubtotal><!--BG-23-->
+            <cbc:TaxableAmount currencyID="RON">11350.00</cbc:TaxableAmount><!--BT-116-->
+            <cbc:TaxAmount currencyID="RON">2156.50</cbc:TaxAmount><!--BT-117-->
+            <cac:TaxCategory>
+                <cbc:ID>S</cbc:ID><!--BT-118-->
+                <cbc:Percent>19.00</cbc:Percent><!--BT-119-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal><!--BG-22-->
+        <cbc:LineExtensionAmount currencyID="RON">11350.00</cbc:LineExtensionAmount><!--BT-106-->
+        <cbc:TaxExclusiveAmount currencyID="RON">11350.00</cbc:TaxExclusiveAmount><!--BT-109-->
+        <cbc:TaxInclusiveAmount currencyID="RON">13506.50</cbc:TaxInclusiveAmount><!--BT-112-->
+        <cbc:AllowanceTotalAmount currencyID="RON">0.00</cbc:AllowanceTotalAmount><!--BT-107-->
+        <cbc:ChargeTotalAmount currencyID="RON">0</cbc:ChargeTotalAmount><!--BT-108-->
+        <cbc:PrepaidAmount currencyID="RON">0</cbc:PrepaidAmount><!--BT-113-->
+        <cbc:PayableRoundingAmount currencyID="RON">0.00</cbc:PayableRoundingAmount><!--BT-114-->
+        <cbc:PayableAmount currencyID="RON">13506.50</cbc:PayableAmount><!--BT-115-->
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID><!--BT-126-->
+        <cbc:InvoicedQuantity unitCode="H87">1.0000</cbc:InvoicedQuantity><!--BT-129 BT-130-->
+        <cbc:LineExtensionAmount currencyID="RON">2400.00</cbc:LineExtensionAmount><!--BT-131-->
+        <cac:Item><!--BG-31-->
+            <cbc:Name>Ciuc Radler poster 50x70 - 2000 buc</cbc:Name><!--BT-153-->
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID>S</cbc:ID><!--BT-151-->
+                <cbc:Percent>19.00</cbc:Percent><!--BT-152-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:ClassifiedTaxCategory>
+        </cac:Item>
+        <cac:Price><!--BG-29-->
+            <cbc:PriceAmount currencyID="RON">2400.00</cbc:PriceAmount><!--BT-146-->
+            <cbc:BaseQuantity unitCode="H87">1.0000</cbc:BaseQuantity><!--BT-149 BT-150-->
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>2</cbc:ID><!--BT-126-->
+        <cbc:InvoicedQuantity unitCode="H87">1.0000</cbc:InvoicedQuantity><!--BT-129 BT-130-->
+        <cbc:LineExtensionAmount currencyID="RON">6450.00</cbc:LineExtensionAmount><!--BT-131-->
+        <cac:Item><!--BG-31-->
+            <cbc:Name>Ciuc Radler people stopper - 2000 buc</cbc:Name><!--BT-153-->
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID>S</cbc:ID><!--BT-151-->
+                <cbc:Percent>19.00</cbc:Percent><!--BT-152-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:ClassifiedTaxCategory>
+        </cac:Item>
+        <cac:Price><!--BG-29-->
+            <cbc:PriceAmount currencyID="RON">6450.00</cbc:PriceAmount><!--BT-146-->
+            <cbc:BaseQuantity unitCode="H87">1.0000</cbc:BaseQuantity><!--BT-149 BT-150-->
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>3</cbc:ID><!--BT-126-->
+        <cbc:InvoicedQuantity unitCode="H87">1.0000</cbc:InvoicedQuantity><!--BT-129 BT-130-->
+        <cbc:LineExtensionAmount currencyID="RON">2500.00</cbc:LineExtensionAmount><!--BT-131-->
+        <cac:Item><!--BG-31-->
+            <cbc:Name>Ciuc Radler Wobbler - 4000 buc</cbc:Name><!--BT-153-->
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID>S</cbc:ID><!--BT-151-->
+                <cbc:Percent>19.00</cbc:Percent><!--BT-152-->
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:ClassifiedTaxCategory>
+        </cac:Item>
+        <cac:Price><!--BG-29-->
+            <cbc:PriceAmount currencyID="RON">2500.00</cbc:PriceAmount><!--BT-146-->
+            <cbc:BaseQuantity unitCode="H87">1.0000</cbc:BaseQuantity><!--BT-149 BT-150-->
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>

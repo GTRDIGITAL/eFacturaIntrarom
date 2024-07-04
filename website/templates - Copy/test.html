@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Camp de Parolă</title>
+  <link rel="icon" href="/static/favicon.png" type="image/png">
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById("parola");
+      var toggleButton = document.getElementById("toggleButton");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleButton.textContent = "Ascunde Parola";
+      } else {
+        passwordField.type = "password";
+        toggleButton.textContent = "Arată Parola";
+      }
+    }
+  </script>
+</head>
+<body>
+  <label for="parola">Parola:</label>
+  <input type="password" id="parola" name="parola">
+  <button type="button" id="toggleButton" onclick="togglePassword()">Arată Parola</button>
+</body>
+</html>

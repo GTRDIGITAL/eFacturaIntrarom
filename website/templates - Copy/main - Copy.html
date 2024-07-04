@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principala</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background: url('static/factura.png') no-repeat center center fixed;
+            background-size: cover;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #header {
+/*            background: url('static/test.png') no-repeat center center;*/
+/*            background-size: cover;*/
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 600px; 
+            padding-top: 20px;
+            margin-left:-490px;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 20px 50px;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+            margin-left:20px;
+        }
+
+        .button:hover {
+            background-color: #000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>E-factura:Client 1</p>
+        <p>User: {{ email }}</p>
+        <form action="/logout" >
+            <button type="submit" class="button" id="rightButton">Logout</button>
+        </form>
+    </div>
+
+    <div class="button-container">
+    <form action="/raport_client" method="POST">
+        <button type="submit" class="button" id="rightButton" >Modul transmitere facturi</button>
+    </form>
+</div>
+<div class = "button-container">
+        <form action="/statusFacturi" method="GET">
+        <button type="submit" class="button" id="leftButton" >Status transmitere SPV</button>
+    </form>
+    </div>
+<div class = "button-container">
+        <form action="/status" method="POST">
+        <button type="submit" class="button" id="leftButton" >Raport încărcare date</button>
+    </form>
+    </div>
+    
+
+
+<!--     <div class = "button-container">
+        <form action="/conversie" method="POST">
+        <button type="submit" class="button" id="leftButton" >Conversie XML</button>
+    </form>
+    </div> -->
+</body>
+</html>

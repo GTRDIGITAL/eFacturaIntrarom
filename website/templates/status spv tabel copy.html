@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+       <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/extensions/filter-control/bootstrap-table-filter-control.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/extensions/export/bootstrap-table-export.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.js"></script>  -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/extensions/filter-control/bootstrap-table-filter-control.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.js"></script> -->
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.5/extensions/filter-control/bootstrap-table-filter-control.min.js"></script> -->
+<!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'> -->
+<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'> -->
+<link rel='stylesheet' href='https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/editable/bootstrap-table-editable.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/export/bootstrap-table-export.js'></script>
+<script src="http://frontendfreecode.com/codes/files/tableExport.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.21.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js'></script> -->
+
+
+
+ <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.5/dist/bootstrap-table.min.css">/ -->
+
+
+    <title>Istoric SPV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-size:13px;
+            background: url('static/factura2.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: 000;
+            color: #fff;
+            width: 10%;
+            min-height: 70vh;
+            padding: 20px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar2 {
+            background-color: darkred;
+            color: #fff;
+            width: 20%;
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+
+        .container2 {
+            margin-left: 180px;
+                }
+
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+/*            padding: 20px;*/
+            width: 50%;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+            border: 1px solid #000;
+
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+         h1 {
+             color: #4f2d7f;
+            font-size: 38px;
+            margin-bottom: 10px;
+            float:center;
+            margin-left: -10px;
+            /*-webkit-text-stroke: 0.5px #fff;*/
+
+        }
+
+        h2 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            font-size: 16px;
+        }
+        th {
+            background-color: #2B144D;
+            color:white;
+        }
+        .sidebar-box {
+            margin-bottom: 20px;
+            background-color: #000; /* Schimbați culoarea fundalului */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left; /* Alinează textul la stânga */
+        }
+
+        .sidebar-box h2 {
+            color: #fff; /* Schimbați culoarea textului titlului */
+        }
+
+        .sidebar-box p {
+            color: #ccc; /* Schimbați culoarea textului conținutului */
+        }
+        .login-form button {
+            background-color: #4F2D7F;
+            color: #fff; /* Schimbați culoarea textului butonului */
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+            margin-right: 40px;
+        }
+
+        /* Stilizări pentru butonul de autentificare la trecerea peste el */
+        .login-form button:hover {
+            background-color: #2B144D; /* Schimbați culoarea de fundal la trecerea peste buton */
+        }
+
+
+        .denis{
+            background-color: #000; /* Schimbați culoarea de fundal a butonului */
+            color: #000; /* Schimbați culoarea textului butonului */
+            padding-top: 200px;
+            padding: 10px 20px; /* Schimbați spațiul dintre text și marginile butonului */
+            border: none; /* Eliminați conturul butonului */
+            border-radius: 5px; /* Rotunjiți colțurile butonului */
+            cursor: pointer; /* Transformați cursorul în mână la trecerea peste buton */
+            font-size: 18px; /* Măriți dimensiunea textului butonului */
+            transition: background-color 0.3s ease-in-out; /* Adăugați o tranziție lină pentru culoarea de fundal */
+        }
+
+         #myPieChart {
+            width: 230px;
+            height: 230px;
+            margin-left: auto;
+/*            margin-right: 200px;*/
+/*            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);*/
+            border-radius: 10px;
+            margin-top: 230px;
+            align-items: center;
+/*            margin-right: -150px;*/
+        }
+
+        .download-button {
+            background-color: #4f2d7f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+            margin-top: 20px;
+/*            margin-left: 45px;*/
+
+
+        }
+
+        .download-button:hover {
+            background-color: #2B144D;
+        }
+
+         .trimitere-button {
+/*            background-color: #000;*/
+            background-color: #4f2d7f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+/*            display: inline-block;*/
+/*            margin-top: -100px;*/
+/*            margin-right: -230px;*/
+
+
+        }
+.procent-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size:10px;
+    margin: 10px;
+    width: auto;
+    height:auto;
+    float:left;
+    margin-left: -10px;
+    margin-right: 30px;
+    /*position: fixed;*/
+}
+
+#facturi-eroare, #facturi-fara-eroare {
+    font-size: 13px;
+    margin: 5px 0;
+}
+#facturi-eroare{
+    color:red;
+    font-weight: bold;
+}
+#facturi-fara-eroare{
+    color:#4F2D7F;
+    font-weight: bold;
+}
+#facturi-total, #facturi-total-validate, #facturi-total-erori {
+    font-size: 13px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#facturi-total-validate{
+    color:#4F2D7F;
+    font-weight: bold;
+}
+#facturi-total-erori{
+    color:red;
+    font-weight: bold;
+}
+.navbar-top {
+    /*background-color: #6b4d47;*/
+    background-image: linear-gradient(85deg, #4f2d7f 40%, #4f2d7f 100%);
+    /*border-radius: 10px;*/
+    font-family: "Times New Roman", Times, serif;
+    /*color: : white;*/
+  }
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+
+
+.nav .navbar-nav > li > a:hover, .nav .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+
+.nav-link.font-roboto {
+    font-family: Roboto, sans-serif;
+  }
+
+
+    </style>
+</head>
+<body>
+   
+
+
+    <div class="container mt-5">
+    <div class="container">
+         <nav class="navbar navbar-inverse navbar-top"  >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+            <a class="navbar-brand" style="color:white; font: caption;" >E-Factura</a>
+          </div>
+          <ul class="nav navbar-nav">
+      
+            <li class="nav-item" style="float:left;color:white;">
+              <a class="nav-link font-roboto"style="float:right;color:white;" href="/main">Home</a>
+            </li>
+      
+            <li class="nav-item" style="float:right;">
+              <a class="nav-link font-roboto"style="float:right;color:white;" href="/raport_client">Modul transmitere facturi</a>
+            </li>
+            
+            <li class="nav-item" style="float:right;color:white;">
+              <a class="nav-link font-roboto"style="float:right;color:white;" href="/status">Raport încărcare date</a>
+            </li>
+          </ul>
+      
+        </div>
+      </nav>
+      <h1>Istoric transmitere SPV</h1>
+        <!--<div class="button-container">
+            <form id="login-form" class="login-form" action="/main" method="POST">
+                <button type="submit">Pagina principală</button>
+            </form>
+        </div>-->
+    
+    <div class="procent-container">
+        <div> <p id="facturi-total">Total facturi transmise: 0%</p></div>
+        <div><p id="facturi-total-validate">Total facturi validate: 0%</p></div>
+        <div><p id="facturi-total-erori">Total facturi cu erori: 0%</p></div></div>
+        <div class="procent-container"><div><p id="facturi-eroare">Procent facturi cu erori: 0%</p></div>
+        <div><p id="facturi-fara-eroare">Procent facturi fără erori: 0%</p></div>
+    </div>
+</div>
+
+
+    <div id="toolbar1" class="select" >
+        <button class="btn btn-default refresh" title="Refresh">
+            <i class="glyphicon glyphicon-refresh"></i> Refresh Data
+        </button>
+        <form id="download-form"  method="GET">
+            <input type='hidden' name="iduri_selectate" id="iduri_selectate"> 
+            <button class="btn btn-default download" type="submit" id="getSelectedIdsButton" name="getSelectedIdsButton" title="Download">
+                <i class="glyphicon glyphicon-download"></i> Download selected rows
+            </button></form>
+        
+    </div>
+        <table id="table1" class="table table-bordered" style="background-color: white; color:#2B144D; text-align: center;"
+               data-toggle="table"
+               data-search="true"
+               data-searchable="true"
+               data-filter-control="true"
+               data-show-export="false"
+               data-export-data-type="all"
+               
+               data-pagination="true"
+               data-show-columns="false"
+               data-show-search-clear-button="true"
+               data-show-refresh="false"
+               
+
+               
+               
+               data-toolbar="#toolbar1"
+               data-click-to-select="true"
+               data-sort-name="data_creare"
+               data-sort-order="desc">
+            <thead style="background-color: #2B144D; color:white; opacity: 80%;">
+                <tr>
+                    
+                    <th data-field="factura" data-sortable="true" >Factura</th>
+                    <th data-field="data_creare" data-sortable="true" >data_creare</th>
+                    <th data-field="cif"  data-sortable="true">cif</th>
+                    <th data-field="id_solicitare"  data-sortable="true">id_solicitare</th>
+                    <th data-field="detalii"  data-sortable="true">detalii</th>
+                    <th data-field="tip"  data-sortable="true">tip</th>
+                    <th data-field="id"  data-sortable="true">id</th>
+                    <th data-field="user_id" data-sortable="true"> User</th>
+                    <th data-field="state" data-checkbox="true"></th>
+                    <!--<th data-field="download" data-sortable="true"> Download</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                {% for mesaj in mesaje %}
+                    <tr>
+                        
+                        <td>{{ mesaj["factura"] }}</td>
+                        <td>{{ mesaj["data_creare"] }}</td>
+                        <td>{{ mesaj["cif"] }}</td>
+                        <td>{{ mesaj["id_solicitare"] }}</td>
+                        <td>{{ mesaj["detalii"] }}</td>
+                        <td>{{ mesaj["tip"] }}</td>
+                        <td>{{ mesaj["id_factura"] }}</td>
+                        <td>{{ mesaj["user_id"] }}</td>
+                        <td></td>
+                        <!--<form id="download-form" class="download-form"  method="POST">
+                        <td> <button name="download" id="download" class="btn" value={{ mesaj["id_solicitare"] }}onclick="downloadFunction(this)"><i class="fa fa-download"></i> Download</button> </td>
+                        </form>-->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+ 
+
+</body>
+<script>
+    function downloadFunction(button) {
+        // Get the closest table row (parent tr)
+        var row = $(button).closest('tr');
+
+        // Log the content of the row to the console for debugging
+        console.log("Row content:", row.html());
+
+        // Retrieve the value of id_solicitare from the fourth column of the clicked row
+        var idSolicitare = row.find('td:eq(3)').text();
+
+        // You can use idSolicitare in your JavaScript logic
+        console.log("id_solicitare:", idSolicitare);
+        
+        // Perform other actions or use the value as needed
+        // For example, you can send an AJAX request to download the corresponding data
+        // or redirect to a download link with the idSolicitare value.
+
+        
+            var dataToSend = { variableFromJS: idSolicitare };
+        
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                url: '/statusFacturi',  // Ajustează la ruta corectă a serverului tău Flask
+                data: JSON.stringify(dataToSend),
+                success: function(response) {
+                    console.log("Raspuns de la server:", response);
+                    // Poți efectua acțiuni suplimentare aici dacă dorești
+                },
+                error: function(error) {
+                    console.error("Eroare la trimiterea datelor:", error);
+                }
+            });
+        
+    }; 
+
+    /*$(document).ready(function() {
+        $('#getSelectedIdsButton').click(function() {
+            // Verifică dacă există rânduri selectate
+            var selectedRows = $('tr.selected');
+            if (selectedRows.length === 0) {
+                console.log("Nu sunt rânduri selectate.");
+                return; // Ieși din funcție dacă nu sunt rânduri selectate
+            }
+    
+            // Extrage id-urile rândurilor selectate
+            var idSelectate = [];
+            selectedRows.each(function() {
+                var idSolicitare = $(this).find('td:eq(3)').text();
+                idSelectate.push(idSolicitare);
+            });
+    
+            // Trimite id-urile la server utilizând AJAX
+            var dataToSend = { idSelectate: idSelectate };
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                url: '/descarcare-pdf', // Ajustează ruta corectă către serverul tău Flask care va gestiona descărcarea PDF-ului
+                data: JSON.stringify(dataToSend),
+                success: function(response) {
+                    console.log("Răspuns de la server:", response);
+                    // Poți efectua acțiuni suplimentare aici dacă dorești
+                },
+                error: function(error) {
+                    console.error("Eroare la trimiterea datelor:", error);
+                }
+            });
+        });
+    });
+    
+    */
+
+var $table = $('#table1')
+
+$(function () {
+    $('#toolbar1').find('select').change(function () {
+        // var sortName = $table.bootstrapTable('getOptions').sortName;
+        // var sortOrder = $table.bootstrapTable('getOptions').sortOrder;
+
+        $table.bootstrapTable('destroy').bootstrapTable({
+            exportDataType: $(this).val(),
+            exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+            columns: [
+                {
+                    field: 'factura',
+                    title: 'Factura',
+                    sortable: true
+                },
+                {
+                    field: 'data_creare',
+                    title: 'Data',
+                    sortable: true,
+                    order: 'desc',
+                    formatter: function (value) {
+                        if (value) {
+                            var year = value.slice(0, 4);
+                            var month = value.slice(4, 6);
+                            var day = value.slice(6, 8);
+                            var hour = value.slice(8, 10);
+                            var minute = value.slice(10, 12);
+                            var date = new Date(year, month - 1, day, hour, minute);
+                            return date.toLocaleString();
+                        }
+                        return value;
+                    }
+                },
+                {
+                    field: 'cif',
+                    title: 'CIF',
+                    sortable: true
+                },
+                {
+                    field: 'id_solicitare',
+                    title: 'ID Solicitare',
+                    sortable: true
+                },
+                {
+                    field: 'detalii',
+                    title: 'Detalii',
+                    sortable: true
+                },
+                {
+                    field: 'tip',
+                    title: 'Tip',
+                    sortable: true
+                },
+                {
+                    field: 'id',
+                    title: 'ID',
+                    sortable: true
+                },
+                {
+                    field: 'user_id',
+                    title:'User'
+                }
+            ]
+        });
+
+        $table.bootstrapTable('refresh', {
+            sortName: sortName,
+            sortOrder: sortOrder
+        });
+    }).trigger('change');
+});
+document.addEventListener('DOMContentLoaded', function () {
+    // Funcție pentru a prelua valorile coloanei "id_descarcare" a rândurilor selectate
+    function getSelectedIds() {
+        var table = document.getElementById('table1');
+        var selectedIds = [];
+        var rows = table.getElementsByTagName('tr');
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i].classList.contains('selected')) {
+                var cells = rows[i].getElementsByTagName('td');
+                selectedIds.push(cells[3].innerText); // Modifică indexul conform coloanei "id_descarcare"
+            }
+        }
+        document.getElementById('iduri_selectate').value = selectedIds;
+        return selectedIds;
+    }
+
+
+
+    // Eveniment pentru clic pe butonul pentru a prelua valorile
+    document.getElementById('getSelectedIdsButton').addEventListener('click', function () {
+        var selectedIds = getSelectedIds();
+        console.log(selectedIds); // Poți înlocui această linie pentru a utiliza valorile în altă parte a codului
+    });
+});
+
+function setCellTextColor(value, cell) {
+    if (value.includes("ERORI")) {
+        cell.css('background-color', 'red');
+        cell.css('color', 'white');
+        cell.css('font-weight', 'bold'); // Setează culoarea textului la roșu
+    } else {
+        cell.css('background-color', '#4F2D7F');
+        cell.css('color', 'white');
+        cell.css('font-weight', 'bold'); // Setează culoarea textului la verde
+    }
+}
+function datesSorter(a, b) {
+  if (new Date(a) < new Date(b)) return 1;
+  if (new Date(a) > new Date(b)) return -1;
+  return 0;
+}
+// Obține toate celulele din coloana "TIP" și setează culoarea textului
+$table.find('tbody tr').each(function () {
+    var cell = $(this).find('td:eq(5)'); // Obține celula din coloana "TIP"
+    var value = cell.text(); // Obține valoarea din celulă
+    setCellTextColor(value, cell); // Setează culoarea textului în funcție de valoare
+});
+
+/*
+// Funcție pentru a calcula procentele
+function calculProcente() {
+    var $table = $('#table1');
+    var numarFacturi = $table.find('tbody tr').length;
+
+
+    var numarFacturiCuEroare = 0;
+
+    $table.find('tbody tr').each(function () {
+        var tip = $(this).find('td:eq(5)').text(); // Obține valoarea din coloana "TIP"
+        if (tip.includes("ERORI")) {
+            numarFacturiCuEroare++;
+        }
+    });
+
+    var numarFacturiFaraEroare = numarFacturi - numarFacturiCuEroare;
+    var procentFacturiCuEroare = (numarFacturiCuEroare / numarFacturi) * 100;
+    var procentFacturiFaraEroare = 100 - procentFacturiCuEroare;
+    localStorage.setItem('valoareSalvata', numarFacturiValideUltimaRulare);
+
+    //localStorage.setItem('valoareSalvata', numarFacturiFaraEroare);
+
+    $('#facturi-total').text('Total facturi transmise: ' + numarFacturi);
+    $('#facturi-total-validate').text('Total facturi validate ' + numarFacturiFaraEroare);
+    $('#facturi-total-erori').text('Total facturi erori ' + numarFacturiCuEroare);
+    $('#facturi-eroare').text('Procent facturi cu erori: ' + procentFacturiCuEroare.toFixed(2) + '%');
+    $('#facturi-fara-eroare').text('Procent facturi fără erori: ' + procentFacturiFaraEroare.toFixed(2) + '%');
+    
+}
+*/
+
+
+
+
+function calculProcenteUltimaRulare() {
+    var $rows = $table.find('tbody tr');
+    var $primaLinie = $rows.last();
+    numarFacturiCuEroare=0;
+    numarFacturiUltimaRulare=0;
+    numarFacturiValideUltimaRulare=0;
+    var listaUltimaRulare={{ listaMesajeRulareCurenta | tojson  }};
+
+
+
+
+
+
+
+
+   var tipCelula = $primaLinie.find('td:eq(0)').text();
+    $table.find('tbody tr').each(function () {
+        var celule = $(this).find('td:eq(3)').text();
+        // alert(celule)
+        var statusCelule = $(this).find('td:eq(5)').text(); // Obține valoarea din coloana "TIP"
+        if (listaUltimaRulare.includes(celule)) {
+            numarFacturiUltimaRulare++;
+            if (statusCelule.includes("ERORI")){
+                numarFacturiCuEroare++;
+                // alert(statusCelule)
+            }
+            else {
+                numarFacturiValideUltimaRulare++;
+            }
+        }
+    });
+   // alert(tipCelula) // Obțineți valoarea din coloana "tip" a primei linii
+    var procentFacturiCuEroare = (numarFacturiCuEroare / numarFacturiUltimaRulare) * 100;
+    var procentFacturiFaraEroare = 100 - procentFacturiCuEroare;
+    var factValidate=numarFacturiUltimaRulare-numarFacturiCuEroare
+
+    $('#facturi-total').text('Total facturi transmise la ultima transmitere: ' + numarFacturiUltimaRulare );
+    $('#facturi-total-validate').text('Total facturi validate la ultima transmitere:' + numarFacturiValideUltimaRulare);
+    $('#facturi-total-erori').text('Total facturi erori la ultima transmitere:' + numarFacturiCuEroare);
+    $('#facturi-eroare').text('Procent facturi cu erori la ultima transmitere:' + procentFacturiCuEroare.toFixed(2) + '%');
+    $('#facturi-fara-eroare').text('Procent facturi fără erori la ultima transmitere:' + procentFacturiFaraEroare.toFixed(2) + '%');
+
+/*
+    $('#facturi-total').text('Total facturi transmise la ultima transmitere: 20' );
+    $('#facturi-total-validate').text('Total facturi validate la ultima transmitere: 19' );
+    $('#facturi-total-erori').text('Total facturi erori la ultima transmitere: 1' );
+    $('#facturi-eroare').text('Procent facturi cu erori la ultima transmitere: 5%' );
+    $('#facturi-fara-eroare').text('Procent facturi fără erori la ultima transmitere: 95%');
+*/
+}
+
+
+// Apelați funcția pentru calculul inițial al procentelor
+//calculProcente();
+calculProcenteUltimaRulare();
+
+// $('#date-filter-start, #date-filter-end').on('change', customDateFilter);
+</script>
+</html>

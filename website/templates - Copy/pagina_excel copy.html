@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport Client</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/factura.png'); /* Adaugăm imaginea de fundal */
+            background-size: 100%;
+            /* background-repeat: no-repeat; */
+        }
+
+        #header {
+            background-color: #4f2d7f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adăugăm umbre la antet */
+        }
+
+        #container {
+            width: 70%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+            border: 1px solid #263545;
+            box-shadow: 0px 0px 10px rgba(38, 53, 69, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        #container2 {
+            width: 90%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+            border: 1px solid #263545;
+            box-shadow: 0px 0px 10px rgba(38, 53, 69, 0.5);
+            padding: 20px;
+            padding-left: 200px;
+        }
+
+        h1 {
+            color: #4f2d7f;
+        }
+
+        #excelFileInput {
+            display: none;
+        }
+        #excelFile {
+            display: none;
+        }
+
+        #tableContainer {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+            
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f2f2f2;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #263545;
+            color: white;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ddd;
+        }
+
+        tr:hover {
+            background-color: #ccc;
+        }
+
+        #uploadLabel {
+            cursor: pointer;
+            color: #4f2d7f;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 1px solid #4f2d7f;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adăugăm umbre la butonul de încărcare */
+        }
+
+        #uploadLabel:hover {
+            background-color: #4f2d7f;
+            color: white;
+        }
+
+        #upload {
+            cursor: pointer;
+            color: #4f2d7f;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 1px solid #4f2d7f;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adăugăm umbre la butonul de încărcare */
+        }
+
+        #upload:hover {
+            background-color: #4f2d7f;
+            color: white
+        }
+
+        .button-history {
+            background-color: #4f2d7f;
+            color: white;
+            padding: 10px 20px;
+            padding-left: 200px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-history:hover {
+            background-color: #fff;
+            color: #4f2d7f;
+        }
+
+
+         .button-history2 {
+            cursor: pointer;
+            color: #4f2d7f;
+            display: inline-block;
+/*            padding: 10px 20px;*/
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+/*            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adăugăm umbre la butonul de încărcare */
+/*            margin-top: 5px;*/
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+
+
+
+
+        }
+
+        .button-history2:hover {
+           background-color: #4f2d7f;
+            color: white
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 600px; 
+            padding-top: 100px;
+        }
+
+         #topRow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+  .navbar-top {
+    /*background-color: #6b4d47;*/
+    background-image: linear-gradient(85deg, #4f2d7f 40%, #4f2d7f 100%);
+    /*border-radius: 10px;*/
+    font-family: "Times New Roman", Times, serif;
+    /*color: : white;*/
+  }
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+
+
+.nav .navbar-nav > li > a:hover, .nav .navbar-nav > li > a:focus {
+    background-color: #800080;
+    color: white;
+}
+
+.nav-link.font-roboto {
+    font-family: Roboto, sans-serif;
+  }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="header"> -->
+        <nav class="navbar navbar-inverse navbar-top"  >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+      <a class="navbar-brand" style="color:white; font: caption;" >E-Factura</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+
+
+      <li class="nav-item" style="float:left;">
+        <a class="nav-link font-roboto"style="float:left;color:white;" href="/main">Home</a>
+      </li>
+      <li class="nav-item" style="float:right;color:white;">
+        <a class="nav-link font-roboto"style="float:right;color:white;" href="/statusFacturi">Status transmitere SPV</a>
+      </li>
+      <li class="nav-item" style="float:right;color:white;">
+        <a class="nav-link font-roboto"style="float:right;color:white;" href="/status">Raport încărcare date</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+    <div id="container">
+
+        <h1>Raport Client</h1>
+
+        <label for="excelFileInput" name="fisierVanzari" id="uploadLabel">
+            <i class="fa fa-upload"></i> Selecteaza fișier facturi
+        </label>
+
+        <!-- <button id="loadButton">Descarcă Excel</button> -->
+        
+        <label id="uploadLabel" style="background-color:green; padding: 10px; border-radius: 5px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='darkgreen'" onmouseout="this.style.backgroundColor='green'">   
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" id="excelFileInput" name="excelFileInput" accept=".xlsx, .xls" />
+                <button type="submit" style="background-color:green; color:white; border: none; padding: 5px 10px; border-radius: 3px; onmouseover="this.style.backgroundColor='darkgreen'" onmouseout="this.style.backgroundColor='green'" class="button-history2">Incarca fisier</button>
+            </form>
+        </label>
+        
+
+        <!--<label for="excelFile" id="upload">
+            <i class="fa fa-upload"></i> Conectare soft contabil
+        </label> -->
+
+        <label  id="uploadLabel">  
+            <form action="/summary" method="POST">
+                
+            <button type="submit" class="button-history2">Prevalidare integritate date</button>
+            </form>
+        </label>
+
+       
+        
+      
+        <!-- <button class="fa fa-upload" id="importButton">Importă date din Excel</button> -->
+
+        <br /><br />
+        <div id="tableContainer">
+            <table id="excelTable">
+                <!-- Tabelul pentru datele din Excel va fi afișat aici -->
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+    <script>
+        // document.getElementById('importButton').addEventListener('click', importExcel);
+        document.getElementById('excelFileInput').addEventListener('change', handleFile);
+        // document.getElementById('importButton').addEventListener('click', importExcel); // Adaugăm evenimentul pentru butonul de import
+
+        function handleFile(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const data = e.target.result;
+        const workbook = XLSX.read(data, { type: 'binary' });
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        const tableData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        const table = XLSX.utils.sheet_to_html(worksheet, { header: 1 });
+                document.getElementById('excelTable').innerHTML = table;
+
+
+         // Verificați dacă există date în fișierul Excel
+      /*  if (tableData.length > 1) {
+            // Prima și ultima factură
+            const firstRow = tableData[1]; // Prima factură (a doua linie)
+            const lastRow = tableData[tableData.length - 1]; // Ultima factură
+
+            // Stocați detaliile în sessionStorage
+            sessionStorage.setItem('nrPrimeiFacturi', firstRow[0]);
+            sessionStorage.setItem('nrUltimeiFacturi', lastRow[0]);
+        } else {
+            // Dacă nu există date în fișier, stocați "N/A" în sessionStorage
+            sessionStorage.setItem('nrPrimeiFacturi', 'N/A');
+            sessionStorage.setItem('nrUltimeiFacturi', 'N/A');
+        }
+
+        //total facturi
+        if (tableData.length > 1) {
+            // Calculați numărul total de facturi
+            let totalFacturi = tableData.length - 1; // Excludem linia cu antet
+            const uniqueFacturi = new Set();
+            for (let i = 1; i < tableData.length; i++) {
+            uniqueFacturi.add(tableData[i][0]); // Presupunând că prima coloană conține numărul facturii
+        }
+
+        // Calculați lungimea setului pentru a obține numărul de facturi unice
+        totalFacturi = uniqueFacturi.size;
+
+            // Stocați numărul total de facturi în sessionStorage
+            sessionStorage.setItem('totalFacturi', totalFacturi.toString());
+        } else {
+            // Dacă nu există date în fișier, stocați "0" în sessionStorage
+            sessionStorage.setItem('totalFacturi', '0');
+        }
+
+         if (tableData.length > 1) {
+            // Calculați numărul total de facturi din acest fișier
+            const numarFacturi = totalFacturi; // Excludem linia cu antet
+
+            // Obțineți numărul total de facturi stocat în localStorage
+            let totalFacturi = parseInt(localStorage.getItem('totalFacturi')) || 0;
+
+            // Adăugați numărul de facturi din acest fișier la totalul existent
+            totalFacturi += numarFacturi;
+
+            // Stocați noul total în localStorage
+            localStorage.setItem('totalFacturi', totalFacturi.toString());
+        } else {
+            // Dacă nu există date în fișier, nu faceți nimic
+        }
+
+         if (tableData.length > 1) {
+            // Calculați numărul total de facturi din acest fișier
+            const numarFacturi = totalFacturi; // Excludem linia cu antet
+
+            // Obțineți numărul total de facturi stocat în localStorage
+            let total_Facturi = parseInt(localStorage.getItem('totalFacturi')) || 0;
+
+            // Adăugați numărul de facturi din acest fișier la totalul existent
+            total_Facturi += numarFacturi;
+
+            // Stocați noul total în localStorage
+            localStorage.setItem('total_Facturi', total_Facturi.toString());
+        } else {
+            // Dacă nu există date în fișier, nu faceți nimic
+        }
+
+   */
+    };
+
+
+    reader.readAsBinaryString(file);
+}
+
+
+    </script>
+</body>
+</html>

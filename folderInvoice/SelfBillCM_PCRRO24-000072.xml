@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+                    <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ns4="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+                    <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+                    <cbc:ID>PCRRO24-000072</cbc:ID>
+                    <cbc:IssueDate>2024-03-06</cbc:IssueDate>
+                    <cbc:DueDate>2024-05-27</cbc:DueDate>
+                    <cbc:InvoiceTypeCode>389</cbc:InvoiceTypeCode>
+                    <cbc:Note>Sell-to-Contact:Mihai Dinu</cbc:Note>
+                    <cbc:Note>Your Ref. No:PINRO24-000077</cbc:Note>
+                    <cbc:Note>Please forward your remittance to: remittances@indicia.konicaminolta.com</cbc:Note>
+                    <cbc:Note>Project No.: </cbc:Note>
+                    <cbc:Note>ExternalDocNo.: PINRO24-000077</cbc:Note>
+                    <cbc:Note>YourReference: PRL 17941</cbc:Note>
+                    <cbc:Note>SELF BILLING CREDIT MEMO </cbc:Note>
+                    <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+                    
+                    
+                        <cac:AccountingSupplierParty>
+                            <cac:Party>
+                                    <cac:PostalAddress>
+                                        <cbc:StreetName>Str. Pavel Ceamur 12, Popesti Leordeni </cbc:StreetName>
+                                        <cbc:CityName>Ors. Popesti-Leordeni</cbc:CityName>
+                                        <cbc:CountrySubentity>RO-IF</cbc:CountrySubentity>
+                                        <cac:Country>
+                                            <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                                        </cac:Country>
+                                    </cac:PostalAddress>
+                                    <cac:PartyTaxScheme>
+                                        <cbc:CompanyID>RO9538195</cbc:CompanyID>
+                                        <cac:TaxScheme>
+                                            <cbc:ID>VAT</cbc:ID>
+                                        </cac:TaxScheme>
+                                    </cac:PartyTaxScheme>
+                                    <cac:PartyLegalEntity>
+                                        <cbc:RegistrationName>PRO RECLAMA PRODUCTION  SRL</cbc:RegistrationName>
+                                        <cbc:CompanyID>RO9538195</cbc:CompanyID>
+                                    </cac:PartyLegalEntity>
+                                    <cac:Contact>
+                                        <cbc:Name>Mihai Dinu</cbc:Name>
+                                    </cac:Contact>
+                                </cac:Party>
+                        </cac:AccountingSupplierParty>
+                        
+                    <cac:AccountingCustomerParty>
+                        
+                        
+                    <cac:Party>
+                        <cac:PostalAddress>
+                            <cbc:StreetName>Str. C.A Rosetti 17, Etj 1, Birou 105, Campus 02</cbc:StreetName>
+                            <cbc:CityName>SECTOR2</cbc:CityName>
+                            <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+                            <cac:Country>
+                                <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyTaxScheme>
+                            <cbc:CompanyID>RO30770893</cbc:CompanyID>
+                            <cac:TaxScheme>
+                                <cbc:ID>VAT</cbc:ID>
+                            </cac:TaxScheme>
+                        </cac:PartyTaxScheme>
+                        <cac:PartyLegalEntity>
+                            <cbc:RegistrationName>Konica Minolta Marketing Services Limited (RO)</cbc:RegistrationName>
+                            <cbc:CompanyID>RO30770893</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                            <cbc:Name>Alina Novac</cbc:Name>
+                            <cbc:ElectronicMail>finance.suppliers@indicia.konicaminolta.com</cbc:ElectronicMail>
+                        </cac:Contact>
+                    </cac:Party>
+                    </cac:AccountingCustomerParty>
+                    <cac:PaymentMeans>
+                        <cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>
+                        <cac:PayeeFinancialAccount>
+                            <cbc:ID>RO89CITI0000000755078018</cbc:ID>
+                            <cbc:Name>Citibank Europe plc - sucursala Romania</cbc:Name>
+                            <cac:FinancialInstitutionBranch>
+                                <cbc:ID>CITIROBU</cbc:ID>
+                            </cac:FinancialInstitutionBranch>
+                        </cac:PayeeFinancialAccount>
+                    </cac:PaymentMeans>
+                            <cac:TaxTotal>
+                                <cbc:TaxAmount currencyID="RON">156.57</cbc:TaxAmount>
+                                <cac:TaxSubtotal>
+                                    <cbc:TaxableAmount currencyID="RON">824.07</cbc:TaxableAmount>
+                                    <cbc:TaxAmount currencyID="RON">156.57</cbc:TaxAmount>
+                                    <cac:TaxCategory>
+                                        
+                                        <cbc:ID>S</cbc:ID>
+                                        <cbc:Percent>19.0</cbc:Percent>
+                                        <cac:TaxScheme>
+                                            <cbc:ID>VAT</cbc:ID>
+                                        </cac:TaxScheme>
+                                    </cac:TaxCategory>
+                                </cac:TaxSubtotal>
+                            </cac:TaxTotal>
+
+                    <cac:LegalMonetaryTotal>
+                        <cbc:LineExtensionAmount currencyID="RON">824.07</cbc:LineExtensionAmount>
+                        <cbc:TaxExclusiveAmount currencyID="RON">824.07</cbc:TaxExclusiveAmount>
+                        <cbc:TaxInclusiveAmount currencyID="RON">980.64</cbc:TaxInclusiveAmount>
+                        <cbc:AllowanceTotalAmount currencyID="RON">0.00</cbc:AllowanceTotalAmount>
+                        <cbc:ChargeTotalAmount currencyID="RON">0.00</cbc:ChargeTotalAmount>
+                        <cbc:PrepaidAmount currencyID="RON">0.00</cbc:PrepaidAmount>
+                        <cbc:PayableRoundingAmount currencyID="RON">0.00</cbc:PayableRoundingAmount>
+                        <cbc:PayableAmount currencyID="RON">980.64</cbc:PayableAmount>
+                    </cac:LegalMonetaryTotal><cac:InvoiceLine>
+                                <cbc:ID>1</cbc:ID>
+                                <cbc:InvoicedQuantity unitCode="H87">1.0</cbc:InvoicedQuantity>
+                                <cbc:LineExtensionAmount currencyID="RON">824.07</cbc:LineExtensionAmount>
+                                <cac:Item>
+                                    <cbc:Name>Partner Services Fee - 13%</cbc:Name>
+                                    <cac:ClassifiedTaxCategory>
+                                        <cbc:ID>S</cbc:ID>
+                                        <cbc:Percent>19.0</cbc:Percent>
+                                        <cac:TaxScheme>
+                                            <cbc:ID>VAT</cbc:ID>
+                                        </cac:TaxScheme>
+                                    </cac:ClassifiedTaxCategory>
+                                </cac:Item>
+                                <cac:Price>
+                                    <cbc:PriceAmount currencyID="RON">824.07</cbc:PriceAmount>
+                                </cac:Price>
+                            </cac:InvoiceLine>
+</Invoice>

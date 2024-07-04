@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+   <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:efactura.mfinante.ro:CIUS-RO:1.0.1</cbc:CustomizationID>
+   <cbc:ID>814409913</cbc:ID>
+   <cbc:IssueDate>2024-01-02</cbc:IssueDate>
+   <cbc:DueDate>2024-01-02</cbc:DueDate>
+   <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+   <cbc:DocumentCurrencyCode>RON</cbc:DocumentCurrencyCode>
+   <cac:AccountingSupplierParty>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID>ROY</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>FedEx Express Romania Transportation S.R.L.</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>172-176 Bucuresti-Ploiesti Road</cbc:StreetName>
+            <cbc:AdditionalStreetName>Platinum Business &amp; Convention Center, Corp B</cbc:AdditionalStreetName>
+            <cbc:CityName>SECTOR1</cbc:CityName>
+            <cbc:PostalZone>15016</cbc:PostalZone>
+            <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+            <cac:AddressLine>
+               <cbc:Line>Et.2, Sector 1</cbc:Line>
+            </cac:AddressLine>
+            <cac:Country>
+               <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+         <cac:PartyTaxScheme>
+            <cbc:CompanyID>RO1592989</cbc:CompanyID>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:PartyTaxScheme>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>FedEx Express Romania Transportation S.R.L.</cbc:RegistrationName>
+            <cbc:CompanyID>J40/1428/1991</cbc:CompanyID>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:AccountingSupplierParty>
+   <cac:AccountingCustomerParty>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID>389114391</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>INTRAROM</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>,17, FABRICA DE GLUCOZA ST.</cbc:StreetName>
+            <cbc:CityName>SECTOR2</cbc:CityName>
+            <cbc:PostalZone>020331</cbc:PostalZone>
+            <cbc:CountrySubentity>RO-B</cbc:CountrySubentity>
+            <cac:Country>
+               <cbc:IdentificationCode>RO</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+         <cac:PartyTaxScheme>
+            <cbc:CompanyID>RO4879159</cbc:CompanyID>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:PartyTaxScheme>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>INTRAROM</cbc:RegistrationName>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:AccountingCustomerParty>
+   <cac:PaymentMeans>
+      <cbc:PaymentMeansCode>47</cbc:PaymentMeansCode>
+   </cac:PaymentMeans>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="RON">4.66</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="RON">24.50</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="RON">4.66</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:ID>S</cbc:ID>
+            <cbc:Percent>19.00</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="RON">4.00</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="RON">0.00</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:ID>E</cbc:ID>
+            <cbc:Percent>0.00</cbc:Percent>
+            <cbc:TaxExemptionReasonCode>VATEX-EU-O</cbc:TaxExemptionReasonCode>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:LegalMonetaryTotal>
+      <cbc:LineExtensionAmount currencyID="RON">28.50</cbc:LineExtensionAmount>
+      <cbc:TaxExclusiveAmount currencyID="RON">28.50</cbc:TaxExclusiveAmount>
+      <cbc:TaxInclusiveAmount currencyID="RON">33.16</cbc:TaxInclusiveAmount>
+      <cbc:PayableAmount currencyID="RON">33.16</cbc:PayableAmount>
+   </cac:LegalMonetaryTotal>
+   <cac:InvoiceLine>
+      <cbc:ID>1</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="ZZ">1</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="RON">24.50</cbc:LineExtensionAmount>
+      <cac:Item>
+         <cbc:Name>Freight Services</cbc:Name>
+         <cac:SellersItemIdentification>
+            <cbc:ID>Freight Services</cbc:ID>
+         </cac:SellersItemIdentification>
+         <cac:ClassifiedTaxCategory>
+            <cbc:ID>S</cbc:ID>
+            <cbc:Percent>19.00</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+         <cbc:PriceAmount currencyID="RON">24.5</cbc:PriceAmount>
+      </cac:Price>
+   </cac:InvoiceLine>
+   <cac:InvoiceLine>
+      <cbc:ID>2</cbc:ID>
+      <cbc:Note>VATEX-EU-O</cbc:Note>
+      <cbc:InvoicedQuantity unitCode="ZZ">1</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="RON">4.00</cbc:LineExtensionAmount>
+      <cac:Item>
+         <cbc:Name>Duty and Tax Services</cbc:Name>
+         <cac:SellersItemIdentification>
+            <cbc:ID>Duty and Tax Services</cbc:ID>
+         </cac:SellersItemIdentification>
+         <cac:ClassifiedTaxCategory>
+            <cbc:ID>E</cbc:ID>
+            <cbc:Percent>0.00</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+         <cbc:PriceAmount currencyID="RON">4</cbc:PriceAmount>
+      </cac:Price>
+   </cac:InvoiceLine>
+</Invoice>
