@@ -890,9 +890,9 @@ def stareMesaj(results):
     for i in range(0, len(results)):
         try:
             if str(results[i])[:1] == '5':
-                apiStareMesaj = 'https://api.anaf.ro/prod/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
+                apiStareMesaj = 'https://api.anaf.ro/test/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
             else:
-                apiStareMesaj = 'https://api.anaf.ro/prod/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
+                apiStareMesaj = 'https://api.anaf.ro/test/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
                 
             print(apiStareMesaj)
             # while True:  # buclă infinită
