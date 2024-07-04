@@ -343,8 +343,8 @@ def stocarePDF():
     )
     cursor = connection.cursor()
     
-    director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
-    # director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
+    # director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
+    director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
 
 # Parcurgerea fișierelor din director și inserarea în baza de date
     for nume_fisier in os.listdir(director_fisiere):
@@ -373,8 +373,8 @@ def stocarePDFPrimite():
     )
     cursor = connection.cursor()
     
-    director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
-    # director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
+    # director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
+    director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
     for nume_fisier in os.listdir(director_fisiere):
         if nume_fisier.endswith('.xml'):
             cale_absoluta = os.path.join(director_fisiere, nume_fisier)
@@ -462,10 +462,10 @@ def descarcarepdf(idSelectate):
     cursor = connection.cursor() 
     
     # print(idSelectate, 'ASTEA AICI SUNT IN STOCARE.PY')
-    downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
-    destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
-    # downlXMLbaza = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
-    # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
+    # downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
+    # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
+    downlXMLbaza = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
+    destinatie = '/home/efactura/efactura_intrarom/destinatie/'
     # idSelectate=idSelectate[1:]
     print(idSelectate, 'ASTEA SUNT SELECTATE')
     stringID=""
@@ -515,8 +515,8 @@ def descarcarepdf(idSelectate):
 
         def conversie():
                 # xmlANAF = 'C:/Dezvoltare/E-Factura/2023/eFactura/Expeditors/eFacturaExpeditors local2/output conversie'
-                cale_fisier = '/download pdf baza de date'
-                # cale_fisier = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
+                # cale_fisier = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date' # de pus calea
+                cale_fisier = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
                 headerss = {"Content-Type": "text/plain"}
 
                 # Creează un nou workbook Excel
@@ -562,8 +562,8 @@ def descarcarepdf(idSelectate):
 
                             if response and response.status_code == 200:
                                 filename_no_extension = os.path.splitext(filename)[0]
-                                with open(f'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date/{filename_no_extension}.pdf', 'wb') as file:
-                                # with open(f'/home/efactura/efactura_intrarom/downloadPdfBazaDate/{filename_no_extension}.pdf', 'wb') as file:
+                                # with open(f'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date/{filename_no_extension}.pdf', 'wb') as file:
+                                with open(f'/home/efactura/efactura_intrarom/downloadPdfBazaDate/{filename_no_extension}.pdf', 'wb') as file:
                                     file.write(response.content)
                                     print(f'Fisierul {filename} a fost convertit cu succes')
                             else:
@@ -620,9 +620,10 @@ def descarcarepdfPrimite(idSelectate):
     
     print(idSelectate, 'ASTEA AICI SUNT IN STOCARE.PY')
     
-    downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
-    destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
-    
+    # downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
+    # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
+    downlXMLbaza = '/home/efactura/efactura_intrarom/downloadpdfbazadate'
+    destinatie = '/home/efactura/efactura_intrarom/destinatie/'
     # Eliminăm primul element din lista idSelectate
     idSelectate = idSelectate[1:]
     
@@ -669,7 +670,8 @@ def descarcarepdfPrimite(idSelectate):
                 print(f"Fișier salvat la: {cale_fisier}")
 
         def conversie():
-            cale_fisier = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
+            # cale_fisier = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/download pdf baza de date'
+            cale_fisier = '/home/efactura/efactura_intrarom/downloadpdfbazadate'
             headerss = {"Content-Type": "text/plain"}
 
             for filename in os.listdir(cale_fisier):
@@ -957,7 +959,8 @@ def updateFacturi(stringID):
 def raspunsANAF(id_selectate):
         # --------------------------------STARE MESAj -----------------------------------
     # try:
-        stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api', '.zip')
+        # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api', '.zip')
+        stergeFisiere('/home/efactura/efactura_intrarom/outputzipapi', '.zip')
         listaIdDescarcare = []
         string_value = id_selectate[0]
 
@@ -1011,8 +1014,8 @@ def raspunsANAF(id_selectate):
 
                 if descarcare.status_code == 200:
                     # print("Cererea a fost efectuata cu succes!")
-                    with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api/fisier'+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
-                    # with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier"+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
+                    # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api/fisier'+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
+                    with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier"+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
                         file.write(descarcare.content)
                         print('Descarcat cu success')
                     
@@ -1023,12 +1026,12 @@ def raspunsANAF(id_selectate):
         # print("aici descarcam folosind id_descarcare")
         descarcare()
 
-        directory_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api'
-        # directory_path = "/home/efactura/efactura_intrarom/outputZipAPI"
+        # directory_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api'
+        directory_path = "/home/efactura/efactura_intrarom/outputZipAPI"
 
-        output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie'
-        # output_directory = "/home/efactura/efactura_intrarom/outputConversie"
-        # arhiveANAF = "/home/efactura/efactura_intrarom/arhiveANAF"
+        # output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie'
+        output_directory = "/home/efactura/efactura_intrarom/outputConversie"
+        arhiveANAF = "/home/efactura/efactura_intrarom/arhiveANAF"
 
         os.makedirs(output_directory, exist_ok=True)
 
@@ -1068,10 +1071,10 @@ def raspunsANAF(id_selectate):
         
 
 
-        pdf_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie PDF'
-        # pdf_directory = '/home/efactura/efactura_intrarom/outputConversiePDF'
-        # zip_file_path = '/home/efactura/efactura_intrarom/outputArhiveConversiePDF/rezultatArhiveConversie.zip'
-        zip_file_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output arhive conversie PDF/rezultatArhiveConversie.zip'
+        # pdf_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie PDF'
+        pdf_directory = '/home/efactura/efactura_intrarom/outputConversiePDF'
+        zip_file_path = '/home/efactura/efactura_intrarom/outputArhiveConversiePDF/rezultatArhiveConversie.zip'
+        # zip_file_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output arhive conversie PDF/rezultatArhiveConversie.zip'
         make_archive(directory_path, os.path.join(pdf_directory, 'rezultat.zip'))   
 
         with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_DEFLATED) as zip_file:
@@ -1090,8 +1093,8 @@ def stocareZIPAnaf():
     )
     cursor = connection.cursor()
     
-    director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
-    # director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
+    # director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie"
+    director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
 
 # Parcurgerea fișierelor din director și inserarea în baza de date
     for nume_fisier in os.listdir(director_fisiere):

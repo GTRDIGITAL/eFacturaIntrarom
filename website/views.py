@@ -34,8 +34,8 @@ def trimitereMail():
     date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
     subj = "Facturi SPV " + str(date)
     mailTo = "cristian.iordache@ro.gt.com"
-    destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
-    # destinatie = '/home/efactura/efactura_konica/destinatie/'
+    # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/destinatie/"
+    destinatie = '/home/efactura/efactura_intrarom/destinatie/'
     attachment_path = destinatie+"rezultat.zip"
 
     with open(attachment_path, "rb") as attachment:
@@ -136,7 +136,8 @@ def welcome():
     if code == cod:
         if request.method == 'POST':
             files = request.files.getlist('excelFileInput')
-            file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/outs"
+            # file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/outs"
+            file_path = '/home/efactura/efactura_intrarom/outs'
             
             if not files:
                 return render_template('pagina_excel.html', files=[])
@@ -166,7 +167,8 @@ def summary():
     code = session.get('verified_code')
     
     if code == cod:
-        file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/outs"
+        # file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/outs"
+        file_path = '/home/efactura/efactura_intrarom/outs'
         
         # Verificăm dacă folderul există
         if not os.path.exists(file_path):
@@ -242,8 +244,8 @@ def download_excel():
     code = session.get('verified_code')
     if code == cod:
         try:
-            excel_file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/logs/informatii.txt"
-            # excel_file_path = "/home/efactura/efactura_konica/logs/informatii.txt"
+            # excel_file_path = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/logs/informatii.txt"
+            excel_file_path = "/home/efactura/efactura_intrarom/logs/informatii.txt"
             return send_file(excel_file_path, as_attachment=True, download_name='Informatii erori facturi.txt')
         except:
             return render_template('auth.html')
@@ -259,21 +261,22 @@ def trimitere_anaf():
     code = session.get('verified_code')
     if code == cod:
         if request.method == 'GET':
+            print("aici a intrat pe get")
             # filename = 'rezultat '+str(current_datetime)+'.zip'
             # filename = 'facturiTransmise.txt'
-            try:
-                eFactura()
+            #try:
+            print("ajunge aici")
+            eFactura()  
                 # trimitere_anaf()
-            except:
-                return render_template('main.html')
+            #    return render_template('main.html')
             listaMesajeEroare2 = listaMesajeEroare
             print("mergi fa ", listaMesajeEroare2)
     else:
         return render_template('auth.html')
         
 
-    return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari', 'facturiTransmise.txt', as_attachment = True)
-    # return send_from_directory('/home/efactura/efactura_konica/outputArhiveConversiePDF', filename, as_attachment = True)
+    # return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari', 'facturiTransmise.txt', as_attachment = True)
+    return send_from_directory('/home/efactura/efactura_intrarom/bazadatevanzaro', 'facturiTransmise.txt', as_attachment = True)
 
 def stareMesaj():
         listaIdDescarcare.clear()
@@ -381,7 +384,8 @@ def download_file_ANAF():
         # return render_template("status spv tabel.html")
     # return render_template("main.html")
     filename = 'rezultatArhiveConversie.zip'
-    return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output arhive conversie PDF', filename, as_attachment = True)
+    # return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output arhive conversie PDF', filename, as_attachment = True)
+    return send_from_directory('/home/efactura/efactura_intrarom/outputarhiveconversiepdf', filename, as_attachment = True)
 
 @views.route('/download_invoices', methods=['GET'])
 @login_required
@@ -740,8 +744,8 @@ def sincronizareAPIvsBD():
 
             if descarcare.status_code == 200:
                 # print("Cererea a fost efectuata cu succes!")
-                with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api/fisier'+str(listaDiferente[i])+'.zip', 'wb') as file:
-                # with open("/home/efactura/efactura_konica/outputZipAPI/fisier"+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
+                # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api/fisier'+str(listaDiferente[i])+'.zip', 'wb') as file:
+                with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier"+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
                     file.write(descarcare.content)
                     print('Descarcat cu success')
                 
@@ -752,12 +756,12 @@ def sincronizareAPIvsBD():
     print("aici descarcam folosind id_descarcare")
     descarcare()
 
-    directory_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api'
-    # directory_path = "/home/efactura/efactura_konica/outputZipAPI"
+    # directory_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api'
+    directory_path = "/home/efactura/efactura_intrarom/outputZipAPI"
 
-    output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie'
-    # output_directory = "/home/efactura/efactura_konica/outputConversie"
-    # arhiveANAF = "/home/efactura/efactura_konica/arhiveANAF"
+    # output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie'
+    output_directory = "/home/efactura/efactura_intrarom/outputConversie"
+    arhiveANAF = "/home/efactura/efactura_intrarom/arhiveANAF"
 
     os.makedirs(output_directory, exist_ok=True)
 
