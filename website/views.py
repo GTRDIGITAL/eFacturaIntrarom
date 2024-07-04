@@ -276,7 +276,7 @@ def trimitere_anaf():
         
 
     # return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari', 'facturiTransmise.txt', as_attachment = True)
-    return send_from_directory('/home/efactura/efactura_intrarom/bazadatevanzaro', 'facturiTransmise.txt', as_attachment = True)
+    return send_from_directory('/home/efactura/efactura_intrarom/bazadatevanzari', 'facturiTransmise.txt', as_attachment = True)
 
 def stareMesaj():
         listaIdDescarcare.clear()
@@ -745,7 +745,7 @@ def sincronizareAPIvsBD():
             if descarcare.status_code == 200:
                 # print("Cererea a fost efectuata cu succes!")
                 # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api/fisier'+str(listaDiferente[i])+'.zip', 'wb') as file:
-                with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier"+str(listaIdDescarcare[i])+'.zip', 'wb') as file:
+                with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier"+str(listaDiferente[i])+'.zip', 'wb') as file:
                     file.write(descarcare.content)
                     print('Descarcat cu success')
                 
