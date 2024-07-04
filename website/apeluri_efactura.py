@@ -144,7 +144,7 @@ def eFactura():
         factura = item["Factura"]
         index_solicitare = item["Index"]
         # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari/facturiTransmise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
-        with open('/home/efactura/efactura_intrarom/bazaDateVanzari/facturiTrimise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
+        with open('/home/efactura/efactura_intrarom/bazaDateVanzari/facturiTransmise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
             raspunsANAFIndex.write("Factura: "+str(factura)+" "+ "Index: " +str(index_solicitare)+" \n")
     
     stocareDictionarFacturi(dictionarFacturi)
