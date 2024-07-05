@@ -304,7 +304,7 @@
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/main"
-                  >Home</a
+                  >Acasa</a
                 >
               </li>
 
@@ -313,22 +313,22 @@
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/raport_client"
-                  >Invoice submission</a
+                  >Transmitere facturi</a
                 >
               </li>
 
-              <li class="nav-item" style="float: right; color: white">
+              <!--<li class="nav-item" style="float: right; color: white">
                 <a
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/status"
                   >Data loading report</a
                 >
-              </li>
+              </li>-->
             </ul>
           </div>
         </nav>
-        <h1>SPV received invoices history</h1>
+        <h1>Status SPV facturi primite</h1>
         <!--<div class="button-container">
             <form id="login-form" class="login-form" action="/main" method="POST">
                 <button type="submit">Pagina principală</button>
@@ -340,7 +340,7 @@
       <div id="toolbar1" class="select">
         <form id="download-form" action="/refreshReceived" method="GET">
           <button class="btn btn-default refresh" title="Refresh">
-            <i class="glyphicon glyphicon-refresh"></i> Refresh Data
+            <i class="glyphicon glyphicon-refresh"></i> Actualizare date
           </button>
         </form>
         <form id="download-form" action="/downloadPrimite" method="GET">
@@ -352,7 +352,7 @@
             name="getSelectedIdsButton"
             title="Download"
           >
-            <i class="glyphicon glyphicon-download"></i> Download selected rows
+            <i class="glyphicon glyphicon-download"></i> Descarcare randuri selectate
           </button>
         </form>
       </div>
@@ -377,17 +377,17 @@
       >
         <thead style="background-color: #2b144d; color: white; opacity: 80%">
           <tr>
-            <th data-field="data_creare" data-sortable="true">date_created</th>
-            <th data-field="cif" data-sortable="true">VAT Reg. No</th>
+            <th data-field="data_creare" data-sortable="true">Data creare</th>
+            <th data-field="cif" data-sortable="true">Numar identificare fiscala</th>
             <th data-field="id_solicitare" data-sortable="true">
-              id_request
+              Index incarcare
             </th>
-            <th data-field="factura" data-sortable="true">invoice</th>
-            <th data-field="furnizor" data-sortable="true">vendor</th>
-            <th data-field="detalii" data-sortable="true">details</th>
-            <th data-field="tip" data-sortable="true">type</th>
-            <th data-field="id" data-sortable="true">id</th>
-            <th data-field="descarcata" data-sortable="true">Downloaded</th>
+            <th data-field="factura" data-sortable="true">Numar factura</th>
+            <th data-field="furnizor" data-sortable="true">Furnizor</th>
+            <th data-field="detalii" data-sortable="true">Detalii</th>
+            <th data-field="tip" data-sortable="true">Tip</th>
+            <th data-field="id" data-sortable="true">Index descarcare</th>
+            <th data-field="descarcata" data-sortable="true">Descarcata</th>
             <th data-field="state" data-checkbox="true"></th>
             <!--<th data-field="download" data-sortable="true"> Download</th>-->
           </tr>

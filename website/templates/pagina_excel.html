@@ -220,14 +220,15 @@
 
 
       <li class="nav-item" style="float:left;">
-        <a class="nav-link font-roboto"style="float:left;color:white;" href="/main">Home</a>
+        <a class="nav-link font-roboto"style="float:left;color:white;" href="/main">Acasa</a>
       </li>
       <li class="nav-item" style="float:right;color:white;">
-        <a class="nav-link font-roboto"style="float:right;color:white;" href="/statusFacturi">SPV submission status</a>
+        <a class="nav-link font-roboto"style="float:right;color:white;" href="/statusFacturi">Status transmitere SPV</a>
       </li>
+      <!--
       <li class="nav-item" style="float:right;color:white;">
         <a class="nav-link font-roboto"style="float:right;color:white;" href="/status">Data loading report</a>
-      </li>
+      </li>-->
     </ul>
 
   </div>
@@ -235,10 +236,10 @@
 
     <div id="container">
 
-        <h1>Client Report</h1>
+        <h1>Raport client</h1>
 
         <label for="excelFileInput" name="fisierVanzari" id="uploadLabel">
-            <i class="fa fa-upload"></i> Select invoice file
+            <i class="fa fa-upload"></i> Selectare facturi
         </label>
 
         <!-- <button id="loadButton">Descarcă Excel</button> -->
@@ -246,7 +247,7 @@
         <label id="uploadLabel" style="background-color:green; padding: 10px; border-radius: 5px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='darkgreen'" onmouseout="this.style.backgroundColor='green'">   
             <form method="POST" enctype="multipart/form-data">
                 <input type="file" id="excelFileInput" name="excelFileInput" multiple accept=".xlsx, .xls, .xml" />
-                <button type="submit" style="background-color:green; color:white; border: none; padding: 5px 10px; border-radius: 3px;" onmouseover="this.style.backgroundColor='darkgreen'" onmouseout="this.style.backgroundColor='green'" class="button-history2">Load file</button>            </form>
+                <button type="submit" style="background-color:green; color:white; border: none; padding: 5px 10px; border-radius: 3px;" onmouseover="this.style.backgroundColor='darkgreen'" onmouseout="this.style.backgroundColor='green'" class="button-history2">Incarcare facturi</button>            </form>
         </label>
         
 
@@ -257,7 +258,7 @@
         <label  id="uploadLabel">  
             <form action="/summary" method="POST">
                 
-            <button type="submit" class="button-history2">Data integrity prevalidation</button>
+            <button type="submit" class="button-history2">Prevalidare date</button>
             </form>
         </label>
 

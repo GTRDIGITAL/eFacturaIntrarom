@@ -326,36 +326,36 @@
     <div class="container">
 <div id="popup">
      <i id="notice-icon" class="fas fa-exclamation-circle"></i>
-    <p style="color: white;">The invoices are being transmitted, please wait for their automatic download.</p>
-    <div id="loading">Loading<span id="loading-spinner"></span></div>
+    <p style="color: white;">Facturile sunt in curs de transmitere. Va rugam sa asteptati fisierul privind confirmarea trimiterii acestora.</p>
+    <div id="loading">Incarcare ...<span id="loading-spinner"></span></div>
     <button onclick="hidePopup()">Close</button>
 </div>
 
         <div class="box">
-            <h2>Total invoices uploaded</h2>
+            <h2>Total facturi incarcate</h2>
             <p id="totalFacturi">0</p>
         </div>
 
         <div class="box">
-            <h2>Document number of the first uploaded invoice</h2>
+            <h2>Numarul primei facturi incarcate</h2>
             <p id="nrPrimeiFacturi">N/A</p>
         </div>
         <div class="box">
-            <h2>Document number of the last uploaded invoice</h2>
+            <h2>Numarul ultimei facturi incarcate</h2>
             <p id="nrUltimeiFacturi">N/A</p>
         </div>
         <div class="box">
-            <h2>Total amount of uploaded invoices</h2>
+            <h2>Suma totala facturi incarcate</h2>
             <p id="total_Facturi">N/A</p>
         </div>
 
      <div class="button-container">
         <form id="login-form" class="login-form" action="/main" method="POST">
-            <button type="submit">Main page</button>
+            <button type="submit">Acasa</button>
         </form>
 
         <form action="/trimitere_anaf" method="GET">
-            <button type = "submit" id="sendEmailButton" onclick="showPopup()" class="trimitere-button">SPV Submission</button>
+            <button type = "submit" id="sendEmailButton" onclick="showPopup()" class="trimitere-button">Transmitere SPV</button>
             
         </form>
           </div>      

@@ -304,7 +304,7 @@
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/main"
-                  >Home</a
+                  >Acasa</a
                 >
               </li>
 
@@ -313,18 +313,18 @@
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/raport_client"
-                  >Invoice submission</a
+                  >Transmitere facturi</a
                 >
               </li>
 
-              <li class="nav-item" style="float: right; color: white">
+              <!--<li class="nav-item" style="float: right; color: white">
                 <a
                   class="nav-link font-roboto"
                   style="float: right; color: white"
                   href="/status"
                   >Data loading report</a
                 >
-              </li>
+              </li>-->
             </ul>
           </div>
         </nav>
@@ -365,7 +365,7 @@
             name="getSelectedIdsButton"
             title="Download"
           >
-            <i class="glyphicon glyphicon-download"></i> Download ANAF invoices
+            <i class="glyphicon glyphicon-download"></i> Descarcare facturi ANAF
           </button>
         </form>
         
@@ -381,7 +381,7 @@
           name="getSelectedIdsButtonPDF"
           title="Download"
         >
-          <i class="glyphicon glyphicon-download"></i> Download PDF invoices
+          <i class="glyphicon glyphicon-download"></i> Descarcare facturi PDF
         </button>
       </form>
     </div>
@@ -408,17 +408,17 @@
       >
         <thead style="background-color: #2b144d; color: white; opacity: 80%">
           <tr>
-            <th data-field="factura" data-sortable="true">Invoice</th>
-            <th data-field="data_trimis" data-sortable="true">Submission date</th>
+            <th data-field="factura" data-sortable="true">Numar factura</th>
+            <th data-field="data_trimis" data-sortable="true">Data transmitere</th>
 
             <th data-field="index_incarcare" data-sortable="true">
-              Upload index
+              Index incarcare
             </th>
-            <th data-field="status_facturi" data-sortable="true">Invoice SPV status</th>
+            <th data-field="status_facturi" data-sortable="true">Status SPV factura</th>
             
             
-            <th data-field="user_id" data-sortable="true">User</th>
-            <th data-field="descarcata" data-sortable="true">Downloaded</th>
+            <th data-field="user_id" data-sortable="true">Id utilizator</th>
+            <th data-field="descarcata" data-sortable="true">Descarcata din SPV</th>
             <th data-field="state" data-checkbox="true"></th>
             <!--<th data-field="download" data-sortable="true"> Download</th>-->
           </tr>
