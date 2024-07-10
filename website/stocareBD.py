@@ -534,7 +534,8 @@ def descarcarepdf(idSelectate):
 
                             with open(xml_file_path, 'rb') as xml_file:
                                 xml_data = xml_file.read()
-                                xml_data=xml_data.replace('xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"',"")    
+                                if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                    xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                             if 'CreditNote' in str(xml_data):
                                 convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
                             else:
@@ -681,7 +682,8 @@ def descarcarepdfPrimite(idSelectate):
 
                         with open(xml_file_path, 'rb') as xml_file:
                             xml_data = xml_file.read()
-                            xml_data=xml_data.replace('xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"',"")
+                            if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                         if 'CreditNote' in str(xml_data):
                             convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
                         else:
