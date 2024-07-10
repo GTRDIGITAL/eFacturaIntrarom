@@ -539,9 +539,9 @@ def descarcarepdf(idSelectate):
                                 if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
                                     xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                             if 'CreditNote' in str(xml_data):
-                                convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
+                                convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FCN/DA'
                             else:
-                                convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FACT1/DA'
+                                convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FACT1/DA'
 
                             start_time = time.time()  # Momentul de start al procesării
         
@@ -689,9 +689,9 @@ def descarcarepdfPrimite(idSelectate):
                             if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
                                     xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                         if 'CreditNote' in str(xml_data):
-                            convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
+                            convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FCN/DA'
                         else:
-                            convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FACT1/DA'
+                            convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FACT1/DA'
 
                         start_time = time.time()  # Momentul de start al procesării
                         response = None  # Inițializăm răspunsul cu None
