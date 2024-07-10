@@ -536,6 +536,8 @@ def descarcarepdf(idSelectate):
                                 xml_data = xml_file.read()
                                 if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
                                     xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
+                                if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                    xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                             if 'CreditNote' in str(xml_data):
                                 convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
                             else:
@@ -684,6 +686,8 @@ def descarcarepdfPrimite(idSelectate):
                             xml_data = xml_file.read()
                             if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
                                 xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
+                            if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                    xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
                         if 'CreditNote' in str(xml_data):
                             convert = 'https://webservicesp.anaf.ro/test/FCTEL/rest/transformare/FCN/DA'
                         else:
