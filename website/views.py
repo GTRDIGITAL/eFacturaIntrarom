@@ -666,7 +666,7 @@ def sincronizareAPIvsBD():
     time.sleep(10)
     
     current_time = datetime.datetime.now()
-    start_time = current_time - datetime.timedelta(days=60)
+    start_time = current_time - datetime.timedelta(days=15)
     val1 = int(time.mktime(start_time.timetuple())) * 1000
 
     X = 0
@@ -698,7 +698,7 @@ def sincronizareAPIvsBD():
                     
                     for i in range(1,numar_pagini+1):
                         print(numar_pagini, 'numar pagini')
-                        api_url_updated = f'{apiListaFacturi}?startTime={val1}&endTime={val2}&cif={cif}&pagina={i}'
+                        api_url_updated = f'{apiListaFacturi}?startTime={val1}&endTime={val2}&cif={cif}&pagina={i}&filtru=P'
     
                         listaMesaje = requests.get(api_url_updated, headers=headers, timeout=30)
                         if listaMesaje.status_code == 200:
