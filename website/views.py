@@ -677,7 +677,7 @@ def sincronizareAPIvsBD():
     print("val2 ", val2)
 
     apiListaFacturi = f'https://api.anaf.ro/prod/FCTEL/rest/listaMesajePaginatieFactura'
-    apiefacturaprimite=f'https://api.anaf.ro/prod/FCTEL/rest/listaMesajeFactura?zile=60&cif={cif}&filtru=P'
+    apiefacturaprimite=f'https://api.anaf.ro/prod/FCTEL/rest/listaMesajeFactura?zile=10&cif={cif}&filtru=P'
  
 
     params = {
