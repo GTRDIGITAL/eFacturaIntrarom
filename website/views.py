@@ -677,6 +677,8 @@ def sincronizareAPIvsBD():
     print("val2 ", val2)
 
     apiListaFacturi = f'https://api.anaf.ro/prod/FCTEL/rest/listaMesajePaginatieFactura'
+    apiefacturaprimite=f'https://api.anaf.ro/prod/FCTEL/rest/listaMesajeFactura?zile=60&cif={cif}&filtru=P'
+ 
 
     params = {
         'startTime': val1,
@@ -696,39 +698,39 @@ def sincronizareAPIvsBD():
                 else:
                     numar_pagini = data.get('numar_total_pagini')
                     
-                    for i in range(1,numar_pagini+1):
-                        print(numar_pagini, 'numar pagini')
-                        api_url_updated = f'{apiListaFacturi}?startTime={val1}&endTime={val2}&cif={cif}&pagina={i}&filtru=P'
-    
-                        listaMesaje = requests.get(api_url_updated, headers=headers, timeout=30)
-                        if listaMesaje.status_code == 200:
-                            raspunsMesajeFacturi = listaMesaje.json()
-                            listaIDANAF = [int(mesaj['id']) for mesaj in raspunsMesajeFacturi['mesaje'] if mesaj['tip'] == 'FACTURA PRIMITA']
-    
-                            # print("Lista ID-uri ANAF: ", listaIDANAF, "lungimea id anaf ", len(listaIDANAF))
-    
-                            # Convertirea ID-urilor în întregi
-                            result_list = [int(id) for id in result_list]
-    
-                            listaDiferente = [id for id in listaIDANAF if id not in result_list]
-    
-                            # print("Lista diferențe: ", listaDiferente, "lungimea diferente ", len(listaDiferente))
-                            print("Lista diferențe: ", listaDiferente)
-                            # Filtrarea mesajelor pentru a păstra doar cele din listaDiferente
-                            
-                            listaDiferente = [str(id) for id in listaDiferente]
-                            mesajeFiltrate = [mesaj for mesaj in raspunsMesajeFacturi['mesaje'] if mesaj['id'] in listaDiferente]
-                            rezultat_final = {'mesaje': mesajeFiltrate}
-                            # print(mesajeFiltrate)
-                            # Stocare mesaje filtrate
-                            print("urmeaza insert")
-                            stocareMesajeAnafPrimite(rezultat_final)
-                            # print(rezultat_final)
-                            print('Stocare a mesajelor cu success')
-                            break
-                        else:
-                            print(f'Eroare la cererea API, cod de stare: {listaMesaje.status_code}')
-                            time.sleep(10)
+                    # for i in range(1,numar_pagini+1):
+                    print(numar_pagini, 'numar pagini')
+                    api_url_updated = f'{apiefacturaprimite}'
+
+                    listaMesaje = requests.get(api_url_updated, headers=headers, timeout=30)
+                    if listaMesaje.status_code == 200:
+                        raspunsMesajeFacturi = listaMesaje.json()
+                        listaIDANAF = [int(mesaj['id']) for mesaj in raspunsMesajeFacturi['mesaje'] if mesaj['tip'] == 'FACTURA PRIMITA']
+
+                        # print("Lista ID-uri ANAF: ", listaIDANAF, "lungimea id anaf ", len(listaIDANAF))
+
+                        # Convertirea ID-urilor în întregi
+                        result_list = [int(id) for id in result_list]
+
+                        listaDiferente = [id for id in listaIDANAF if id not in result_list]
+
+                        # print("Lista diferențe: ", listaDiferente, "lungimea diferente ", len(listaDiferente))
+                        print("Lista diferențe: ", listaDiferente)
+                        # Filtrarea mesajelor pentru a păstra doar cele din listaDiferente
+                        
+                        listaDiferente = [str(id) for id in listaDiferente]
+                        mesajeFiltrate = [mesaj for mesaj in raspunsMesajeFacturi['mesaje'] if mesaj['id'] in listaDiferente]
+                        rezultat_final = {'mesaje': mesajeFiltrate}
+                        # print(mesajeFiltrate)
+                        # Stocare mesaje filtrate
+                        print("urmeaza insert")
+                        stocareMesajeAnafPrimite(rezultat_final)
+                        # print(rezultat_final)
+                        print('Stocare a mesajelor cu success')
+                        break
+                    else:
+                        print(f'Eroare la cererea API, cod de stare: {listaMesaje.status_code}')
+                        time.sleep(10)
             else:
                 time.sleep(10)
         except KeyError as e:
