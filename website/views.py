@@ -727,7 +727,6 @@ def sincronizareAPIvsBD():
                 stocareMesajeAnafPrimite(rezultat_final)
                 # print(rezultat_final)
                 print('Stocare a mesajelor cu success')
-                break
             else:
                 print(f'Eroare la cererea API, cod de stare: {listaMesaje.status_code}')
                 time.sleep(10)
