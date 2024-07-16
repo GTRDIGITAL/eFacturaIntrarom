@@ -387,7 +387,7 @@ def download_file_ANAF():
     # try:
         raspunsANAF(lista)
         stocareZIPAnaf()
-        trimitereMail("/home/efactura/efactura_intrarom/outputarhiveconversiepdf", 'rezultatArhiveConversie.zip')
+        trimitereMail("/home/efactura/efactura_intrarom/outputarhiveconversiepdf/", 'rezultatArhiveConversie.zip')
         # trimitereMail('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output arhive conversie PDF/', 'rezultatArhiveConversie.zip')
     #     return render_template("main.html")
     # except:
