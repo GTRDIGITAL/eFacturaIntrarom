@@ -33,7 +33,7 @@ def trimitereMail(locatie, nume):
     
     date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
     subj = "Facturi SPV " + str(date)
-    mailTo = "cristian.iordache@ro.gt.com"
+    mailTo = "invoices-spv@intrarom.ro"
     # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
     # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
     attachment_path = locatie + nume
