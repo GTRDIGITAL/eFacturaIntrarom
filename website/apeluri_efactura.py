@@ -47,11 +47,12 @@ def eFactura():
         except Exception as e:
             print(f"Eroare la stergerea fișierelor: {str(e)}")
 
-    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie', '.xml')
-    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output zip api', '.zip')
-    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie PDF', '.pdf')
-    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie PDF', '.txt')
-    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari', '.txt')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie', '.xml')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api', '.zip')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie PDF', '.pdf')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie PDF', '.txt')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/Baza de date vanzari', '.txt')
+    # stergeFisiere('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/outs', '.xml')
     
     stergeFisiere('/home/efactura/efactura_intrarom/outputConversie', '.xml')
     stergeFisiere('/home/efactura/efactura_intrarom/outputZipAPI', '.zip')
@@ -119,13 +120,13 @@ def eFactura():
                 message = "fisier cu probleme----------------->" + str(fisier_xml)
                 print("ASTA E RASPUNSUL LA EROARE ", response)
                 listaMesajeEroare.append(message)
-                # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/output conversie PDF/log.txt', 'a', encoding='utf-8') as log_file:
+                # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie PDF/log.txt', 'a', encoding='utf-8') as log_file:
                 with open('/home/efactura/efactura_intrarom/outputConversiePDF/log.txt', 'a', encoding='utf-8') as log_file:
                     log_file.write("Eroare validare fisier: "+str(fisier_xml)+" \n")
                     log_file.write("Eroare la efectuarea cererii HTTP: "+str(response.status_code)+"\n")
         
     # Lista fișierelor XML se obține în afara funcției
-    # director_xml = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/outs/"
+    # director_xml = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/outs/"
     director_xml = "/home/efactura/efactura_intrarom/outs"
     fisiere_xml = lista_fisiere_xml(director_xml)
 
@@ -143,7 +144,7 @@ def eFactura():
     for item in dictionarFacturi["mesaje"]:
         factura = item["Factura"]
         index_solicitare = item["Index"]
-        # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local/Baza de date vanzari/facturiTransmise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
+        # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/Baza de date vanzari/facturiTransmise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
         with open('/home/efactura/efactura_intrarom/bazaDateVanzari/facturiTransmise.txt', 'a', encoding='utf-8') as raspunsANAFIndex:
             raspunsANAFIndex.write("Factura: "+str(factura)+" "+ "Index: " +str(index_solicitare)+" \n")
     
@@ -151,5 +152,5 @@ def eFactura():
     
     # print("asta e lista de facturi" ,listaFacturi(lungimeListaFacturi))
     
-    
+
     print("import in baza de date cu succes!")
