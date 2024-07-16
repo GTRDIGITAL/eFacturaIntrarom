@@ -330,7 +330,7 @@ def statusFacturi():
         descarcarepdf(lista)
         if request.method=='POST':
             # trimitereMail("C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/", "rezultat.zip")
-            trimitereMail("/home/efactura/efactura_intrarom/destinatie", "rezultat.zip")
+            trimitereMail("/home/efactura/efactura_intrarom/destinatie/", "rezultat.zip")
         # return render_template("status spv tabel.html", mesaje=mesaje, listaMesajeRulareCurenta=listaMesajeRulareCurenta)
     return render_template("status spv tabel.html", mesaje = mesaje, listaMesajeRulareCurenta=listaMesajeRulareCurenta)
     # else:
@@ -421,7 +421,7 @@ def download_file_invoices():
     
     descarcarepdf(lista)
     # trimitereMail("C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/", "rezultat.zip")
-    trimitereMail("/home/efactura/efactura_intrarom/destinatie", "rezultat.zip")
+    trimitereMail("/home/efactura/efactura_intrarom/destinatie/", "rezultat.zip")
     # Utilizați funcția send_file pentru a trimite fișierul către utilizator
     return render_template("main.html")
 
@@ -446,7 +446,7 @@ def download_file_recevied():
     
     descarcarepdfPrimite(lista)
     # trimitereMail("C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/", "rezultat.zip")
-    trimitereMail("/home/efactura/efactura_intrarom/destinatie", "rezultat.zip")
+    trimitereMail("/home/efactura/efactura_intrarom/destinatie/", "rezultat.zip")
     # Utilizați funcția send_file pentru a trimite fișierul către utilizator
     return render_template("main.html")
 

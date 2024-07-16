@@ -383,6 +383,7 @@
               Index incarcare
             </th>
             <th data-field="factura" data-sortable="true">Numar factura</th>
+            <th data-field="data_factura" data-sortable="true">Data factura</th>
             <th data-field="furnizor" data-sortable="true">Furnizor</th>
             <th data-field="detalii" data-sortable="true">Detalii</th>
             <th data-field="tip" data-sortable="true">Tip</th>
@@ -399,6 +400,7 @@
             <td>{{ mesaj["cif"] }}</td>
             <td>{{ mesaj["id_solicitare"] }}</td>
             <td>{{ mesaj["factura"] }}</td>
+            <td>{{ mesaj["data_factura"] }}</td>
             <td>{{ mesaj["furnizor"] }}</td>
             <td>{{ mesaj["detalii"] }}</td>
             <td>{{ mesaj["tip"] }}</td>
@@ -603,7 +605,7 @@
     // Obține toate celulele din coloana "TIP" și setează culoarea textului
     // AICI COLORAM
     $table.find('tbody tr').each(function () {
-        var cell = $(this).find('td:eq(6)'); // Obține celula din coloana "TIP"
+        var cell = $(this).find('td:eq(7)'); // Obține celula din coloana "TIP"
         var value = cell.text(); // Obține valoarea din celulă
         setCellTextColor(value, cell); // Setează culoarea textului în funcție de valoare
     });
