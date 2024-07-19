@@ -570,7 +570,7 @@
             for (var i = 0; i < rows.length; i++) {
                 if (rows[i].classList.contains('selected')) {
                     var cells = rows[i].getElementsByTagName('td');
-                    selectedIds.push(cells[2].innerText); // Modifică indexul conform coloanei "id_descarcare"
+                    selectedIds.push(cells[8].innerText); // Modifică indexul conform coloanei "id_descarcare"
                 }
             }
             document.getElementById('iduri_selectate').value = selectedIds;
