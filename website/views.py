@@ -22,6 +22,7 @@ import os
 import pymysql
 from sqlalchemy import create_engine, text
 from .trimitereCodOTP import *
+import re
 #print()
 def trimitereMail(locatie, nume):
     smtp_server = "smtp.office365.com"
