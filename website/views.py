@@ -747,7 +747,7 @@ def sincronizareAPIvsBD():
 
                         if descarcare.status_code == 200:
                             # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
-                            with open('with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
+                           with open('/home/efactura/efactura_intrarom/outputzipapi/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
                                 file.write(descarcare.content)
                                 print('Descarcat cu success')
                         else:
