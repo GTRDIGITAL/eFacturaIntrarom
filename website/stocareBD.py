@@ -438,7 +438,7 @@ def stocarePDFPrimite():
                 luna_factura = data_factura.split('-')[1]
 
                 # Construim numele facturii conform cerințelor
-                nume_factura = f"{nume_furnizor} F.{numar_factura} L{luna_factura} si idIncarcare(ala cu 4/5)"
+                nume_factura = f"{nume_furnizor} F.{numar_factura} L{luna_factura}"
 
                 print(f"Numele facturii formatat: {nume_factura}")
             else:
@@ -691,8 +691,11 @@ def descarcarepdfPrimite(idSelectate):
     
     # downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/download pdf baza de date'
     # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
-    downlXMLbaza = '/home/efactura/efactura_intrarom/downloadpdfbazadate'
-    destinatie = '/home/efactura/efactura_intrarom/destinatie/'
+    
+    downlXMLbaza = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
+    destinatie = "/home/efactura/efactura_intrarom/destinatie/"
+    
+
     # Eliminăm primul element din lista idSelectate
     if len(idSelectate) > 1:
         idSelectate = idSelectate[1:]
@@ -747,7 +750,7 @@ def descarcarepdfPrimite(idSelectate):
                     print(f"Fișier salvat la: {cale_fisier}")
                 
                 if continut_semnatura:
-                    cale_fisier_semnatura = os.path.join(downlXMLbaza, f"semnatura_{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}.xml")
+                    cale_fisier_semnatura = os.path.join(downlXMLbaza, f"{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}_semnatura.xml")
                     print(f"Scriem fișierul cu semnătură: {cale_fisier_semnatura}")
                     
                     with open(cale_fisier_semnatura, 'wb') as file:
@@ -760,7 +763,7 @@ def descarcarepdfPrimite(idSelectate):
 
             for filename in os.listdir(cale_fisier):
                 try:
-                    if filename.endswith('.xml') and "semnatura_" not in filename:
+                    if filename.endswith('.xml') and "_semnatura" not in filename:
                         xml_file_path = os.path.join(cale_fisier, filename)
 
                         with open(xml_file_path, 'rb') as xml_file:
@@ -811,7 +814,7 @@ def descarcarepdfPrimite(idSelectate):
                     sqlSafeUpdates = "SET sql_safe_updates = 0"
                     cursor.execute(sqlSafeUpdates)
                     
-                    update_query = f"UPDATE statusmesaje SET descarcata = 'Descarcata' WHERE id_solicitare IN ({stringID})"
+                    update_query = f"UPDATE statusmesaje SET descarcata = 'Descarcata' WHERE id_factura IN ({stringID})"
                     print(update_query, '-------------------------------------')
                     cursor.execute(update_query)
                     
@@ -822,6 +825,8 @@ def descarcarepdfPrimite(idSelectate):
             print("No IDs provided to update.")
 
         make_archive(downlXMLbaza, destinatie + 'rezultat.zip')
+        # stergeFisiere(downlXMLbaza, '.pdf')
+        # stergeFisiere(downlXMLbaza, '.xml')
         
     except Exception as e:
         print(f"Eroare în blocul principal: {e}")

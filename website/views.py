@@ -339,6 +339,9 @@ def statusFacturi():
 @views.route("/statusFacturiPrimite", methods=['GET','POST'])
 @login_required
 def statusFacturiPrimite():
+    stergeFisiere('/home/efactura/efactura_intrarom/downloadPDFBazaDate', '.xml')
+    stergeFisiere('/home/efactura/efactura_intrarom/downloadPDFBazaDate', 'pdf')
+    stergeFisiere('/home/efactura/efactura_intrarom/outputconversie', '.xml')
     lista.clear()
     email = session.get('email')
     cod = session.get('cod')
@@ -735,30 +738,31 @@ def sincronizareAPIvsBD():
                 print(rezultat_final)
                 stocareMesajeAnafPrimite(rezultat_final)
             
-            def descarcare():
-                for i in range(0, len(listaDiferente)):
-                    apiDescarcare = 'https://api.anaf.ro/prod/FCTEL/rest/descarcare?id=' + str(listaDiferente[i])
-                    print(apiDescarcare, 'ASTA E API DESCARCARE')
+                def descarcare():
+                    for i in range(0, len(listaDiferente)):
+                        apiDescarcare = 'https://api.anaf.ro/prod/FCTEL/rest/descarcare?id=' + str(listaDiferente[i])
+                        print(apiDescarcare, 'ASTA E API DESCARCARE')
 
-                    descarcare = requests.get(apiDescarcare, headers=headers, timeout=30)
+                        descarcare = requests.get(apiDescarcare, headers=headers, timeout=30)
 
-                    if descarcare.status_code == 200:
-                        # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
-                        with open("/home/efactura/efactura_intrarom/outputZipAPI/fisier" + str(listaDiferente[i]) + ".zip", "wb") as file:
-                            print('Descarcare cu success')
-                            file.write(descarcare.content)
-                            print('Descarcat cu success')
-                    else:
-                        print("Eroare la efectuarea cererii HTTP:", descarcare.status_code)
-                        print(descarcare.text)
+                        if descarcare.status_code == 200:
+                            # with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
+                            with open('with open('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:/fisier' + str(listaDiferente[i]) + '.zip', 'wb') as file:
+                                file.write(descarcare.content)
+                                print('Descarcat cu success')
+                        else:
+                            print("Eroare la efectuarea cererii HTTP:", descarcare.status_code)
+                            print(descarcare.text)
 
-            print("aici descarcam folosind id_descarcare")
-            descarcare()
+                print("aici descarcam folosind id_descarcare")
+                descarcare()
 
         # directory_path = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output zip api'
-        directory_path = "/home/efactura/efactura_intrarom/outputZipAPI"
+        directory_path = '/home/efactura/efactura_intrarom/outputzipapi'
+
         # output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie'
-        output_directory = "/home/efactura/efactura_intrarom/outputConversie"
+        output_directory = '/home/efactura/efactura_intrarom/outputconversie'
+
         os.makedirs(output_directory, exist_ok=True)
 
         for filename in os.listdir(directory_path):
@@ -766,18 +770,21 @@ def sincronizareAPIvsBD():
                 zip_file_path = os.path.join(directory_path, filename)
                 try:
                     with zipfile.ZipFile(zip_file_path, 'r') as zip_file:
-                        xml_files = [name for name in zip_file.namelist() if name.endswith('.xml')]
-                        for xml_file in xml_files:
-                            with zip_file.open(xml_file) as file:
-                                xml_data = file.read()
-                                if "semnatura" in xml_file.lower():
-                                    output_path = os.path.join(output_directory, xml_file)
-                                else:
-                                    output_path = os.path.join(output_directory, xml_file)
-                                with open(output_path, 'wb') as output_file:
-                                    output_file.write(xml_data)
+                        file_id = filename.replace('fisier', '').replace('.zip', '')
+                        for xml_file in zip_file.namelist():
+                            if xml_file.endswith('.xml'):
+                                with zip_file.open(xml_file) as file:
+                                    xml_data = file.read()
+                                    # Replace any numeric part in the xml_file name with file_id
+                                    new_filename = re.sub(r'\d+', file_id, xml_file)
+                                    output_path = os.path.join(output_directory, new_filename)
+                                    with open(output_path, 'wb') as output_file:
+                                        output_file.write(xml_data)
                 except zipfile.BadZipFile:
                     print(f'Fișierul {zip_file_path} nu este un fișier ZIP valid sau este corupt')
+
+
+
 
 
     def make_archive(source, destination):
