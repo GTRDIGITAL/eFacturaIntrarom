@@ -87,6 +87,12 @@ def citeste_configurare(file_path):
         config = json.load(file)
     return config
 
+def stergeFisiere(downlXMLbaza, file_extension):
+    for root, dirs, files in os.walk(downlXMLbaza):
+        for file in files:
+            if file.endswith(file_extension):
+                os.remove(os.path.join(root, file))
+                
 config = citeste_configurare('config.json')
 mysql_config = config['mysql']
 # print(mysql_config)
@@ -391,9 +397,8 @@ def download_file_ANAF():
     # try:
         raspunsANAF(lista)
         stocareZIPAnaf()
-        trimitereMail("/home/efactura/efactura_intrarom/outputarhiveconversiepdf/", 'rezultatArhiveConversie.zip')
         # trimitereMail('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output arhive conversie PDF/', 'rezultatArhiveConversie.zip')
-    #     return render_template("main.html")
+        # return render_template("main.html")
     # except:
         # return render_template("status spv tabel.html")
     # return render_template("main.html")
@@ -401,7 +406,7 @@ def download_file_ANAF():
     # trimitereMail()
     # return send_from_directory('C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output arhive conversie PDF', filename, as_attachment = True)
     # return send_from_directory('/home/efactura/efactura_intrarom/outputarhiveconversiepdf', filename, as_attachment = True)
-    return render_template("main.html")
+    return redirect(url_for("views.statusFacturi"))
 
 @views.route('/download_invoices', methods=['GET'])
 @login_required

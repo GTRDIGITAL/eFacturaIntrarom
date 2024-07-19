@@ -11,7 +11,11 @@ import pymysql
 import requests
 import xml.etree.ElementTree as ET
 
-
+def stergeFisiere(downlXMLbaza, file_extension):
+    for root, dirs, files in os.walk(downlXMLbaza):
+        for file in files:
+            if file.endswith(file_extension):
+                os.remove(os.path.join(root, file))
 def citeste_configurare(file_path):
     with open(file_path, 'r') as file:
         config = json.load(file)
@@ -509,36 +513,36 @@ def descarcarepdf(idSelectate):
         database=mysql_config['database']
     )
     cursor = connection.cursor() 
-    
-    # print(idSelectate, 'ASTEA AICI SUNT IN STOCARE.PY')
-    # downlXMLbaza = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/download pdf baza de date'
-    # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
     downlXMLbaza = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
-    destinatie = '/home/efactura/efactura_intrarom/destinatie/'
-    # idSelectate=idSelectate[1:]
-    print(idSelectate, 'ASTEA SUNT SELECTATE')
-    stringID=""
-    for i in range(0, len(idSelectate)):
-        if i == len(idSelectate)-1:
-            stringID=stringID + str(idSelectate[i])
-        else:
-            stringID=stringID + str(idSelectate[i]) +  ','
-
-    print(stringID, ' STRINGID')
-    file_extension =('.pdf', '.xml')
-    def stergeFisiere(directory_path, file_extension):
-        
-        try:
-            for filename in os.listdir(directory_path):
-                file_path = os.path.join(directory_path, filename)
-                if filename.endswith(file_extension):
-                    os.remove(file_path)
-                    print(f"Fisierul {filename} a fost sters.")
-        except Exception as e:
-            print(f"Eroare la stergerea fișierelor: {str(e)}")
-
-    stergeFisiere(downlXMLbaza, file_extension)
+    destinatie = "/home/efactura/efactura_intrarom/destinatie/"
     
+    
+    
+    stergeFisiere(downlXMLbaza, '.pdf')
+    stergeFisiere(destinatie, '.zip')
+    print(idSelectate, 'aici suntem in descarcare')
+    # Eliminăm primul element din lista idSelectate
+    # if len(idSelectate) > 1:
+    #     idSelectate = idSelectate[1:]
+    # else:
+    #     print("Nu există ID-uri selectate pentru procesare.")
+    #     return
+
+    # Creăm un string ID pentru query-ul SQL
+    stringID = ",".join(map(str, idSelectate))
+    if not stringID:
+        print("StringID este gol, ieșim din funcție.")
+        return
+    
+    # Extensia fișierelor de șters
+    file_extension = ('.pdf', '.xml')
+
+    # Funcție pentru ștergerea fișierelor dintr-un director specific
+    
+    # Ștergem fișierele din directorul specificat
+    stergeFisiere(downlXMLbaza, file_extension)
+
+    # Funcție pentru crearea unui arhiv ZIP
     def make_archive(source, destination):
         base = os.path.basename(destination)
         name = base.split('.')[0]
@@ -546,140 +550,109 @@ def descarcarepdf(idSelectate):
         archive_from = os.path.dirname(source)
         archive_to = os.path.basename(source.strip(os.sep))
         shutil.make_archive(name, format, archive_from, archive_to)
-        shutil.move('%s.%s'%(name,format), destination)
+        shutil.move('%s.%s' % (name, format), destination)
 
     try:
-        query = "SELECT nume_fisier, continut, continut_semnatura FROM fisierepdf WHERE nume_fisier IN ("+str(stringID)+")"
-        print(query)
-        # cursor.execute(query)
-        # # print("ce plm ai")
-        # for (nume_fisier, continut) in cursor:
-        #     cale_fisier = os.path.join(downlXMLbaza, str(nume_fisier) + '.xml')
-        #     print(f"am gasit {stringID}")
-
-        #     with open(cale_fisier, 'wb') as file:
-        #         file.write(continut)
-        # print(stringID, 'STRINGGGGGGGGG')
-        cursor.execute(query)
-        print("Query executat cu succes")
-
-        for (nume_fisier, continut, continut_semnatura) in cursor:
-            cale_fisier = os.path.join(downlXMLbaza, f"{nume_fisier}.xml")
-            print(f"Scriem fișierul: {cale_fisier}")
+        with connection.cursor() as cursor:
+            query = f"SELECT nume_fisier, month(data_factura), numar_factura, nume_client, continut, continut_semnatura FROM fisierepdf WHERE nume_fisier IN ({stringID})"
+            print("Query:", query)
             
-            with open(cale_fisier, 'wb') as file:
-                file.write(continut)
-                print(f"Fișier salvat la: {cale_fisier}")
-            
-            if continut_semnatura:
-                cale_fisier_semnatura = os.path.join(downlXMLbaza, f"semnatura_{nume_fisier}.xml")
-                print(f"Scriem fișierul cu semnătură: {cale_fisier_semnatura}")
+            cursor.execute(query)
+            print("Query executat cu succes")
+
+            for (nume_fisier, data_factura, numar_factura, nume_client, continut, continut_semnatura) in cursor:
+                # luna = data_factura.strftime('%m')
+                cale_fisier = os.path.join(downlXMLbaza, f"{nume_client} F.{numar_factura} L{data_factura} {nume_fisier}.xml")
+                print(f"Scriem fișierul: {cale_fisier}")
                 
-                with open(cale_fisier_semnatura, 'wb') as file:
-                    file.write(continut_semnatura)
-                    print(f"Fișier cu semnătură salvat la: {cale_fisier_semnatura}")
-
+                with open(cale_fisier, 'wb') as file:
+                    file.write(continut)
+                    print(f"Fișier salvat la: {cale_fisier}")
+                
+                if continut_semnatura:
+                    cale_fisier_semnatura = os.path.join(downlXMLbaza, f"{nume_client} F.{numar_factura} L{data_factura} {nume_fisier}_semnatura.xml")
+                    print(f"Scriem fișierul cu semnătură: {cale_fisier_semnatura}")
+                    
+                    with open(cale_fisier_semnatura, 'wb') as file:
+                        file.write(continut_semnatura)
+                        print(f"Fișier cu semnătură salvat la: {cale_fisier_semnatura}")
 
         def conversie():
-                # xmlANAF = 'C:/Dezvoltare/E-Factura/2023/eFactura/Expeditors/eFacturaExpeditors local2/output conversie'
-                # cale_fisier = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/download pdf baza de date' # de pus calea
-                cale_fisier = '/home/efactura/efactura_intrarom/downloadPdfBazaDate'
-                headerss = {"Content-Type": "text/plain"}
+            cale_fisier = downlXMLbaza
+            headerss = {"Content-Type": "text/plain"}
 
-                # Creează un nou workbook Excel
-                # workbook = Workbook()
-                # sheet = workbook.active
-                # sheet.title = 'Excepții'
+            for filename in os.listdir(cale_fisier):
+                try:
+                    if filename.endswith('.xml') and "_semnatura" not in filename:
+                        xml_file_path = os.path.join(cale_fisier, filename)
 
-                # Adaugă un antet pentru coloana INDEX_INCARCARE
-                # sheet['A1'] = 'INDEX_INCARCARE'
+                        with open(xml_file_path, 'rb') as xml_file:
+                            xml_data = xml_file.read()
+                            if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
+                            if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
+                            if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
+                                xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
 
-                for filename in os.listdir(cale_fisier):
-                    try:
-                        if filename.endswith('.xml') and "semnatura_" not in filename:
-                            xml_file_path = os.path.join(cale_fisier, filename)
+                        if 'CreditNote' in str(xml_data):
+                            convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FCN/DA'
+                        else:
+                            convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FACT1/DA'
 
-                            with open(xml_file_path, 'rb') as xml_file:
-                                xml_data = xml_file.read()
-                                if b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
-                                    xml_data = xml_data.replace(b'xmlns:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
-                                if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
-                                    xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
-                                if b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"' in xml_data:
-                                    xml_data = xml_data.replace(b'xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../../UBL-2.1(1)/xsd/maindoc/UBL-Invoice-2.1.xsd"', b'')
-                            if 'CreditNote' in str(xml_data):
-                                convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FCN/DA'
-                            else:
-                                convert = 'https://webservicesp.anaf.ro/prod/FCTEL/rest/transformare/FACT1/DA'
+                        start_time = time.time()  # Momentul de start al procesării
+                        response = None  # Inițializăm răspunsul cu None
+                        max_retry_time = 16  # Numărul maxim de secunde pentru a efectua încercările
+                        retry_interval = 3  # Intervalul de timp între încercări
 
-                            start_time = time.time()  # Momentul de start al procesării
-        
-                            response = None  # Inițializăm răspunsul cu None
-                            max_retry_time = 16  # Numărul maxim de secunde pentru a efectua încercările
-                            retry_interval = 3  # Intervalul de timp între încercări
-                            
-                            # Loop până când obținem un răspuns sau până când timpul maxim a fost depășit
-                            while response is None and time.time() - start_time < max_retry_time:
-                                try:
-                                    response = requests.post(convert, data=xml_data, headers=headerss, timeout=30)
-                                    # print(response.text)
-                                except requests.exceptions.Timeout:
-                                    # Dacă întâlnim un timeout, continuăm loop-ul și încercăm din nou
-                                    pass
-                                
-                                # yield "\r\n"
-        
-                            # Așteaptă intervalul de timp specificat între încercări
+                        # Loop până când obținem un răspuns sau până când timpul maxim a fost depășit
+                        while response is None and time.time() - start_time < max_retry_time:
+                            try:
+                                response = requests.post(convert, data=xml_data, headers=headerss, timeout=30)
+                            except requests.exceptions.Timeout:
+                                pass  # Dacă întâlnim un timeout, continuăm loop-ul și încercăm din nou
                             time.sleep(retry_interval)
 
-                            if response and response.status_code == 200:
-                                filename_no_extension = os.path.splitext(filename)[0]
-                                # with open(f'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/download pdf baza de date/{filename_no_extension}.pdf', 'wb') as file:
-                                with open(f'/home/efactura/efactura_intrarom/downloadPdfBazaDate/{filename_no_extension}.pdf', 'wb') as file:
-                                    file.write(response.content)
-                                    print(f'Fisierul {filename} a fost convertit cu succes')
-                            else:
-                                print("Eroare la efectuarea cererii HTTP:", response.status_code)
+                        if response and response.status_code == 200:
+                            filename_no_extension = os.path.splitext(filename)[0]
+                            pdf_path = os.path.join(cale_fisier, f"{filename_no_extension}.pdf")
+                            with open(pdf_path, 'wb') as file:
+                                file.write(response.content)
+                                print(f'Fișierul {filename} a fost convertit cu succes în {pdf_path}')
+                        else:
+                            print("Eroare la efectuarea cererii HTTP:", response.status_code if response else "No response")
+                            if response:
                                 print(response.text)
+                except Exception as e:
+                    print("A apărut o excepție la", filename, ":", str(e))
 
-                            # Adaugă numele fișierului în coloana INDEX_INCARCARE
-                            # sheet.append([filename_no_extension])
-                    except Exception as e:
-                        print("A apărut o excepție la", filename, ":", str(e))
-                        # Adaugă numele fișierului în coloana INDEX_INCARCARE pentru a înregistra excepția
-                        # sheet.append([filename])
-                # Salvează workbook-ul Excel
-                # workbook.save('C:/Dezvoltare/E-Factura/2023/eFactura/Expeditors/eFacturaExpeditors local2/output conversie PDF/excepții.xlsx')
-
-            
         conversie()
-        # time.sleep(5)
 
-        print('aici facem conversia in PDF')        
-        # make_archive(downlPDFbaza, 'C:\\Dezvoltare\\E-Factura\\2023\\eFactura\\Ferro\\eFacturaFerro\\destinatie\\'+'rezultat.zip')
-        # sqlSafeUpdates="set sql_safe_updates = 0"
-        # cursor.execute(sqlSafeUpdates)
-        # update_query = "UPDATE trimiterefacturi SET descarcata = 'Da' WHERE index_incarcare IN (" + stringID + ")"
-        # print(update_query, '-------------------------------------')
-        # cursor.execute(update_query)
-        
+        # if stringID:
+        #     try:
+        #         with connection.cursor() as cursor:
+        #             sqlSafeUpdates = "SET sql_safe_updates = 0"
+        #             cursor.execute(sqlSafeUpdates)
+                    
+        #             update_query = f"UPDATE statusmesaje SET descarcata = 'Descarcata' WHERE id_factura IN ({stringID})"
+        #             print(update_query, '-------------------------------------')
+        #             cursor.execute(update_query)
+                    
+        #             connection.commit()  # Commit the transaction
+        #     except Exception as e:
+        #         print(f"An error occurred during the update: {e}")
+        # else:
+        #     print("No IDs provided to update.")
+
         make_archive(downlXMLbaza, destinatie + 'rezultat.zip')
+        # stergeFisiere(downlXMLbaza, '.pdf')
+        # stergeFisiere(downlXMLbaza, '.xml')
         
-    except:
-        print("nu are valori")
-
-    cursor.close()
-
-def stergeFisiere(directory_path, file_extension):
-        
-    try:
-        for filename in os.listdir(directory_path):
-            file_path = os.path.join(directory_path, filename)
-            if filename.endswith(file_extension):
-                os.remove(file_path)
-                print(f"Fisierul {filename} a fost sters.")
     except Exception as e:
-        print(f"Eroare la stergerea fișierelor: {str(e)}")
+        print(f"Eroare în blocul principal: {e}")
+    finally:
+        connection.close()
+        
 
 def descarcarepdfPrimite(idSelectate):
     connection = pymysql.connect(
