@@ -351,7 +351,8 @@ def stocarePDF():
     # director_fisiere = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie"
     director_fisiere = '/home/efactura/efactura_intrarom/outputConversie/'
 
-# Parcurgerea fișierelor din director și inserarea în baza de date
+
+    
     for nume_fisier in os.listdir(director_fisiere):
         if nume_fisier.endswith('.xml') and not nume_fisier.startswith('semnatura_'):
             cale_absoluta = os.path.join(director_fisiere, nume_fisier)
@@ -359,32 +360,32 @@ def stocarePDF():
             with open(cale_absoluta, 'rb') as file:
                 pdf_content = file.read()
             nume_fisier_fara_extensie = nume_fisier.replace(".xml", "")
-            # tree = ET.parse(cale_absoluta)
-            # root = tree.getroot()
-            # namespaces = {
-            #     'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
-            #     'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'
-            # }
+            tree = ET.parse(cale_absoluta)
+            root = tree.getroot()
+            namespaces = {
+                'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
+                'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'
+            }
 
-            # numar_factura_element = root.find('.//cbc:ID', namespaces)
-            # data_factura_element = root.find('.//cbc:IssueDate', namespaces)
-            # nume_furnizor_element = root.find('.//cac:PartyLegalEntity/cbc:RegistrationName', namespaces)
+            numar_factura_element = root.find('.//cbc:ID', namespaces)
+            data_factura_element = root.find('.//cbc:IssueDate', namespaces)
+            nume_client_element = root.find('.//cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName', namespaces)
 
-            # if numar_factura_element is not None and data_factura_element is not None and nume_furnizor_element is not None:
-            #     numar_factura = numar_factura_element.text.replace('/', ' ')
-            #     data_factura = data_factura_element.text
-            #     nume_furnizor = nume_furnizor_element.text
+            if numar_factura_element is not None and data_factura_element is not None and nume_client_element is not None:
+                numar_factura = numar_factura_element.text.replace('/', ' ')
+                data_factura = data_factura_element.text
+                nume_client = nume_client_element.text
 
-            #     # Obținem luna din data facturii (presupunem că data este în formatul 'YYYY-MM-DD')
-            #     luna_factura = data_factura.split('-')[1]
+                # Obținem luna din data facturii (presupunem că data este în formatul 'YYYY-MM-DD')
+                luna_factura = data_factura.split('-')[1]
 
-            #     # Construim numele facturii conform cerințelor
-            #     nume_factura = f"{nume_furnizor} F.{numar_factura} L{luna_factura} si idIncarcare(ala cu 4/5)"
+                # Construim numele facturii conform cerințelor
+                nume_factura = f"{nume_client} F.{numar_factura} L{luna_factura}"
 
-            #     print(f"Numele facturii formatat: {nume_factura}")
-            # else:
-            #     print(f"Elementele necesare pentru construirea numelui facturii lipsesc în fișierul {nume_fisier}.xml")
-            #     continue
+                print(f"Numele facturii formatat: {nume_factura}")
+            else:
+                print(f"Elementele necesare pentru construirea numelui facturii lipsesc în fișierul {nume_fisier}.xml")
+                continue
 
             # Căutăm fișierul de semnătură asociat
             nume_fisier_semnatura = f"semnatura_{nume_fisier}"
@@ -397,8 +398,12 @@ def stocarePDF():
 
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            insert_query = "INSERT INTO FisierePDF (nume_fisier, continut, data_introducere, continut_semnatura) VALUES (%s, %s, %s, %s)"
-            values = (nume_fisier.replace('.xml', ''), pdf_content, timestamp, continut_semnatura)
+            insert_query = """
+                INSERT INTO FisierePDF 
+                (nume_fisier, data_introducere, continut, continut_semnatura, nume_client, data_factura, numar_factura) 
+                VALUES (%s, %s, %s, %s, %s, %s, %s)
+            """
+            values = (nume_fisier_fara_extensie, timestamp, pdf_content, continut_semnatura, nume_client, data_factura, numar_factura)
             cursor.execute(insert_query, values)
 
     connection.commit()
@@ -1113,7 +1118,7 @@ def raspunsANAF(id_selectate):
 
         # output_directory = 'C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/output conversie'
         output_directory = "/home/efactura/efactura_intrarom/outputConversie"
-        arhiveANAF = "/home/efactura/efactura_intrarom/arhiveANAF"
+        # arhiveANAF = "/home/efactura/efactura_intrarom/arhiveANAF"
 
         os.makedirs(output_directory, exist_ok=True)
 
@@ -1141,6 +1146,11 @@ def raspunsANAF(id_selectate):
             shutil.move('%s.%s'%(name,format), destination)   
             
         stocarePDF()
+        
+        
+        
+        
+        
         # stergeFisiere('/output conversie', '.xml')
         print("facem stocarea pdf")
         # print("aici stocam XML in BD")
