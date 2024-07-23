@@ -718,17 +718,33 @@ def descarcarepdfPrimite(idSelectate):
             cursor.execute(query)
             print("Query executat cu succes")
 
-            for (nume_fisier, data_factura, numar_factura, nume_furnizor, continut, continut_semnatura) in cursor:
-                # luna = data_factura.strftime('%m')
-                cale_fisier = os.path.join(downlXMLbaza, f"{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}.xml")
+            for nume_fisier, data_factura, numar_factura, nume_furnizor, continut, continut_semnatura in cursor:
+                # Remove leading "SC ", "S.C.", or "SC" from nume_furnizor directly in the loop
+                if nume_furnizor.startswith("SC "):
+                    nume_furnizor = nume_furnizor[3:].strip()
+                elif nume_furnizor.startswith("S.C."):
+                    nume_furnizor = nume_furnizor[4:].strip()
+                elif nume_furnizor.startswith("SC"):
+                    nume_furnizor = nume_furnizor[2:].strip()
+
+                # Create file path with cleaned nume_furnizor
+                cale_fisier = os.path.join(
+                    downlXMLbaza, 
+                    f"{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}.xml"
+                )
                 print(f"Scriem fișierul: {cale_fisier}")
                 
+                # Write the file content
                 with open(cale_fisier, 'wb') as file:
                     file.write(continut)
                     print(f"Fișier salvat la: {cale_fisier}")
                 
+                # Check if there is a signature content and write it
                 if continut_semnatura:
-                    cale_fisier_semnatura = os.path.join(downlXMLbaza, f"{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}_semnatura.xml")
+                    cale_fisier_semnatura = os.path.join(
+                        downlXMLbaza, 
+                        f"{nume_furnizor} F.{numar_factura} L{data_factura} {nume_fisier}_semnatura.xml"
+                    )
                     print(f"Scriem fișierul cu semnătură: {cale_fisier_semnatura}")
                     
                     with open(cale_fisier_semnatura, 'wb') as file:
