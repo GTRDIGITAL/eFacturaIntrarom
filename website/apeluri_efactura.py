@@ -86,12 +86,12 @@ def eFactura():
 
                 if "<cbc:InvoiceTypeCode>389</cbc:InvoiceTypeCode>" in xml:
                     print("asta e AUTOFACTURA")
-                    apiDepunere = f'https://api.anaf.ro/test/FCTEL/rest/upload?standard=UBL&cif={cif}&autofactura=DA'
+                    apiDepunere = f'https://api.anaf.ro/prod/FCTEL/rest/upload?standard=UBL&cif={cif}&autofactura=DA'
                 elif "CreditNote" in xml:
                     print('asta e credit note')
-                    apiDepunere = 'https://api.anaf.ro/test/FCTEL/rest/upload?standard=CN&cif='+str(cif)
+                    apiDepunere = 'https://api.anaf.ro/prod/FCTEL/rest/upload?standard=CN&cif='+str(cif)
                 else:
-                    apiDepunere = 'https://api.anaf.ro/test/FCTEL/rest/upload?standard=UBL&cif='+str(cif)
+                    apiDepunere = 'https://api.anaf.ro/prod/FCTEL/rest/upload?standard=UBL&cif='+str(cif)
                     
                 response = requests.post(apiDepunere, headers=headers, data=xml)
                 print('AICI AVEM RESPONSE',response)
