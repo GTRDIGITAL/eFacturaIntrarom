@@ -993,9 +993,9 @@ def stareMesaj(results):
     for i in range(0, len(results)):
         try:
             if str(results[i])[:1] == '5':
-                apiStareMesaj = 'https://api.anaf.ro/test/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
+                apiStareMesaj = 'https://api.anaf.ro/prod/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
             else:
-                apiStareMesaj = 'https://api.anaf.ro/test/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
+                apiStareMesaj = 'https://api.anaf.ro/prod/FCTEL/rest/stareMesaj?id_incarcare='+str(results[i])
                 
             print(apiStareMesaj)
             # while True:  # buclă infinită
@@ -1079,7 +1079,7 @@ def raspunsANAF(id_selectate):
             listaIdDescarcare.clear()
             for i in range(0, len(number_list)):
                 print('in for ',number_list[i])
-                apiStareMesaj = 'https://api.anaf.ro/test/FCTEL/rest/stareMesaj?id_incarcare='+str(number_list[i])
+                apiStareMesaj = 'https://api.anaf.ro/prod/FCTEL/rest/stareMesaj?id_incarcare='+str(number_list[i])
                 
                 while True:  # buclă infinită
                     stare = requests.get(apiStareMesaj, headers=headers, timeout=30)
@@ -1111,7 +1111,7 @@ def raspunsANAF(id_selectate):
         time.sleep(10)
         def descarcare():
             for i in range(0, len(listaIdDescarcare)):
-                apiDescarcare = 'https://api.anaf.ro/test/FCTEL/rest/descarcare?id='+str(listaIdDescarcare[i])
+                apiDescarcare = 'https://api.anaf.ro/prod/FCTEL/rest/descarcare?id='+str(listaIdDescarcare[i])
 
                 descarcare = requests.get(apiDescarcare, headers=headers, timeout=30)
 
