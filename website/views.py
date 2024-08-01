@@ -23,8 +23,137 @@ import pymysql
 from sqlalchemy import create_engine, text
 from .trimitereCodOTP import *
 import re
+from email.message import EmailMessage
+from email.utils import formataddr
+from email.mime.base import MIMEBase
+from email import encoders
+def stergeFisiere(downlXMLbaza, file_extension):
+    for root, dirs, files in os.walk(downlXMLbaza):
+        for file in files:
+            if file.endswith(file_extension):
+                os.remove(os.path.join(root, file))
+
+    # Ștergem fișierele din directorul specificat
+# stergeFisiere(downlXMLbaza, file_extension)
+def send_email(sender_email, receiver_email, password, subject, body, attachment_path):
+        msg = EmailMessage()
+        msg['From'] = formataddr(('GTRDigital', sender_email))
+        msg['To'] = ', '.join(receiver_email)
+        msg['Subject'] = subject
+
+        msg.set_content(body)
+
+        with open(attachment_path, 'rb') as f:
+            file_data = f.read()
+            file_name = os.path.basename(attachment_path)
+
+        msg.add_attachment(file_data, maintype='application', subtype='octet-stream', filename=file_name)
+
+        context = ssl.create_default_context()
+
+        # try:
+        with smtplib.SMTP("smtp.office365.com", 587) as server:
+            server.ehlo()
+            server.starttls(context=context)
+            server.ehlo()
+            server.login(sender_email, password)
+            server.send_message(msg)
+            print(f"Email trimis către {receiver_email} cu atașamentul {file_name}.")
+        # except Exception as e:
+        #     print(f"Eroare la trimiterea e-mailului: {e}")
+
+def trimiteremailseparat(locatie):
+    print("====trimiteremail")
+    smtp_server = "smtp.office365.com"
+    port = 587  # Pentru starttls
+    sender_email = "GTRDigital@ro.gt.com"
+    password = "g[&vuBR9WQqr=7>D"
+    context = ssl.create_default_context()
+    message_text = "Hello,\n\nPlease find above the downloaded invoices.\n\nThank you,\nGTRDigital"
+    
+    date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
+    subj = "Facturi SPV " + str(date)
+    mailTo = "bogdan.constantinescu@ro.gt.com"
+    # destinatie = "C:/Users/bogdan.constantinesc/Documents/Intrarom local - Copy/destinatie/"
+    # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
+
+    with zipfile.ZipFile(locatie, 'r') as zip_ref:
+        zip_ref.extractall("extracted_files10")
+    folder_path = '/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date'
+    folder_path2='/home/efactura/efactura_intrarom/extracted_files10'
+    word = 'semnatura'
+    for file in os.listdir(folder_path):
+        if word in str(file):
+            os.remove(folder_path+"/"+str(file))
+
+    for file in os.listdir("/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date"):
+        print("----------------")
+        # print(file)
+        if file.endswith(".xml"):
+            print(str(file))
+            tree = ET.parse(os.path.join("/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date", file))
+            root = tree.getroot()
+            folder_path = "extracted_files"
+            namespace = {'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'}
+            sender_email = "GTRDigital@ro.gt.com"
+            password = "g[&vuBR9WQqr=7>D"
+
+            listacui=['RO17753151','RO12276949','RO21763919','RO16291216']
+            listaadreseprimite1=['viorel.grafu@ro.gt.com','cristian.iordache@ro.gt.com','alina.boarca@ro.gt.com','denis.david@ro.gt.com']
+            aprobator2=['bogdan.constantinescu@ro.gt.com','bogdan.constantinescu@ro.gt.com','bogdan.constantinescu@ro.gt.com','bogdan.constantinescu@ro.gt.com']
+            aprobator3=['andrei.soare@ro.gt.com','andrei.soare@ro.gt.com','andrei.soare@ro.gt.com','andrei.soare@ro.gt.com']
+
+            receiver_email = "cristian.iordache@ro.gt.com"
+            message_text = "Hello,\n\nPlease find attached the downloaded invoices.\n\nThank you,\nGTRDigital"
+
+            # Căutarea tag-ului cac:AccountingSupplierParty > Party > PartyTaxScheme > CompanyID
+            ns = {
+                'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
+                'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'
+            }
+
+            # Extrage supplier company id
+            supplier_company_id = root.find('.//cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID', ns).text
+
+            # Extrage total factura (PayableAmount)
+            payable_amount_element = root.find('.//cac:LegalMonetaryTotal/cbc:PayableAmount', ns)
+            total_factura = payable_amount_element.text
+            currency = root.find('.//cbc:DocumentCurrencyCode', ns).text
+            print(supplier_company_id,total_factura,currency)
+            adresedeemail=[]
+            for k in range(0,len(listacui)):
+                print(listacui[k],currency)
+                if(str(listacui[k])==str(supplier_company_id)):
+                    print("yes")
+                    adresedeemail.append(listaadreseprimite1[k])
+                    if(str(currency)=="RON"):
+                        print("tadam")
+                        if(float(total_factura)>500):
+                            adresedeemail.append(aprobator2[k])
+                        if(float(total_factura)>2500):
+                            adresedeemail.append(aprobator3[k])
+                    else:
+                        print(currency)
+                        if(str(currency=="EUR")):
+                            print("astfel")
+                            if(float(total_factura)>100):
+                                adresedeemail.append(aprobator2[k])
+                            if(float(total_factura)>500):   
+                                adresedeemail.append(aprobator3[k])
+            print(supplier_company_id,total_factura,currency)
+            date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
+            subject = "Facturi SPV " + date
+            if not adresedeemail:
+                print("Lista goala")
+            else:
+                try:
+                    send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date/" +str(file).replace(".xml",".pdf"))
+                except:
+                    print("Nu a mers conversia")
+    shutil.rmtree(folder_path2)
 #print()
 def trimitereMail(locatie, nume):
+    trimiteremailseparat("/home/efactura/efactura_intrarom/destinatie/rezultat.zip")
     smtp_server = "smtp.office365.com"
     port = 587  # Pentru starttls
     sender_email = "GTRDigital@ro.gt.com"
