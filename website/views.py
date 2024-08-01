@@ -93,7 +93,7 @@ def trimiteremailseparat(locatie):
             print(str(file))
             tree = ET.parse(os.path.join("/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate", file))
             root = tree.getroot()
-            folder_path = "extracted_files"
+
             namespace = {'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'}
             sender_email = "GTRDigital@ro.gt.com"
             password = "g[&vuBR9WQqr=7>D"
