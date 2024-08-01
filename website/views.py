@@ -79,19 +79,19 @@ def trimiteremailseparat(locatie):
 
     with zipfile.ZipFile(locatie, 'r') as zip_ref:
         zip_ref.extractall("/home/efactura/efactura_intrarom/extracted_files10/")
-    folder_path = '/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date'
+    folder_path = '/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate'
     folder_path2='/home/efactura/efactura_intrarom/extracted_files10'
     word = 'semnatura'
     for file in os.listdir(folder_path):
         if word in str(file):
             os.remove(folder_path+"/"+str(file))
 
-    for file in os.listdir("/home/efactura/efactura_intrarom/extracted_files10/downloadPdfbazadedate"):
+    for file in os.listdir("/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate"):
         print("----------------")
         # print(file)
         if file.endswith(".xml"):
             print(str(file))
-            tree = ET.parse(os.path.join("/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date", file))
+            tree = ET.parse(os.path.join("/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate", file))
             root = tree.getroot()
             folder_path = "extracted_files"
             namespace = {'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'}
@@ -147,7 +147,7 @@ def trimiteremailseparat(locatie):
                 print("Lista goala")
             else:
                 try:
-                    send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadedate/" +str(file).replace(".xml",".pdf"))
+                    send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate/" +str(file).replace(".xml",".pdf"))
                 except:
                     print("Nu a mers conversia")
     shutil.rmtree(folder_path2)
