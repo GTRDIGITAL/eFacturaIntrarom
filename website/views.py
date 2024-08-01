@@ -150,7 +150,7 @@ def trimiteremailseparat(locatie):
                     send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadate/" +str(file).replace(".xml",".pdf"))
                 except:
                     print("Nu a mers conversia")
-    shutil.rmtree(folder_path2)
+    shutil.rmtree(folder_path)
 #print()
 def trimitereMail(locatie, nume):
     trimiteremailseparat("/home/efactura/efactura_intrarom/destinatie/rezultat.zip")
