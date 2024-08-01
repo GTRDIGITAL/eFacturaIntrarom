@@ -78,7 +78,7 @@ def trimiteremailseparat(locatie):
     # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
 
     with zipfile.ZipFile(locatie, 'r') as zip_ref:
-        zip_ref.extractall("extracted_files10")
+        zip_ref.extractall("/home/efactura/efactura_intrarom/extracted_files10/")
     folder_path = '/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date'
     folder_path2='/home/efactura/efactura_intrarom/extracted_files10'
     word = 'semnatura'
@@ -86,7 +86,7 @@ def trimiteremailseparat(locatie):
         if word in str(file):
             os.remove(folder_path+"/"+str(file))
 
-    for file in os.listdir("/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date"):
+    for file in os.listdir("/home/efactura/efactura_intrarom/extracted_files10/downloadPdfbazadedate"):
         print("----------------")
         # print(file)
         if file.endswith(".xml"):
@@ -147,7 +147,7 @@ def trimiteremailseparat(locatie):
                 print("Lista goala")
             else:
                 try:
-                    send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/download pdf baza de date/" +str(file).replace(".xml",".pdf"))
+                    send_email(sender_email, adresedeemail, password, subject, message_text,"/home/efactura/efactura_intrarom/extracted_files10/downloadpdfbazadedate/" +str(file).replace(".xml",".pdf"))
                 except:
                     print("Nu a mers conversia")
     shutil.rmtree(folder_path2)
