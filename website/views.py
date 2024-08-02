@@ -73,7 +73,7 @@ def trimiteremailseparat(locatie):
     
     date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
     subj = "Facturi SPV " + str(date)
-    mailTo = "bogdan.constantinescu@ro.gt.com"
+    mailTo = "invoices-spv@intrarom.ro"
     # destinatie = "C:/Users/bogdan.constantinesc/Documents/Intrarom local - Copy/destinatie/"
     # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
 
