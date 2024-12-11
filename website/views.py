@@ -106,7 +106,7 @@ def trimiteremailseparat(locatie):
             aprobator3=['','','','','','','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','','','','','','','','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','AdrianZ@INTRAROM.RO','','','','','','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','','','','AdrianZ@INTRAROM.RO','','','','','AdrianZ@INTRAROM.RO','','','AdrianZ@INTRAROM.RO','','','','','','','','','','','','','','AdrianZ@INTRAROM.RO','','','','','','','','','','','','','','','','','','AdrianZ@INTRAROM.RO','','','','','','','','','','','','','','','','','','','','','','','','', '', '', '', '', '', '']
 
             receiver_email = "cristian.iordache@ro.gt.com"
-            message_text = "Hello,\n\nPlease find attached the downloaded invoices.\n\nThank you,\nGTRDigital"
+            message_text = "Hello,\n\nPlease find attached the downloaded invoices.\n\nThank you,\nGTRDigital" 
 
             # Căutarea tag-ului cac:AccountingSupplierParty > Party > PartyTaxScheme > CompanyID
             ns = {
