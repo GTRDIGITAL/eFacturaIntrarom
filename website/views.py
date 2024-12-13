@@ -156,64 +156,64 @@ def trimiteremailseparat(locatie):
 #print()
 def trimitereMail(locatie, nume):
     trimiteremailseparat("/home/efactura/efactura_intrarom/destinatie/rezultat.zip")
-#     smtp_server = "smtp.office365.com"
-#     port = 587  # Pentru starttls
-#     sender_email = "GTRDigital@ro.gt.com"
-#     password = "g[&vuBR9WQqr=7>D"
-#     context = ssl.create_default_context()
-#     message_text = "Hello,\n\nPlease find above the downloaded invoices.\n\nThank you,\nGTRDigital"
+    smtp_server = "smtp.office365.com"
+    port = 587  # Pentru starttls
+    sender_email = "GTRDigital@ro.gt.com"
+    password = "g[&vuBR9WQqr=7>D"
+    context = ssl.create_default_context()
+    message_text = "Hello,\n\nPlease find above the downloaded invoices.\n\nThank you,\nGTRDigital"
     
-#     date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
-#     subj = "Facturi SPV " + str(date)
-#     mailTo = "invoices-spv@intrarom.ro"
-#     cc_email = "invoices-spv@intrarom.ro"
-#     # mailTo = "cristian.iordache@ro.gt.com"
-#     # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
-#     # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
-#     attachment_path = locatie + nume
+    date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
+    subj = "Facturi SPV " + str(date)
+    mailTo = "invoices-spv@intrarom.ro"
+    cc_email = "invoices-spv@intrarom.ro"
+    # mailTo = "cristian.iordache@ro.gt.com"
+    # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
+    # destinatie = '/home/efactura/efactura_intrarom/destinatie/'
+    attachment_path = locatie + nume
 
-#     with open(attachment_path, "rb") as attachment:
-#         attachment_data = attachment.read()
-#         attachment_encoded = base64.b64encode(attachment_data).decode()
+    with open(attachment_path, "rb") as attachment:
+        attachment_data = attachment.read()
+        attachment_encoded = base64.b64encode(attachment_data).decode()
 
-#     boundary = "MY_BOUNDARY"
+    boundary = "MY_BOUNDARY"
 
-#     msg = f"""\
-# From: {sender_email}
-# To: {mailTo}
-# Cc: {cc_email}
-# Subject: {subj}
-# Date: {date}
-# MIME-Version: 1.0
-# Content-Type: multipart/mixed; boundary={boundary}
+    msg = f"""\
+From: {sender_email}
+To: {mailTo}
+Cc: {cc_email}
+Subject: {subj}
+Date: {date}
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary={boundary}
 
-# --{boundary}
-# Content-Type: text/plain; charset="utf-8"
+--{boundary}
+Content-Type: text/plain; charset="utf-8"
 
-# {message_text}
+{message_text}
 
-# --{boundary}
-# Content-Type: application/octet-stream
-# Content-Disposition: attachment; filename="{attachment_path.split('/')[-1]}"
-# Content-Transfer-Encoding: base64
+--{boundary}
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="{attachment_path.split('/')[-1]}"
+Content-Transfer-Encoding: base64
 
-# {attachment_encoded}
+{attachment_encoded}
 
-# --{boundary}--
-# """
+--{boundary}--
+"""
 
-#     # Încercați să vă conectați la server și să trimiteți e-mailul
-#     try:
-#         server = smtplib.SMTP(smtp_server, port)
-#         server.ehlo() # Poate fi omis
-#         server.starttls(context=context) # Asigură conexiunea
-#         server.ehlo() # Poate fi omis
-#         server.login(sender_email, password)
-#         server.sendmail(sender_email, mailTo, msg)
-#     except Exception as e:
-#         print(e)
-#     finally:
-#         server.quit()
+    # Încercați să vă conectați la server și să trimiteți e-mailul
+    try:
+        server = smtplib.SMTP(smtp_server, port)
+        server.ehlo() # Poate fi omis
+        server.starttls(context=context) # Asigură conexiunea
+        server.ehlo() # Poate fi omis
+        server.login(sender_email, password)
+        server.sendmail(sender_email, mailTo, msg)
+    except Exception as e:
+        print(e)
+    finally:
+        server.quit()
 
 
 def citeste_configurare(file_path):
