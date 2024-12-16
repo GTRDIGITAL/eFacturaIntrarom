@@ -165,7 +165,7 @@ def trimitereMail(locatie, nume):
     
     date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
     subj = "Facturi SPV " + str(date)
-    mailTo = "invoices-spv@intrarom.ro"
+    mailTo = "invoices-spv@intrarom.ro" 
     cc_email = "invoices-spv@intrarom.ro"
     # mailTo = "cristian.iordache@ro.gt.com"
     # destinatie = "C:/Dezvoltare/E-Factura/2023/eFactura/Intrarom/Intrarom local - Copy/destinatie/"
